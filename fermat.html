@@ -1,0 +1,378 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>core.js</title><meta name="description" content="High-performance mathematics utilities, random number generation, Complex number, Vector, Matrix and geometry classes, unit conversion and expression parsing."><meta name="format-detection" content="telephone=no"><!-- Mobile Data--><meta name="HandheldFriendly" content="True"><meta name="MobileOptimized" content="480"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><meta http-equiv="cleartype" content="on"><!-- Web Apps and Images--><link rel="icon" sizes="64x64" href="/images/favicons/favicon-64.png"><link rel="icon" sizes="96x96" href="/images/favicons/favicon-96.png"><link rel="icon" sizes="192x192" href="/images/favicons/favicon-192.png"><link rel="apple-touch-icon" href="/images/favicons/favicon-192.png"><!-- Facebook Open Graph--><meta property="og:title" content="core.js"><meta property="og:description" content="High-performance mathematics utilities, random number generation, Complex number, Vector, Matrix and geometry classes, unit conversion and expression parsing."><meta property="og:image" content="http://mathigon.org/images/og-tile.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:type" content="school"><meta property="og:site_name" content="Mathigon"><!-- Twitter Cards--><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="core.js"><meta name="twitter:description" content="High-performance mathematics utilities, random number generation, Complex number, Vector, Matrix and geometry classes, unit conversion and expression parsing."><meta name="twitter:image" content="http://mathigon.org/images/og-tile.png"><meta name="twitter:site" content="@MathigonProject"><meta name="twitter:creator" content="@philipplegner"><!-- Stylesheets--><link href="/styles.css" rel="stylesheet"><link href="http://mathigon.org/styles/fonts.css" rel="stylesheet"></head><body class="fermat"><header><nav class="row wrap"><a id="nav-logo" href="/" class="nav-link"></a><a id="nav-core" href="/core" class="nav-link grow">    <span class="nav-img"></span><span class="nav-text">core.js</span></a><a id="nav-fermat" href="/fermat" class="nav-link grow"><span class="nav-img"></span><span class="nav-text">fermat.js</span></a><a id="nav-boost" href="/boost" class="nav-link grow">  <span class="nav-img"></span><span class="nav-text">boost.js</span></a><a id="nav-slate" href="/slate" class="nav-link grow">  <span class="nav-img"></span><span class="nav-text">slate.js</span></a></nav></header><div class="hero"><div class="wrap"><h1>core.js</h1><div class="row"><p style="margin-right: 20px; width: 260px" class="subtitle grow">High-performance mathematics utilities, random number generation, Complex number, Vector, Matrix and geometry classes, unit conversion and expression parsing.</p><div style="width: 260px"><a href="/download/boost.min.js" target="_blank" download class="link"><div class="link-download"></div> Download boost.min.js</a><a href="https://github.com/Mathigon/boost.js" class="link"><div class="link-github"></div> Explore Source on GitHub</a></div></div></div></div><div id="body" class="wrap"><div class="sidebar"><div class="sidebar-wrap"></div><div class="sidebar-fill"></div></div><div id="api" class="content"><h1>Introduction</h1><p>Currently, fermat.js can only use JavaScript's native numbers, and is restricted to their size and precision. In the future, we want to create BigNum and arbitrary precision number classes that work with all functions below.</p><h1 id="arithmetic">Arithmetic</h1>
+<h3 id="nearlyequals">nearlyEquals</h3>
+<p><code>Boolean nearlyEquals(Number x, Number y, [Number tolerance])</code></p>
+<h3 id="sign">sign</h3>
+<p><code>Integer sign(Number x)</code></p>
+<h3 id="square">square</h3>
+<p><code>Number square(Number x)</code></p>
+<h3 id="cube">cube</h3>
+<p><code>Number cube(Number x)</code></p>
+<h3 id="numberformat">numberFormat</h3>
+<p><code>String numberFormat(Number x)</code></p>
+<h3 id="toordinal">toOrdinal</h3>
+<p><code>String toOrdinal(Number x)</code></p>
+<h3 id="digits">digits</h3>
+<p><code>Integer[] digits(Integer n)</code></p>
+<h3 id="fractionaldigits">fractionalDigits</h3>
+<p><code>Integer[] fractionalDigits(Number n)</code></p>
+<h3 id="decimalplaces">decimalPlaces</h3>
+<p><code>Integer decimalPlaces(Number n)</code></p>
+<h3 id="round">round</h3>
+<p><code>Number round(Number n, [Integer precision])</code></p>
+<h3 id="roundto">roundTo</h3>
+<p><code>Number roundTo(Number n, [Number increment])</code></p>
+<h3 id="roundtowardszero">roundTowardsZero</h3>
+<p><code>Integer roundTowardsZero(Number n)</code></p>
+<h3 id="tofraction">toFraction</h3>
+<p><code>[Number numerator, Integer denominator] toFraction(Number n, [Number precision])</code></p>
+<h3 id="mod">mod</h3>
+<p><code>Number mod(Number a, Number m)</code></p>
+<h3 id="log">log</h3>
+<p><code>Number log(Number x, [Number b])</code></p>
+<h1 id="number-theory">Number Theory</h1>
+<h3 id="gcd">gcd</h3>
+<p><code>Integer gcd(Integer ...n)</code></p>
+<h3 id="lcm">lcm</h3>
+<p><code>Integer lcm(Integer ...n)</code></p>
+<h3 id="isprime">isPrime</h3>
+<p><code>Boolean isPrime(Integer n)</code></p>
+<h3 id="primefactorisation">primeFactorisation</h3>
+<p><code>Integer[] primeFactorisation(Integer n)</code></p>
+<h3 id="primefactors">primeFactors</h3>
+<p><code>Integer[] primeFactors(Integer n)</code></p>
+<h3 id="listprimes">listPrimes</h3>
+<p><code>Integer[] listPrimes([Integer n])</code></p>
+<h1 id="combinatorics">Combinatorics</h1>
+<h3 id="factorial">factorial</h3>
+<p><code>Number factorial(Number x)</code></p>
+<h3 id="binomial">binomial</h3>
+<p><code>Integer binomial(Integer n, Integer k)</code></p>
+<h3 id="permutations">permutations</h3>
+<p><code>Array[] permutations(Array a)</code></p>
+<h3 id="subsets">subsets</h3>
+<p><code>Array[] subsets(Array a)</code></p>
+<h3 id="coinflips">coinFlips</h3>
+<p><code>String coinFlips([Integer n])</code></p>
+<h1 id="probability">Probability</h1>
+<h3 id="shuffle">shuffle</h3>
+<p><code>Array shuffle(Array a)</code></p>
+<h3 id="integer">integer</h3>
+<p><code>Integer integer(Integer a, [Integer b])</code></p>
+<h3 id="intarray">intArray</h3>
+<p><code>Integer[] intArray(Integer n)</code>
+Returns a random array of consecutive integers from 0 to n-1 (inclusive)</p>
+<h3 id="weighted">weighted</h3>
+<p><code>Integer intArray(Number[] weights)</code>
+<code>String intArray({String key: Number weight} weights)</code></p>
+<h3 id="smart">smart</h3>
+<p><code>Integer smart(Integer n, String id)</code></p>
+<h3 id="bernoulli">bernoulli</h3>
+<p><code>Integer bernoulli([Number p])</code></p>
+<h3 id="binomial">binomial</h3>
+<p><code>Integer binomial([Integer n, Number p])</code></p>
+<h3 id="poisson">poisson</h3>
+<p><code>Number poisson([Number l])</code></p>
+<h3 id="uniform">uniform</h3>
+<p><code>Number uniform([Number a, Number b])</code></p>
+<h3 id="normal">normal</h3>
+<p><code>Number normal([Number mean, Number variance])</code></p>
+<h3 id="exponential">exponential</h3>
+<p><code>Number exponential([Number l])</code></p>
+<h3 id="geometric">geometric</h3>
+<p><code>Number geometric([Number p])</code></p>
+<h3 id="cauchy">cauchy</h3>
+<p><code>Number cauchy()</code></p>
+<h3 id="normalpdf">normalPDF</h3>
+<p><code>Number normalPDF(Number x, [Number mean, Number variance])</code></p>
+<h1 id="statistics">Statistics</h1>
+<h3 id="mean">mean</h3>
+<p><code>Number mean(Number[] data)</code></p>
+<h3 id="median">median</h3>
+<p><code>Number median(Number[] data)</code></p>
+<h3 id="mode">mode</h3>
+<p><code>Any median(Any[] data)</code></p>
+<h3 id="variance">variance</h3>
+<p><code>Number variance(Number[] data)</code></p>
+<h3 id="stddev">stdDev</h3>
+<p><code>Number stdDev(Number[] data)</code></p>
+<h3 id="covariance">covariance</h3>
+<p><code>Number covariance(Number[] d1, Number[] d2)</code></p>
+<h3 id="correlation">correlation</h3>
+<p><code>Number correlation(Number[] d1, Number[] d2)</code></p>
+<h3 id="rsquared">rSquared</h3>
+<p><code>Number rSquared(Number[] source, Number[] regression)</code></p>
+<h3 id="linearregression">linearRegression</h3>
+<p><code>Function linearRegression(Number[] x, Number[] y)</code></p>
+<h1 id="complex">Complex</h1>
+<h2 id="constructor">Constructor</h2>
+<h3 id="constructor">Constructor</h3>
+<p><code>new Complex([Number re, Number im])</code></p>
+<h2 id="properties">Properties</h2>
+<h3 id="-magnitude">.magnitude</h3>
+<p><code>Number .magnitude</code></p>
+<h3 id="-phase">.phase</h3>
+<p><code>Number .phase</code></p>
+<h3 id="-conjugate">.conjugate</h3>
+<p><code>Complex .conjugate</code></p>
+<h2 id="methods">Methods</h2>
+<h3 id="-tostring">.toString</h3>
+<p><code>String .toString()</code></p>
+<h2 id="static-methods">Static Methods</h2>
+<h3 id="complex-sum">Complex.sum</h3>
+<p><code>Complex Complex.sum(Complex a, Complex b)</code></p>
+<h3 id="complex-difference">Complex.difference</h3>
+<p><code>Complex Complex.difference(Complex a, Complex b)</code></p>
+<h3 id="complex-product">Complex.product</h3>
+<p><code>Complex Complex.product(Complex a, Complex b)</code></p>
+<h3 id="complex-quotient">Complex.quotient</h3>
+<p><code>Complex Complex.quotient(Complex a, Complex b)</code></p>
+<h1 id="vector">Vector</h1>
+<h2 id="constructor">Constructor</h2>
+<h3 id="vector">Vector</h3>
+<p><code>new Vector()</code></p>
+<h2 id="properties">Properties</h2>
+<h3 id="-total">.total</h3>
+<p><code>Number .total</code></p>
+<h3 id="-average">.average</h3>
+<p><code>Number .average</code></p>
+<h3 id="-norm">.norm</h3>
+<p><code>Number .norm</code></p>
+<h3 id="-first">.first</h3>
+<p><code>Number .first</code></p>
+<h3 id="-last">.last</h3>
+<p><code>Number .last</code></p>
+<h3 id="-min">.min</h3>
+<p><code>Number .min</code></p>
+<h3 id="-max">.max</h3>
+<p><code>Number .max</code></p>
+<h3 id="-range">.range</h3>
+<p><code>[Number, Number] .range</code></p>
+<h2 id="methods">Methods</h2>
+<h3 id="-map">.map</h3>
+<p><code>Vector .map(Function fn)</code></p>
+<h3 id="-shift">.shift</h3>
+<p><code>Vector .shift(Number x)</code></p>
+<h3 id="-scale">.scale</h3>
+<p><code>Vector .scale(Number x)</code></p>
+<h3 id="-normalise">.normalise</h3>
+<p><code>Vector .normalise()</code></p>
+<h3 id="-tostring">.toString</h3>
+<p><code>String .toString()</code></p>
+<h2 id="static-methods">Static Methods</h2>
+<h3 id="vector-equals">Vector.equals</h3>
+<p><code>Boolean Vector.equals(Vector a, Vector b)</code></p>
+<h3 id="vector-sum">Vector.sum</h3>
+<p><code>Vector Vector.sum(Vector a, Vector b)</code></p>
+<h3 id="vector-difference">Vector.difference</h3>
+<p><code>Vector Vector.difference(Vector a, Vector b)</code></p>
+<h3 id="vector-product">Vector.product</h3>
+<p><code>Vector Vector.product(Vector a, Vector b)</code></p>
+<h3 id="vector-dot">Vector.dot</h3>
+<p><code>Number Vector.dot(Vector a, Vector b)</code></p>
+<h3 id="vector-cross">Vector.cross</h3>
+<p><code>Vector Vector.cross(Vector a, Vector b)</code></p>
+<h3 id="vector-cross2d">Vector.cross2D</h3>
+<p><code>Number Vector.equals(Number[] a, Number[] b)</code></p>
+<h1 id="matrix-alpha-">Matrix (alpha)</h1>
+<h2 id="constructors">Constructors</h2>
+<h3 id="matrix">Matrix</h3>
+<p><code>new Matrix()</code></p>
+<h3 id="matrix-rotation">Matrix.rotation</h3>
+<p><code>Matrix Matrix.rotation(Number angle)</code></p>
+<h3 id="matrix-shear">Matrix.shear</h3>
+<p><code>Matrix Matrix.shear(Number angle)</code></p>
+<h3 id="matrix-reflection">Matrix.reflection</h3>
+<p><code>Matrix Matrix.reflection()</code></p>
+<h3 id="matrix-projection">Matrix.projection</h3>
+<p><code>Matrix Matrix.rotation()</code></p>
+<h2 id="properties">Properties</h2>
+<h3 id="-issquare">.isSquare</h3>
+<p><code>Boolean .isSquare</code></p>
+<h3 id="-row">.row</h3>
+<p><code>Vector .row(Integer i)</code></p>
+<h3 id="-column">.column</h3>
+<p><code>Vector .column(Integer j)</code></p>
+<h3 id="-transpose">.transpose</h3>
+<p><code>Matrix .transpose</code></p>
+<h3 id="-inverse">.inverse</h3>
+<p><code>Matrix .inverse</code></p>
+<h3 id="-determinant">.determinant</h3>
+<p><code>Number .determinant</code></p>
+<h2 id="methods">Methods</h2>
+<h3 id="-scalarmultiply">.scalarMultiply</h3>
+<p><code>Matrix .scalarMultiply(Number x)</code></p>
+<h2 id="static-methods">Static Methods</h2>
+<h3 id="matrix-add">Matrix.add</h3>
+<p><code>Matrix Matrix.add(Matrix a, Matrix b)</code></p>
+<h3 id="matrix-product">Matrix.product</h3>
+<p><code>Matrix Matrix.product((Matrix|Vector) a, (Matrix|Vector) b)</code></p>
+<h1 id="geometry-alpha-">Geometry (alpha)</h1>
+<h2 id="shape">Shape</h2>
+<h4 id="properties">Properties</h4>
+<ul>
+<li><code>.center</code></li>
+</ul>
+<h4 id="methods">Methods</h4>
+<ul>
+<li><code>.transform</code></li>
+<li><code>.rotate</code></li>
+<li><code>.reflect</code></li>
+<li><code>.scale</code></li>
+<li><code>.shift</code></li>
+<li><code>.contains</code></li>
+<li><code>.at</code></li>
+</ul>
+<h2 id="point-_extends-shape_">Point <em>extends Shape</em></h2>
+<h3 id="point">Point</h3>
+<p><code>new Point(Number x, Number y)</code></p>
+<h4 id="properties">Properties</h4>
+<ul>
+<li><code>.distance</code></li>
+<li><code>.polar</code></li>
+<li><code>.project</code></li>
+</ul>
+<h4 id="methods">Methods</h4>
+<ul>
+<li><code>.distanceFromLine</code></li>
+</ul>
+<h3 id="point-frompolar">Point.fromPolar</h3>
+<h3 id="point-dot">Point.dot</h3>
+<h3 id="point-sum">Point.sum</h3>
+<h3 id="point-difference">Point.difference</h3>
+<h3 id="point-distance">Point.distance</h3>
+<h3 id="point-manhatten">Point.manhatten</h3>
+<h2 id="line-_extends-shape_">Line <em>extends Shape</em></h2>
+<h3 id="line">Line</h3>
+<p><code>new Line(Point p1, Point p2)</code></p>
+<h4 id="properties">Properties</h4>
+<ul>
+<li><code>.length</code></li>
+<li><code>.normalVector</code></li>
+</ul>
+<h4 id="methods">Methods</h4>
+<ul>
+<li><code>.perpendicular</code></li>
+</ul>
+<h3 id="line-isparallel">Line.isParallel</h3>
+<h3 id="line-isperpendicular">Line.isPerpendicular</h3>
+<h3 id="line-anglebetween">Line.angleBetween</h3>
+<h3 id="line-anglebisector">Line.angleBisector</h3>
+<h2 id="bezier-_extends-shape_">Bezier <em>extends Shape</em></h2>
+<h3 id="bezier">Bezier</h3>
+<p><code>new Bezier(Point p1, Point p2, [Point q1, Point q2])</code></p>
+<h4 id="properties">Properties</h4>
+<ul>
+<li><code>.length</code></li>
+</ul>
+<h2 id="ellipse-_extends-shape_">Ellipse <em>extends Shape</em></h2>
+<h3 id="ellipse">Ellipse</h3>
+<h2 id="circle-_extends-ellipse_">Circle <em>extends Ellipse</em></h2>
+<h3 id="circle">Circle</h3>
+<p><code>new Circle([Point center, Number radius])</code></p>
+<h4 id="properties">Properties</h4>
+<ul>
+<li><code>.circumference</code></li>
+<li><code>.area</code></li>
+</ul>
+<h2 id="rectangle-_extends-shape_">Rectangle <em>extends Shape</em></h2>
+<h3 id="rectangle">Rectangle</h3>
+<p><code>new Rectangle([Point x, Point y, Number width, Number height])</code></p>
+<h4 id="properties">Properties</h4>
+<ul>
+<li><code>.circumference</code></li>
+<li><code>.area</code></li>
+<li><code>.polygon</code></li>
+</ul>
+<h2 id="square-_extends-rectangle_">Square <em>extends Rectangle</em></h2>
+<h3 id="square">Square</h3>
+<p><code>new Square([Point x, Point y, Number width])</code></p>
+<h2 id="polygon-_extends-shape_">Polygon <em>extends Shape</em></h2>
+<h3 id="polygon">Polygon</h3>
+<p><code>new Polygon(Point[] ...points)</code></p>
+<h4 id="properties">Properties</h4>
+<ul>
+<li><code>.centroid</code></li>
+<li><code>.circumference</code></li>
+<li><code>.area</code></li>
+</ul>
+<h2 id="triangle-_extends-polygon_">Triangle <em>extends Polygon</em></h2>
+<h3 id="triangle">Triangle</h3>
+<p><code>new Triangle(Point[] ...points)</code></p>
+<h4 id="properties">Properties</h4>
+<ul>
+<li><code>.circumcircle</code></li>
+<li><code>.incircle</code></li>
+</ul>
+<h2 id="utilities">Utilities</h2>
+<h3 id="angle">angle</h3>
+<p><code>Number angle(Point a, Point b, Point c)</code></p>
+<h3 id="same">same</h3>
+<p><code>Boolean same(Shape x, Shape y)</code></p>
+<h3 id="intersect">intersect</h3>
+<p><code>Shape intersect(Shape x, Shape y)</code></p>
+<h3 id="convexhull">convexHull</h3>
+<p><code>Polygon convexHull(Point[] ...points)</code></p>
+<h3 id="travellingsalesman">travellingSalesman</h3>
+<p><code>{ Integer[] path, Number length } travellingSalesman(Array distanceMatrix)</code></p>
+<h3 id="graphcolouring">graphColouring</h3>
+<p><code>Integer[] graphColouring(Array adjacencyMatrix)</code></p>
+<h1 id="cryptography">Cryptography</h1>
+<h3 id="caesarcipher">caesarCipher</h3>
+<p><code>String caesarCipher(String msg, Integer shift)</code></p>
+<h3 id="vigenerecipher">vigenereCipher</h3>
+<p><code>String vigenereCipher(String msg, String key)</code></p>
+<h3 id="letterfrequency">letterFrequency</h3>
+<p><code>Number letterFrequency(String letter)</code></p>
+<h3 id="cipherletterfreq">cipherLetterFreq</h3>
+<p><code>Integer[] cipherLetterFreq(String msg)</code></p>
+<h1 id="numeric">Numeric</h1>
+<h3 id="bisect">bisect</h3>
+<p><code>Integer bisect(Function fn, [Integer precision, Number l, Number h]</code></p>
+<p>more functions to come soon ...</p>
+<h1 id="units">Units</h1>
+<h3 id="convert">convert</h3>
+<p><code>Number convert(Number value, String fromUnit, [String toUnit])</code></p>
+<h3 id="define">define</h3>
+<p><code>String define(String unit)</code></p>
+<h1 id="expression-alpha-">Expression (alpha)</h1>
+<h2 id="constructor">Constructor</h2>
+<h3 id="expression">Expression</h3>
+<p><code>new Expression(String str)</code></p>
+<h2 id="methods">Methods</h2>
+<h3 id="-simplify">.simplify</h3>
+<p><code>Expression .simplify()</code></p>
+<h3 id="-evaluate">.evaluate</h3>
+<p><code>Any .evaluate([Object variables])</code></p>
+<h3 id="-tostring">.toString</h3>
+<p><code>String .toString()</code></p>
+<h1 id="bignum-alpha-">Bignum (alpha)</h1>
+<h2 id="constructor">Constructor</h2>
+<h3 id="integer">Integer</h3>
+<p><code>new Integer((String|Integer) n, [Integer base])</code></p>
+<h2 id="properties">Properties</h2>
+<h3 id="-sqrt">.sqrt</h3>
+<h3 id="-power">.power</h3>
+<h3 id="-mod">.mod</h3>
+<h3 id="-factorial">.factorial</h3>
+<h2 id="methods">Methods</h2>
+<h3 id="-tostring">.toString</h3>
+<h3 id="-valueof">.valueOf</h3>
+<h3 id="-isunit">.isUnit</h3>
+<h3 id="-iszero">.isZero</h3>
+<h2 id="static-methods">Static Methods</h2>
+<h3 id="integer-equals">Integer.equals</h3>
+<h3 id="integer-lessorequal">Integer.lessOrEqual</h3>
+<h3 id="integer-greater">Integer.greater</h3>
+<h3 id="integer-greaterorequal">Integer.greaterOrEqual</h3>
+<h3 id="integer-add">Integer.add</h3>
+<h3 id="integer-subtract">Integer.subtract</h3>
+<h3 id="integer-multiply">Integer.multiply</h3>
+<h3 id="integer-divide">Integer.divide</h3>
+<h3 id="integer-lcm">Integer.lcm</h3>
+<h3 id="integer-gcd">Integer.gcd</h3>
+<footer>© 2016 Mathigon, <a href="https://github.com/Mathigon/core.js/blob/master/LICENSE">MIT License</a></footer></div></div><script src="/scripts.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q || []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37525836-5', 'auto');
+ga('send', 'pageview');</script></body></html>

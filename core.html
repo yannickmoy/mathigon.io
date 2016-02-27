@@ -1,0 +1,280 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>core.js</title><meta name="description" content="Collection of Array and String prototypes, type and equality checking methods, Promises and a powerful Class framework."><meta name="format-detection" content="telephone=no"><!-- Mobile Data--><meta name="HandheldFriendly" content="True"><meta name="MobileOptimized" content="480"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><meta http-equiv="cleartype" content="on"><!-- Web Apps and Images--><link rel="icon" sizes="64x64" href="/images/favicons/favicon-64.png"><link rel="icon" sizes="96x96" href="/images/favicons/favicon-96.png"><link rel="icon" sizes="192x192" href="/images/favicons/favicon-192.png"><link rel="apple-touch-icon" href="/images/favicons/favicon-192.png"><!-- Facebook Open Graph--><meta property="og:title" content="core.js"><meta property="og:description" content="Collection of Array and String prototypes, type and equality checking methods, Promises and a powerful Class framework."><meta property="og:image" content="http://mathigon.org/images/og-tile.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:type" content="school"><meta property="og:site_name" content="Mathigon"><!-- Twitter Cards--><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="core.js"><meta name="twitter:description" content="Collection of Array and String prototypes, type and equality checking methods, Promises and a powerful Class framework."><meta name="twitter:image" content="http://mathigon.org/images/og-tile.png"><meta name="twitter:site" content="@MathigonProject"><meta name="twitter:creator" content="@philipplegner"><!-- Stylesheets--><link href="/styles.css" rel="stylesheet"><link href="http://mathigon.org/styles/fonts.css" rel="stylesheet"></head><body class="core"><header><nav class="row wrap"><a id="nav-logo" href="/" class="nav-link"></a><a id="nav-core" href="/core" class="nav-link grow">    <span class="nav-img"></span><span class="nav-text">core.js</span></a><a id="nav-fermat" href="/fermat" class="nav-link grow"><span class="nav-img"></span><span class="nav-text">fermat.js</span></a><a id="nav-boost" href="/boost" class="nav-link grow">  <span class="nav-img"></span><span class="nav-text">boost.js</span></a><a id="nav-slate" href="/slate" class="nav-link grow">  <span class="nav-img"></span><span class="nav-text">slate.js</span></a></nav></header><div class="hero"><div class="wrap"><h1>core.js</h1><div class="row"><p style="margin-right: 20px; width: 260px" class="subtitle grow">Collection of Array and String prototypes, type and equality checking methods, Promises and a powerful Class framework.</p><div style="width: 260px"><a href="/download/boost.min.js" target="_blank" download class="link"><div class="link-download"></div> Download boost.min.js</a><a href="https://github.com/Mathigon/boost.js" class="link"><div class="link-github"></div> Explore Source on GitHub</a></div></div></div></div><div id="body" class="wrap"><div class="sidebar"><div class="sidebar-wrap"></div><div class="sidebar-fill"></div></div><div id="api" class="content"><h1 id="utilities">Utilities</h1>
+<h3 id="noop">noop</h3>
+<p><code>void noop()</code>
+Empty function.</p>
+<h3 id="uid">uid</h3>
+<p><code>String uid([Integer n])</code>
+Creates an random n-digit string.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li><code>Integer n</code> – Optional, default <code>10</code></li>
+</ul>
+<h3 id="run">run</h3>
+<p><code>Any run(fn, [args, _this])</code>
+If <code>fn</code> is a function, it will evaluate it with the provided arguments and <em>this</em>-value. Otherwise, run just returns fn. This is particularly useful for parsing parameters or configurations that could be both a dynamic function or a static value.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li><code>Any fn</code> - either a function or a static object.</li>
+<li><code>Any[] args</code> - array of arguments to pass to <code>fn</code> if it is a function. Optional, default is <code>[]</code>.</li>
+<li><code>Any _this</code> - object to use as <em>this</em>-value when evaluation <code>fn</code>. Optional, default is <code>null</code>.</li>
+</ul>
+<h4 id="returns">Returns</h4>
+<ul>
+<li><code>Any</code> - either <code>fn</code> itself, or the return value of <code>fn()</code>.</li>
+</ul>
+<h4 id="example">Example</h4>
+<pre><code class="lang-js">run(&#39;xy&#39;, &#39;a&#39;, &#39;b&#39;)             // -&gt; &#39;xy&#39;
+run((a, b) =&gt; a + b, &#39;a&#39;, &#39;b&#39;)  // -&gt; &#39;ab&#39;
+</code></pre>
+<h3 id="isoneof">isOneOf</h3>
+<p><code>Boolean isOneOf(x, ...values)</code>
+Checks if <code>x</code> is strictly equals to any one of <code>values</code>.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li><code>Any x</code> - value to check</li>
+<li><code>Any[] values</code> - multiple values to compare against.</li>
+</ul>
+<h4 id="returns">Returns</h4>
+<ul>
+<li><code>Boolean</code></li>
+</ul>
+<h4 id="example">Example</h4>
+<pre><code class="lang-js">isOneOf(10, 20, 30)     // -&gt; false
+isOneOf(&#39;a&#39;, &#39;b&#39;, &#39;a&#39;)  // -&gt; true
+</code></pre>
+<h3 id="extend">extend</h3>
+<h4 id="-extend-first-object-rest-object-object-"><code>extend(first: object, ...rest: object) =&gt; object</code></h4>
+<p>Adds all properties from the <code>rest</code> objects to the <code>first</code> objects. Later objects in <code>rest</code> will overwrite properties set in previous objects in <code>rest</code>, or the first one.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li><code>first: object</code> (object)</li>
+<li><code>rest?: object</code> (object, optional)</li>
+</ul>
+<h4 id="returns">Returns</h4>
+<p>*</p>
+<h4 id="example">Example</h4>
+<pre><code class="lang-js">let x = { a: 1, b: 2 };
+let y = { b: 3, c: 4 };
+let z = { c: 5, d: 6 };
+extend(x, y, z);
+// x -&gt; { a: 1, b: 3, c: 5, d: 6 }
+</code></pre>
+<h3 id="clamp">clamp</h3>
+<p><code>Number clamp(Number x, Number min, Number max)</code>
+Returns the number <code>x</code> bounded between <code>min</code> and <code>max</code>.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li><code>Number x</code> – the number to bound.</li>
+<li><code>min: number</code>: lower bound.</li>
+<li><code>max: number</code>: upper bound.</li>
+</ul>
+<h4 id="returns">Returns</h4>
+<ul>
+<li><code>number</code>: the bounded value of <code>x</code>.</li>
+</ul>
+<h4 id="example">Example</h4>
+<pre><code class="lang-js">clamp(12, 10, 5)   // → 10
+</code></pre>
+<h3 id="isbetween">isBetween</h3>
+<p><code>Boolean isBetween(Number x, Number min, Number max)</code></p>
+<h3 id="performance">performance</h3>
+<p><code>Number performance(Function fn, [Integer repetitions])</code></p>
+<h3 id="square">square</h3>
+<p><code>Number square(Number x)</code></p>
+<h3 id="cube">cube</h3>
+<p><code>Number square(Number x)</code></p>
+<h3 id="defer">defer</h3>
+<p><code>{promise, resolve, reject} = defer()</code>
+Returns a deferred object that contains promise, resolve and reject properties.</p>
+<h4 id="returns">Returns</h4>
+<ul>
+<li><code>Promise promise</code> - a new Promise instance.</li>
+<li><code>Function resolve(value)</code> - when called, resolves <code>promise</code> with <code>value</code>.</li>
+<li><code>Function reject(value)</code> - when called, rejects <code>promise</code> with <code>value</code>.</li>
+</ul>
+<h4 id="example">Example</h4>
+<pre><code class="lang-js">let deferred = defer()
+deferred.promise.then(x =&gt; { console.log(x); });
+deferred.resolve(&#39;foo&#39;)
+  // -&gt; logs &#39;foo&#39;
+</code></pre>
+<h3 id="has">has</h3>
+<p><code>Boolean has(Object obj, String key)</code>
+Checks if <code>obj</code> has an own property <code>key</code>. This is simply a wrapper for JavaScript&#39;s native <code>hasOwnProperty</code> method.</p>
+<h3 id="each">each</h3>
+<p><code>(Object|Array) each((Object|Array) obj, Function fn)</code>
+Runs <code>fn(value, key)</code> for all enumerable properties <code>key</code> in a collection <code>obj</code> and returns a new collection with the corresponding values returned by <code>fn</code> (like <code>.map</code>). Collections can be arrays or objects, but not strings or maps.</p>
+<h4 id="examples">Examples</h4>
+<pre><code class="lang-js">each([4, 5, 6], (v, k) =&gt; v + k);  // -&gt; [4, 6, 8]
+each({ a: 1, b: 2 }, (k, v) =&gt; v + k);  // -&gt; { a: &#39;1a&#39;, b: &#39;2b&#39; }
+</code></pre>
+<h3 id="some">some</h3>
+<p><code>Any some((Object|Arrya) obj, Function fn)</code></p>
+<h3 id="cache">cache</h3>
+<p><code>Function cache(Function fn)</code>
+Function wrapper that modifies <code>fn</code> to cache its return values. This is useful for performance intensive functions which are called repeatedly with the same arguments, but can reduce performance for functions which are always called with different arguments. Note that argument comparison doesn not work with Objects or nested arrays.&#39;</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li><code>Function fn</code> - a function that is called repeatedly with the same arguments.</li>
+</ul>
+<h4 id="returns">Returns</h4>
+<ul>
+<li><code>Function</code> - an optimised function that has the same behaviour has <code>fn</code>.</li>
+</ul>
+<h4 id="example">Example</h4>
+<pre><code class="lang-js">let slow = cache(function(x) {
+    console.log(&#39;executing...&#39;);
+    return Math.pow(x, x)
+});
+
+slow(100);   // logs &#39;executing...&#39; and returns 1e+200
+slow(100);   // returns 1e+200
+</code></pre>
+<h3 id="throttle">throttle</h3>
+<p><code>Function throttle(Function fn, Number t)</code>
+Function wrapper that prevents <code>fn</code> from being executed more than once every <code>t</code>ms. This is particularly useful for optimising callbacks for continues events like scroll, resize or slider move.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li><code>Function fn</code> - a function that is called repeatedly in quick succession.</li>
+<li><code>Number t</code> - a timeout value in ms.</li>
+</ul>
+<h4 id="returns">Returns</h4>
+<ul>
+<li><code>Function</code> - an optimised function that has the same behaviour has <code>fn</code>.</li>
+</ul>
+<h4 id="example">Example</h4>
+<pre><code class="lang-js">let slow = cache(function(x) {
+    el.height = innerHeight;
+});
+
+window.onresize = slow;
+</code></pre>
+<h3 id="shallowcopy">shallowCopy</h3>
+<p><code>Any shallowCopy(Any obj)</code></p>
+<h3 id="deepcopy">deepCopy</h3>
+<p><code>Any deepCopy(Any obj)</code></p>
+<h1 id="types">Types</h1>
+<h3 id="typeof">typeof</h3>
+<p><code>String typeOf(Any obj)</code>
+Returns the type of <code>obj</code>. Possible return values are <code>number</code>, <code>string</code>, <code>boolean</code>, <code>array</code>, <code>object</code>, <code>date</code>, <code>function</code>, <code>NaN</code>, <code>null</code>, <code>undefined</code>, as well as class names like <code>htmldocument</code>. Note that <code>typeof</code> caches all type checks for better performance.</p>
+<h3 id="istype">isType</h3>
+<p><code>Boolean isType(Any obj, String type)</code>
+Shortcut for <code>typeOf(x) === type</code>.</p>
+<h3 id="isstring">isString</h3>
+<h3 id="isnumber">isNumber</h3>
+<h3 id="isinteger">isInteger</h3>
+<h3 id="isdate">isDate</h3>
+<h3 id="isboolean">isBoolean</h3>
+<h3 id="isobject">isObject</h3>
+<h1 id="arrays">Arrays</h1>
+<h3 id="tabulate">tabulate</h3>
+<p><code>Array tabulate(Any fn, Integer ...dimensions)</code>
+If <code>n</code> integers <code>x1</code> are specified, <code>tabulate</code> will create a multi-dimensional matrix that contains <code>fn(i1, i2, ..., in)</code> in cell <code>[i1][i2]...[in]</code>. If <code>fn</code> is not a function, every item in the resulting array will have value <code>fn</code>.</p>
+<h4 id="examples">Examples</h4>
+<pre><code class="lang-js">tabulate(2, 5)                        // -&gt; [2, 2, 2, 2, 2]
+tabulate(i =&gt; i * i, 5)               // -&gt; [0, 1, 4, 9, 16]
+tabulate((i, j) =&gt; &#39;&#39; + i + j, 2, 2)  // -&gt; [[&#39;00&#39;, &#39;01&#39;], [&#39;10&#39;, &#39;11]]
+tabulate(1, 3, 3);                    // -&gt; [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+</code></pre>
+<h3 id="list">list</h3>
+<p><code>Number[] list(Number a, [Number b, Number step])</code></p>
+<h4 id="examples">Examples</h4>
+<pre><code class="lang-js">list(5);  // -&gt; [0, 1, 2, 3, 4]
+list(-2, 2);  // -&gt; [-2, -1, 0, 1, 2]
+list(5, 15, 5);  // -&gt; [5, 10, 15]
+</code></pre>
+<h3 id="map">map</h3>
+<p><code>Any[] map(Function fn, Any ...args)</code>
+Applies <code>fn</code> to multiple arrays of arguments and returns an array with the results of every operation. This function is particularly useful for vector operations.</p>
+<h4 id="example">Example</h4>
+<pre><code class="lang-js">map(Math.min, [5, 4], [7, 3]);  // -&gt; [min(5, 7), min(4, 3)] = [5, 3]
+</code></pre>
+<h3 id="total">total</h3>
+<p><code>Number total(Number[] a)</code>
+Finds the sum of all elements in a numeric array <code>a</code>. This operation is <em>safe</em>, i.e. any values that can&#39;t be cast to a number are counted as 0.</p>
+<h3 id="average">average</h3>
+<p><code>Number average(Number[] a)</code></p>
+<h3 id="extract">extract</h3>
+<p><code>Array extract(Object[] a, String id)</code></p>
+<h3 id="zip">zip</h3>
+<p><code>Object zip(Array keys, Array values)</code></p>
+<h3 id="sortby">sortBy</h3>
+<p><code>Array sortBy(Array a, String key, [Boolean reverse])</code></p>
+<h3 id="unique">unique</h3>
+<p><code>Array unique(Array a)</code></p>
+<h3 id="clean">clean</h3>
+<p><code>Array clean(Array a)</code></p>
+<h3 id="without">without</h3>
+<p><code>Array without(Array a)</code></p>
+<h3 id="flatten">flatten</h3>
+<p><code>Array flatten(Array a)</code></p>
+<h3 id="cumulative">cumulative</h3>
+<p><code>Number[] cumulative(Number[] a)</code></p>
+<h3 id="chunk">chunk</h3>
+<p><code>Array[] chunk(Array a)</code></p>
+<h3 id="rotate">rotate</h3>
+<p><code>Array rotate(Array a)</code></p>
+<h3 id="intersect">intersect</h3>
+<p><code>Array intersect(Array a, Array b)</code></p>
+<h3 id="difference">difference</h3>
+<p><code>Array difference(Array a, Array b)</code></p>
+<h1 id="strings">Strings</h1>
+<h3 id="words">words</h3>
+<p><code>String[] words(String str)</code>
+Splits a string <code>str</code> into its space separated words.</p>
+<h4 id="example">Example</h4>
+<pre><code class="lang-js">words(&#39; Hello here   is text!&#39;);  // -&gt; [&#39;Hello&#39;, &#39;here&#39;, &#39;is&#39;, &#39;text!&#39;]
+</code></pre>
+<h3 id="totitlecase">toTitleCase</h3>
+<p><code>String toTitleCase(String str)</code>
+Converts a string <code>str</code> to title Case.</p>
+<h3 id="tocamelcase">toCamelCase</h3>
+<p><code>String toCamelCase(String str)</code>
+Converts a string <code>str</code> from-snake-case toCamelCase.</p>
+<h3 id="repeat">repeat</h3>
+<p><code>String repeat(String str, [Number n])</code></p>
+<h3 id="padstart">padStart</h3>
+<p><code>String padStart(String str, Number maxLength, [Str fill])</code></p>
+<h1 id="evented">Evented</h1>
+<p>This is our base class for event management. It is rarely used on its own, but many other classes inherit from <code>Evented</code>.</p>
+<h2 id="constructor">Constructor</h2>
+<h3 id="evented">Evented</h3>
+<p><code>new Evented({ [split], [lowercase] })</code></p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li><code>Boolean lowercase</code> - true if event names are not case sensitive.</li>
+<li><code>String split</code> - separator for multiple events.</li>
+</ul>
+<h2 id="methods">Methods</h2>
+<h3 id="-on">.on</h3>
+<p><code>.on(String events, Function fn)</code>
+Adds an event listener <code>fn</code> to one or more events.</p>
+<h3 id="-one">.one</h3>
+<p><code>.one(String events, Function fn)</code>
+Adds a one-time event listener <code>fn</code> to one or more events.</p>
+<h3 id="-off">.off</h3>
+<p><code>.off(String events, Function fn)</code>
+Removes an event listener <code>fn</code> from one or more events.</p>
+<h3 id="-trigger">.trigger</h3>
+<p><code>.trigger(String events, Any ...args</code>
+Triggers one or more events, and executes all bound event listeners with <code>...args</code> as arguments.</p>
+<h1 id="observable-beta-">Observable (beta)</h1>
+<p>Until all platforms support ES6 proxies, we will have to simulate their functionality using getters and setters, and a slightly more verbose syntax.</p>
+<h2 id="constructor">Constructor</h2>
+<h3 id="observable">observable</h3>
+<p><code>Object observable(Object model)</code></p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li><code>Object model</code></li>
+</ul>
+<h2 id="methods">Methods</h2>
+<h3 id="-watch">.watch</h3>
+<p><code>.watch(String key, Function callback)</code></p>
+<h3 id="-unwatch">.unwatch</h3>
+<p><code>.unwatch(String key)</code></p>
+<footer>© 2016 Mathigon, <a href="https://github.com/Mathigon/core.js/blob/master/LICENSE">MIT License</a></footer></div></div><script src="/scripts.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q || []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37525836-5', 'auto');
+ga('send', 'pageview');</script></body></html>
