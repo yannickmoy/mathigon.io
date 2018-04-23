@@ -1,376 +1,2762 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>fermat.js</title><meta name="description" content="High-performance mathematics utilities, random number generation, Complex number, Vector, Matrix and geometry classes, unit conversion and expression parsing."><meta name="format-detection" content="telephone=no"><!-- Mobile Data--><meta name="HandheldFriendly" content="True"><meta name="MobileOptimized" content="480"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><meta http-equiv="cleartype" content="on"><!-- Web Apps and Images--><link rel="icon" sizes="64x64" href="/images/favicons/favicon-64.png"><link rel="icon" sizes="96x96" href="/images/favicons/favicon-96.png"><link rel="icon" sizes="192x192" href="/images/favicons/favicon-192.png"><link rel="apple-touch-icon" href="/images/favicons/favicon-192.png"><!-- Facebook Open Graph--><meta property="og:title" content="fermat.js"><meta property="og:description" content="High-performance mathematics utilities, random number generation, Complex number, Vector, Matrix and geometry classes, unit conversion and expression parsing."><meta property="og:image" content="http://mathigon.org/images/og-tile.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:type" content="school"><meta property="og:site_name" content="Mathigon"><!-- Twitter Cards--><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="fermat.js"><meta name="twitter:description" content="High-performance mathematics utilities, random number generation, Complex number, Vector, Matrix and geometry classes, unit conversion and expression parsing."><meta name="twitter:image" content="http://mathigon.org/images/og-tile.png"><meta name="twitter:site" content="@MathigonProject"><meta name="twitter:creator" content="@philipplegner"><!-- Stylesheets--><link href="/styles.css" rel="stylesheet"><link href="http://mathigon.org/styles/fonts.css" rel="stylesheet"></head><body class="fermat"><header><nav class="row wrap"><a id="nav-logo" href="/" class="nav-link"></a><a id="nav-core" href="/core" class="nav-link grow">    <span class="nav-img"></span><span class="nav-text">core.js</span></a><a id="nav-fermat" href="/fermat" class="nav-link grow"><span class="nav-img"></span><span class="nav-text">fermat.js</span></a><a id="nav-boost" href="/boost" class="nav-link grow">  <span class="nav-img"></span><span class="nav-text">boost.js</span></a><a id="nav-slate" href="/slate" class="nav-link grow">  <span class="nav-img"></span><span class="nav-text">slate.js</span></a></nav></header><div class="hero"><div class="wrap"><h1>fermat.js</h1><div class="row"><p style="margin-right: 20px; width: 260px" class="subtitle grow">High-performance mathematics utilities, random number generation, Complex number, Vector, Matrix and geometry classes, unit conversion and expression parsing.</p><div style="width: 260px"><a href="https://github.com/Mathigon/fermat.js" class="link"><div class="link-github"></div> Explore Source on GitHub</a><a href="https://github.com/Mathigon/fermat.js/archive/master.zip" download class="link"><div class="link-download"></div> Download boost.min.js</a></div></div></div></div><div id="body" class="wrap"><div class="sidebar"><div class="sidebar-wrap"></div><div class="sidebar-fill"></div></div><div id="api" class="content"><h1>Introduction</h1><p>Currently, fermat.js can only use JavaScript's native numbers, and is restricted to their size and precision. In the future, we want to create BigNum and arbitrary precision number classes that work with all functions below.</p><h1 id="arithmetic">Arithmetic</h1>
-<h3 id="nearlyequals">nearlyEquals</h3>
-<p><code>Boolean nearlyEquals(Number x, Number y, [Number tolerance])</code></p>
-<h3 id="sign">sign</h3>
-<p><code>Integer sign(Number x)</code></p>
-<h3 id="square">square</h3>
-<p><code>Number square(Number x)</code></p>
-<h3 id="cube">cube</h3>
-<p><code>Number cube(Number x)</code></p>
-<h3 id="numberformat">numberFormat</h3>
-<p><code>String numberFormat(Number x)</code></p>
-<h3 id="toordinal">toOrdinal</h3>
-<p><code>String toOrdinal(Number x)</code></p>
-<h3 id="digits">digits</h3>
-<p><code>Integer[] digits(Integer n)</code></p>
-<h3 id="fractionaldigits">fractionalDigits</h3>
-<p><code>Integer[] fractionalDigits(Number n)</code></p>
-<h3 id="decimalplaces">decimalPlaces</h3>
-<p><code>Integer decimalPlaces(Number n)</code></p>
-<h3 id="round">round</h3>
-<p><code>Number round(Number n, [Integer precision])</code></p>
-<h3 id="roundto">roundTo</h3>
-<p><code>Number roundTo(Number n, [Number increment])</code></p>
-<h3 id="roundtowardszero">roundTowardsZero</h3>
-<p><code>Integer roundTowardsZero(Number n)</code></p>
-<h3 id="tofraction">toFraction</h3>
-<p><code>[Number numerator, Integer denominator] toFraction(Number n, [Number precision])</code></p>
-<h3 id="mod">mod</h3>
-<p><code>Number mod(Number a, Number m)</code></p>
-<h3 id="log">log</h3>
-<p><code>Number log(Number x, [Number b])</code></p>
-<h1 id="number-theory">Number Theory</h1>
-<h3 id="gcd">gcd</h3>
-<p><code>Integer gcd(Integer ...n)</code></p>
-<h3 id="lcm">lcm</h3>
-<p><code>Integer lcm(Integer ...n)</code></p>
-<h3 id="isprime">isPrime</h3>
-<p><code>Boolean isPrime(Integer n)</code></p>
-<h3 id="primefactorisation">primeFactorisation</h3>
-<p><code>Integer[] primeFactorisation(Integer n)</code></p>
-<h3 id="primefactors">primeFactors</h3>
-<p><code>Integer[] primeFactors(Integer n)</code></p>
-<h3 id="listprimes">listPrimes</h3>
-<p><code>Integer[] listPrimes([Integer n])</code></p>
-<h1 id="combinatorics">Combinatorics</h1>
-<h3 id="factorial">factorial</h3>
-<p><code>Number factorial(Number x)</code></p>
-<h3 id="binomial">binomial</h3>
-<p><code>Integer binomial(Integer n, Integer k)</code></p>
-<h3 id="permutations">permutations</h3>
-<p><code>Array[] permutations(Array a)</code></p>
-<h3 id="subsets">subsets</h3>
-<p><code>Array[] subsets(Array a)</code></p>
-<h3 id="coinflips">coinFlips</h3>
-<p><code>String coinFlips([Integer n])</code></p>
-<h1 id="probability">Probability</h1>
-<h3 id="shuffle">shuffle</h3>
-<p><code>Array shuffle(Array a)</code></p>
-<h3 id="integer">integer</h3>
-<p><code>Integer integer(Integer a, [Integer b])</code></p>
-<h3 id="intarray">intArray</h3>
-<p><code>Integer[] intArray(Integer n)</code>
-Returns a random array of consecutive integers from 0 to n-1 (inclusive)</p>
-<h3 id="weighted">weighted</h3>
-<p><code>Integer intArray(Number[] weights)</code>
-<code>String intArray({String key: Number weight} weights)</code></p>
-<h3 id="smart">smart</h3>
-<p><code>Integer smart(Integer n, String id)</code></p>
-<h3 id="bernoulli">bernoulli</h3>
-<p><code>Integer bernoulli([Number p])</code></p>
-<h3 id="binomial">binomial</h3>
-<p><code>Integer binomial([Integer n, Number p])</code></p>
-<h3 id="poisson">poisson</h3>
-<p><code>Number poisson([Number l])</code></p>
-<h3 id="uniform">uniform</h3>
-<p><code>Number uniform([Number a, Number b])</code></p>
-<h3 id="normal">normal</h3>
-<p><code>Number normal([Number mean, Number variance])</code></p>
-<h3 id="exponential">exponential</h3>
-<p><code>Number exponential([Number l])</code></p>
-<h3 id="geometric">geometric</h3>
-<p><code>Number geometric([Number p])</code></p>
-<h3 id="cauchy">cauchy</h3>
-<p><code>Number cauchy()</code></p>
-<h3 id="normalpdf">normalPDF</h3>
-<p><code>Number normalPDF(Number x, [Number mean, Number variance])</code></p>
-<h1 id="statistics">Statistics</h1>
-<h3 id="mean">mean</h3>
-<p><code>Number mean(Number[] data)</code></p>
-<h3 id="median">median</h3>
-<p><code>Number median(Number[] data)</code></p>
-<h3 id="mode">mode</h3>
-<p><code>Any median(Any[] data)</code></p>
-<h3 id="variance">variance</h3>
-<p><code>Number variance(Number[] data)</code></p>
-<h3 id="stddev">stdDev</h3>
-<p><code>Number stdDev(Number[] data)</code></p>
-<h3 id="covariance">covariance</h3>
-<p><code>Number covariance(Number[] d1, Number[] d2)</code></p>
-<h3 id="correlation">correlation</h3>
-<p><code>Number correlation(Number[] d1, Number[] d2)</code></p>
-<h3 id="rsquared">rSquared</h3>
-<p><code>Number rSquared(Number[] source, Number[] regression)</code></p>
-<h3 id="linearregression">linearRegression</h3>
-<p><code>Function linearRegression(Number[] x, Number[] y)</code></p>
-<h1 id="complex">Complex</h1>
-<h2 id="constructor">Constructor</h2>
-<h3 id="constructor">Constructor</h3>
-<p><code>new Complex([Number re, Number im])</code></p>
-<h2 id="properties">Properties</h2>
-<h3 id="-magnitude">.magnitude</h3>
-<p><code>Number .magnitude</code></p>
-<h3 id="-phase">.phase</h3>
-<p><code>Number .phase</code></p>
-<h3 id="-conjugate">.conjugate</h3>
-<p><code>Complex .conjugate</code></p>
-<h2 id="methods">Methods</h2>
-<h3 id="-tostring">.toString</h3>
-<p><code>String .toString()</code></p>
-<h2 id="static-methods">Static Methods</h2>
-<h3 id="complex-sum">Complex.sum</h3>
-<p><code>Complex Complex.sum(Complex a, Complex b)</code></p>
-<h3 id="complex-difference">Complex.difference</h3>
-<p><code>Complex Complex.difference(Complex a, Complex b)</code></p>
-<h3 id="complex-product">Complex.product</h3>
-<p><code>Complex Complex.product(Complex a, Complex b)</code></p>
-<h3 id="complex-quotient">Complex.quotient</h3>
-<p><code>Complex Complex.quotient(Complex a, Complex b)</code></p>
-<h1 id="vector">Vector</h1>
-<h2 id="constructor">Constructor</h2>
-<h3 id="vector">Vector</h3>
-<p><code>new Vector()</code></p>
-<h2 id="properties">Properties</h2>
-<h3 id="-total">.total</h3>
-<p><code>Number .total</code></p>
-<h3 id="-average">.average</h3>
-<p><code>Number .average</code></p>
-<h3 id="-norm">.norm</h3>
-<p><code>Number .norm</code></p>
-<h3 id="-first">.first</h3>
-<p><code>Number .first</code></p>
-<h3 id="-last">.last</h3>
-<p><code>Number .last</code></p>
-<h3 id="-min">.min</h3>
-<p><code>Number .min</code></p>
-<h3 id="-max">.max</h3>
-<p><code>Number .max</code></p>
-<h3 id="-range">.range</h3>
-<p><code>[Number, Number] .range</code></p>
-<h2 id="methods">Methods</h2>
-<h3 id="-map">.map</h3>
-<p><code>Vector .map(Function fn)</code></p>
-<h3 id="-shift">.shift</h3>
-<p><code>Vector .shift(Number x)</code></p>
-<h3 id="-scale">.scale</h3>
-<p><code>Vector .scale(Number x)</code></p>
-<h3 id="-normalise">.normalise</h3>
-<p><code>Vector .normalise()</code></p>
-<h3 id="-tostring">.toString</h3>
-<p><code>String .toString()</code></p>
-<h2 id="static-methods">Static Methods</h2>
-<h3 id="vector-equals">Vector.equals</h3>
-<p><code>Boolean Vector.equals(Vector a, Vector b)</code></p>
-<h3 id="vector-sum">Vector.sum</h3>
-<p><code>Vector Vector.sum(Vector a, Vector b)</code></p>
-<h3 id="vector-difference">Vector.difference</h3>
-<p><code>Vector Vector.difference(Vector a, Vector b)</code></p>
-<h3 id="vector-product">Vector.product</h3>
-<p><code>Vector Vector.product(Vector a, Vector b)</code></p>
-<h3 id="vector-dot">Vector.dot</h3>
-<p><code>Number Vector.dot(Vector a, Vector b)</code></p>
-<h3 id="vector-cross">Vector.cross</h3>
-<p><code>Vector Vector.cross(Vector a, Vector b)</code></p>
-<h3 id="vector-cross2d">Vector.cross2D</h3>
-<p><code>Number Vector.equals(Number[] a, Number[] b)</code></p>
-<h1 id="matrix-alpha-">Matrix (alpha)</h1>
-<h2 id="constructors">Constructors</h2>
-<h3 id="matrix">Matrix</h3>
-<p><code>new Matrix()</code></p>
-<h3 id="matrix-rotation">Matrix.rotation</h3>
-<p><code>Matrix Matrix.rotation(Number angle)</code></p>
-<h3 id="matrix-shear">Matrix.shear</h3>
-<p><code>Matrix Matrix.shear(Number angle)</code></p>
-<h3 id="matrix-reflection">Matrix.reflection</h3>
-<p><code>Matrix Matrix.reflection()</code></p>
-<h3 id="matrix-projection">Matrix.projection</h3>
-<p><code>Matrix Matrix.rotation()</code></p>
-<h2 id="properties">Properties</h2>
-<h3 id="-issquare">.isSquare</h3>
-<p><code>Boolean .isSquare</code></p>
-<h3 id="-row">.row</h3>
-<p><code>Vector .row(Integer i)</code></p>
-<h3 id="-column">.column</h3>
-<p><code>Vector .column(Integer j)</code></p>
-<h3 id="-transpose">.transpose</h3>
-<p><code>Matrix .transpose</code></p>
-<h3 id="-inverse">.inverse</h3>
-<p><code>Matrix .inverse</code></p>
-<h3 id="-determinant">.determinant</h3>
-<p><code>Number .determinant</code></p>
-<h2 id="methods">Methods</h2>
-<h3 id="-scalarmultiply">.scalarMultiply</h3>
-<p><code>Matrix .scalarMultiply(Number x)</code></p>
-<h2 id="static-methods">Static Methods</h2>
-<h3 id="matrix-add">Matrix.add</h3>
-<p><code>Matrix Matrix.add(Matrix a, Matrix b)</code></p>
-<h3 id="matrix-product">Matrix.product</h3>
-<p><code>Matrix Matrix.product((Matrix|Vector) a, (Matrix|Vector) b)</code></p>
-<h1 id="geometry-alpha-">Geometry (alpha)</h1>
-<h2 id="shape">Shape</h2>
-<h4 id="properties">Properties</h4>
+<!DOCTYPE html><html class="ready"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>fermat.js</title><meta name="description" content="Powerful mathematics, statistics and geometry library, containing everything from number theory to random numbers, expression parsing and linear algebra classes."><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><meta http-equiv="cleartype" content="on"><meta property="og:title" content="fermat.js"><meta property="og:description" content="Powerful mathematics, statistics and geometry library, containing everything from number theory to random numbers, expression parsing and linear algebra classes."><meta property="og:image" content="https://mathigon.org/images/og-tile.png"><meta property="og:site_name" content="Mathigon"><meta name="twitter:site" content="@MathigonProject"><link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,300,400i&amp;amp;subset=greek" rel="stylesheet" type="text/css"><link href="/styles.css" rel="stylesheet"></head><body><header><a id="logo" href="/"><svg class="icon" viewBox="0 0 36 36" width="36" height="36"><use xlink:href="/images/icons.svg#logo"></use></svg><svg class="icon" viewBox="0 0 120 36" width="120" height="36"><use xlink:href="/images/icons.svg#title-io"></use></svg></a><nav><div class="nav-item"><div class="nav-link dropdown-title"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#javascript"></use></svg>JS Libraries</div><div class="dropdown-body"><a class="nav-dropdown-item red" href="/core"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#core"></use></svg>core.js</a><a class="nav-dropdown-item blue" href="/fermat"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#fermat"></use></svg>fermat.js</a><a class="nav-dropdown-item green" href="/boost"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#boost"></use></svg>boost.js</a></div></div><div class="nav-item"><div class="nav-link dropdown-title"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#library"></use></svg>Textbook Content</div><div class="dropdown-body"><a class="nav-dropdown-item yellow" href="/markdown"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#markdown"></use></svg>Markdown</a><a class="nav-dropdown-item blue" href="/functions"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#functions"></use></svg>Functions</a><a class="nav-dropdown-item red" href="/others"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#others"></use></svg>Others</a></div></div></nav></header><div class="x-blue"><div class="hero slanted"><div class="container narrow"><h1><svg class="icon" viewBox="0 0 72 72" width="72" height="72"><use xlink:href="/images/icons.svg#fermat"></use></svg>fermat.js</h1><p class="subtitle">Powerful mathematics, statistics and geometry library, containing everything from number theory to random numbers, expression parsing and linear algebra classes.</p><div class="btn-row"><a class="btn btn-white m-blue" href="https://github.com/mathigon/fermat.js"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#github"></use></svg>View on Github</a></div></div></div><div class="container narrow api"><div class="sidebar"><div class="sidebar-body"></div></div><div class="api-body"><h2><a id="arithmetic"></a> Arithmetic</h2>
+<h3><a id="nearlyEquals"></a>nearlyEquals(x, y, t) : <code>boolean</code></h3>
+<p>Checks if two numbers are nearly equals.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td><code>number</code></td>
+<td></td>
+</tr>
+<tr>
+<td>y</td>
+<td><code>number</code></td>
+<td></td>
+</tr>
+<tr>
+<td>t</td>
+<td><code>number</code></td>
+<td>The allowed tolerance</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="isBetween"></a>isBetween(x, a, b, t) : <code>boolean</code></h3>
+<p>Checks if a number x is between two numbers a and b.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>a</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>b</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>t</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="sign"></a>sign(x, t) : <code>number</code></h3>
+<p>Returns the sign of a number x, as +1, 0 or –1.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>t</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="numberFormat"></a>numberFormat(x) : <code>string</code></h3>
+<p>Adds thousand separators to a number.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="toOrdinal"></a>toOrdinal(x) : <code>string</code></h3>
+<p>Converts a number to an ordinal.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="toWord"></a>toWord(n) : <code>string</code></h3>
+<p>Spells a number as an English word.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="digits"></a>digits(n) : <code>Array.&lt;number&gt;</code></h3>
+<p>Returns the digits of a number n.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="fractionalDigits"></a>fractionalDigits(n) : <code>Array.&lt;number&gt;</code></h3>
+<p>Returns the decimal digits of a number n.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="decimalPlaces"></a>decimalPlaces(n) : <code>number</code></h3>
+<p>Returns the number of decimal places in a number n.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="round"></a>round(n, precision) : <code>number</code></h3>
+<p>Rounds a number <code>n</code> to <code>precision</code> decimal places.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>precision</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="roundTo"></a>roundTo(n, increment) : <code>number</code></h3>
+<p>Round a number <code>n</code> to the nearest multiple of <code>increment</code>.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>increment</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="toFraction"></a>toFraction(decimal, precision) : <code>Array.&lt;number&gt;</code></h3>
+<p>Returns an [numerator, denominator] array that approximated a <code>decimal</code> to
+<code>precision</code>. See http://en.wikipedia.org/wiki/Continued_fraction</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>decimal</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>precision</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="mod"></a>mod(a, m) : <code>number</code></h3>
+<p>Calculates <code>a mod m</code>. The JS implementation of the % operator returns the
+symmetric modulo. Both are identical if a &gt;= 0 and m &gt;= 0 but the results
+differ if a or m &lt; 0.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>m</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="log"></a>log(x, b) : <code>number</code></h3>
+<p>Calculates the logarithm of <code>x</code> with base <code>b</code>.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>b</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2><a id="combinatorics"></a> Combinatorics</h2>
+<h3><a id="factorial"></a>factorial(x) : <code>number</code></h3>
+<p>Calculates the factorial of a number x.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="binomial"></a>binomial(n, k) : <code>number</code></h3>
+<p>Calculates the binomial coefficient nCk of two numbers n and k.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>k</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="permutations"></a>permutations(arr) : <code>Array</code></h3>
+<p>Returns an array of all possible permutations of an input array arr. In this
+implementation, we always have permutations(arr)[0] == arr.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>arr</td>
+<td><code>Array</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="subsets"></a>subsets(arr, length) : <code>Array</code></h3>
+<p>Returns an array of all possible subsets (of given length) of an input array
+arr.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>arr</td>
+<td><code>Array</code></td>
+</tr>
+<tr>
+<td>length</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="coinFlips"></a>coinFlips(n) : <code>string</code></h3>
+<p>Returns a string of n coin flips like 'HTTHTHTTHTT'.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2><a id="complex"></a> Complex</h2>
+<h3><a id="Complex"></a>Complex</h3>
+<p>Complex number class.</p>
+<p>Kind: global class</p>
 <ul>
-<li><code>.center</code></li>
-</ul>
-<h4 id="methods">Methods</h4>
+<li><a href="#Complex">Complex</a>
 <ul>
-<li><code>.transform</code></li>
-<li><code>.rotate</code></li>
-<li><code>.reflect</code></li>
-<li><code>.scale</code></li>
-<li><code>.shift</code></li>
-<li><code>.contains</code></li>
-<li><code>.at</code></li>
-</ul>
-<h2 id="point-_extends-shape_">Point <em>extends Shape</em></h2>
-<h3 id="point">Point</h3>
-<p><code>new Point(Number x, Number y)</code></p>
-<h4 id="properties">Properties</h4>
+<li><em>instance</em>
 <ul>
-<li><code>.distance</code></li>
-<li><code>.polar</code></li>
-<li><code>.project</code></li>
+<li><a href="#Complex+magnitude">.magnitude</a> : <code>number</code></li>
+<li><a href="#Complex+phase">.phase</a> : <code>number</code></li>
+<li><a href="#Complex+conjugate">.conjugate</a> : <a href="#Complex"><code>Complex</code></a></li>
+<li><a href="#Complex+toString">.toString()</a> : <code>string</code></li>
 </ul>
-<h4 id="methods">Methods</h4>
+</li>
+<li><em>static</em>
 <ul>
-<li><code>.distanceFromLine</code></li>
+<li><a href="#Complex.sum">.sum(c1, c2)</a> : <a href="#Complex"><code>Complex</code></a></li>
+<li><a href="#Complex.difference">.difference(c1, c2)</a> : <a href="#Complex"><code>Complex</code></a></li>
+<li><a href="#Complex.product">.product(c1, c2)</a> : <a href="#Complex"><code>Complex</code></a></li>
+<li><a href="#Complex.quotient">.quotient(c1, c2)</a> : <a href="#Complex"><code>Complex</code></a></li>
 </ul>
-<h3 id="point-frompolar">Point.fromPolar</h3>
-<h3 id="point-dot">Point.dot</h3>
-<h3 id="point-sum">Point.sum</h3>
-<h3 id="point-difference">Point.difference</h3>
-<h3 id="point-distance">Point.distance</h3>
-<h3 id="point-manhatten">Point.manhatten</h3>
-<h2 id="line-_extends-shape_">Line <em>extends Shape</em></h2>
-<h3 id="line">Line</h3>
-<p><code>new Line(Point p1, Point p2)</code></p>
-<h4 id="properties">Properties</h4>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4><a id="Complex+magnitude"></a>complex.magnitude : <code>number</code></h4>
+<p>Kind: instance property of <a href="#Complex"><code>Complex</code></a></p>
+<hr>
+<h4><a id="Complex+phase"></a>complex.phase : <code>number</code></h4>
+<p>Kind: instance property of <a href="#Complex"><code>Complex</code></a></p>
+<hr>
+<h4><a id="Complex+conjugate"></a>complex.conjugate : <a href="#Complex"><code>Complex</code></a></h4>
+<p>Kind: instance property of <a href="#Complex"><code>Complex</code></a></p>
+<hr>
+<h4><a id="Complex+toString"></a>complex.toString() : <code>string</code></h4>
+<p>Kind: instance method of <a href="#Complex"><code>Complex</code></a></p>
+<hr>
+<h4><a id="Complex.sum"></a>Complex.sum(c1, c2) : <a href="#Complex"><code>Complex</code></a></h4>
+<p>Calculates the sum of two complex numbers c1 and c2.</p>
+<p>Kind: static method of <a href="#Complex"><code>Complex</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>c1</td>
+<td><a href="#Complex"><code>Complex</code></a></td>
+</tr>
+<tr>
+<td>c2</td>
+<td><a href="#Complex"><code>Complex</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Complex.difference"></a>Complex.difference(c1, c2) : <a href="#Complex"><code>Complex</code></a></h4>
+<p>Calculates the difference of two complex numbers c1 and c2.</p>
+<p>Kind: static method of <a href="#Complex"><code>Complex</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>c1</td>
+<td><a href="#Complex"><code>Complex</code></a></td>
+</tr>
+<tr>
+<td>c2</td>
+<td><a href="#Complex"><code>Complex</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Complex.product"></a>Complex.product(c1, c2) : <a href="#Complex"><code>Complex</code></a></h4>
+<p>Calculates the product of two complex numbers c1 and c2.</p>
+<p>Kind: static method of <a href="#Complex"><code>Complex</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>c1</td>
+<td><a href="#Complex"><code>Complex</code></a></td>
+</tr>
+<tr>
+<td>c2</td>
+<td><a href="#Complex"><code>Complex</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Complex.quotient"></a>Complex.quotient(c1, c2) : <a href="#Complex"><code>Complex</code></a></h4>
+<p>Calculates the sum of two quotient numbers c1 and c2.</p>
+<p>Kind: static method of <a href="#Complex"><code>Complex</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>c1</td>
+<td><a href="#Complex"><code>Complex</code></a></td>
+</tr>
+<tr>
+<td>c2</td>
+<td><a href="#Complex"><code>Complex</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2><a id="cryptography"></a> Cryptography</h2>
+<h3><a id="caesarCipher"></a>caesarCipher(msg, shift) : <code>string</code></h3>
+<p>Enciphers a string by shifting every letter by a certain offset through the
+alphabet.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>msg</td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td>shift</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="vigenereCipher"></a>vigenereCipher(msg, key) : <code>string</code></h3>
+<p>Enciphers a string using a Vigenere cipher with a give key.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>msg</td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td>key</td>
+<td><code>string</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="letterFrequency"></a>letterFrequency(letter) : <code>number</code></h3>
+<p>Returns the relative frequency of a given letter in the English language.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>letter</td>
+<td><code>string</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="cipherLetterFreq"></a>cipherLetterFreq(cipher) : <code>Array.&lt;number&gt;</code></h3>
+<p>Counts how often every letter occurs in a given cipher.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cipher</td>
+<td><code>str</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2><a id="expression"></a> Expression</h2>
+<h3><a id="Expression"></a>Expression</h3>
+<p>Parsed mathematical expression class.</p>
+<p>Kind: global class</p>
 <ul>
-<li><code>.length</code></li>
-<li><code>.normalVector</code></li>
-</ul>
-<h4 id="methods">Methods</h4>
+<li><a href="#Expression">Expression</a>
 <ul>
-<li><code>.perpendicular</code></li>
+<li><a href="#Expression+simplified">.simplified</a> : <a href="#Expression"><code>Expression</code></a></li>
+<li><a href="#Expression+functions">.functions</a> : <code>Array.&lt;string&gt;</code></li>
+<li><a href="#Expression+variables">.variables</a> : <code>Array.&lt;string&gt;</code></li>
+<li><a href="#Expression+toString">.toString()</a> : <code>string</code></li>
+<li><a href="#Expression+same">.same(other)</a> : <code>boolean</code></li>
+<li><a href="#Expression+equals">.equals(other)</a> : <code>boolean</code></li>
+<li><a href="#Expression+evaluate">.evaluate(vars)</a> : <code>number</code></li>
+<li><a href="#Expression+numEquals">.numEquals(other)</a> : <code>boolean</code></li>
+<li><a href="#Expression+substitute">.substitute(vars)</a> : <a href="#Expression"><code>Expression</code></a></li>
 </ul>
-<h3 id="line-isparallel">Line.isParallel</h3>
-<h3 id="line-isperpendicular">Line.isPerpendicular</h3>
-<h3 id="line-anglebetween">Line.angleBetween</h3>
-<h3 id="line-anglebisector">Line.angleBisector</h3>
-<h2 id="bezier-_extends-shape_">Bezier <em>extends Shape</em></h2>
-<h3 id="bezier">Bezier</h3>
-<p><code>new Bezier(Point p1, Point p2, [Point q1, Point q2])</code></p>
-<h4 id="properties">Properties</h4>
+</li>
+</ul>
+<hr>
+<h4><a id="Expression+simplified"></a>expression.simplified : <a href="#Expression"><code>Expression</code></a></h4>
+<p>Kind: instance property of <a href="#Expression"><code>Expression</code></a></p>
+<hr>
+<h4><a id="Expression+functions"></a>expression.functions : <code>Array.&lt;string&gt;</code></h4>
+<p>Kind: instance property of <a href="#Expression"><code>Expression</code></a></p>
+<hr>
+<h4><a id="Expression+variables"></a>expression.variables : <code>Array.&lt;string&gt;</code></h4>
+<p>Kind: instance property of <a href="#Expression"><code>Expression</code></a></p>
+<hr>
+<h4><a id="Expression+toString"></a>expression.toString() : <code>string</code></h4>
+<p>Kind: instance method of <a href="#Expression"><code>Expression</code></a></p>
+<hr>
+<h4><a id="Expression+same"></a>expression.same(other) : <code>boolean</code></h4>
+<p>Checks if two expressions are exactly the same.</p>
+<p>Kind: instance method of <a href="#Expression"><code>Expression</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>other</td>
+<td><a href="#Expression"><code>Expression</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Expression+equals"></a>expression.equals(other) : <code>boolean</code></h4>
+<p>Checks if two expressions are mathematically equivalent.</p>
+<p>Kind: instance method of <a href="#Expression"><code>Expression</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>other</td>
+<td><a href="#Expression"><code>Expression</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Expression+evaluate"></a>expression.evaluate(vars) : <code>number</code></h4>
+<p>Evaluates this expression with a given set of variable values.</p>
+<p>Kind: instance method of <a href="#Expression"><code>Expression</code></a><br>
+<strong>Throws</strong>:</p>
 <ul>
-<li><code>.length</code></li>
+<li><code>ExprError</code></li>
 </ul>
-<h2 id="ellipse-_extends-shape_">Ellipse <em>extends Shape</em></h2>
-<h3 id="ellipse">Ellipse</h3>
-<h2 id="circle-_extends-ellipse_">Circle <em>extends Ellipse</em></h2>
-<h3 id="circle">Circle</h3>
-<p><code>new Circle([Point center, Number radius])</code></p>
-<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vars</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Expression+numEquals"></a>expression.numEquals(other) : <code>boolean</code></h4>
+<p>Numerically checks if two expressions are mathematically equal.</p>
+<p>Kind: instance method of <a href="#Expression"><code>Expression</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>other</td>
+<td><a href="#Expression"><code>Expression</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Expression+substitute"></a>expression.substitute(vars) : <a href="#Expression"><code>Expression</code></a></h4>
+<p>Substitutes certain variables in an expression.</p>
+<p>Kind: instance method of <a href="#Expression"><code>Expression</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vars</td>
+<td><code>Object</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2><a id="geometry"></a> Geometry</h2>
+<h3><a id="Point"></a>Point</h3>
+<p>A single point class defined by two coordinates x and y.</p>
+<p>Kind: global class</p>
 <ul>
-<li><code>.circumference</code></li>
-<li><code>.area</code></li>
-</ul>
-<h2 id="rectangle-_extends-shape_">Rectangle <em>extends Shape</em></h2>
-<h3 id="rectangle">Rectangle</h3>
-<p><code>new Rectangle([Point x, Point y, Number width, Number height])</code></p>
-<h4 id="properties">Properties</h4>
+<li><a href="#Point">Point</a>
 <ul>
-<li><code>.circumference</code></li>
-<li><code>.area</code></li>
-<li><code>.polygon</code></li>
-</ul>
-<h2 id="square-_extends-rectangle_">Square <em>extends Rectangle</em></h2>
-<h3 id="square">Square</h3>
-<p><code>new Square([Point x, Point y, Number width])</code></p>
-<h2 id="polygon-_extends-shape_">Polygon <em>extends Shape</em></h2>
-<h3 id="polygon">Polygon</h3>
-<p><code>new Polygon(Point[] ...points)</code></p>
-<h4 id="properties">Properties</h4>
+<li><em>instance</em>
 <ul>
-<li><code>.centroid</code></li>
-<li><code>.circumference</code></li>
-<li><code>.area</code></li>
+<li><a href="#Point+x">.x</a> : <code>number</code></li>
+<li><a href="#Point+y">.y</a> : <code>number</code></li>
+<li><a href="#Point+normal">.normal</a> : <a href="#Point"><code>Point</code></a></li>
+<li><a href="#Point+length">.length</a> : <code>number</code></li>
+<li><a href="#Point+inverse">.inverse</a> : <a href="#Point"><code>Point</code></a></li>
+<li><a href="#Point+flip">.flip</a> : <a href="#Point"><code>Point</code></a></li>
+<li><a href="#Point+array">.array</a> : <code>Array.&lt;number&gt;</code></li>
+<li><a href="#Point+distanceFromLine">.distanceFromLine(l)</a> : <code>number</code></li>
+<li><a href="#Point+clamp">.clamp(xMin, xMax, yMin, yMax)</a> : <a href="#Point"><code>Point</code></a></li>
+<li><a href="#Point+transform">.transform(m)</a> : <a href="#Point"><code>Point</code></a></li>
+<li><a href="#Point+rotate">.rotate(angle, c)</a> : <a href="#Point"><code>Point</code></a></li>
+<li><a href="#Point+reflect">.reflect(l)</a> : <a href="#Point"><code>Point</code></a></li>
 </ul>
-<h2 id="triangle-_extends-polygon_">Triangle <em>extends Polygon</em></h2>
-<h3 id="triangle">Triangle</h3>
-<p><code>new Triangle(Point[] ...points)</code></p>
-<h4 id="properties">Properties</h4>
+</li>
+<li><em>static</em>
 <ul>
-<li><code>.circumcircle</code></li>
-<li><code>.incircle</code></li>
+<li><a href="#Point.average">.average(...points)</a> : <a href="#Point"><code>Point</code></a></li>
+<li><a href="#Point.dot">.dot(p1, p2)</a> : <code>number</code></li>
+<li><a href="#Point.distance">.distance(p1, p2)</a> : <code>number</code></li>
+<li><a href="#Point.manhattan">.manhattan(p1, p2)</a> : <code>number</code></li>
+<li><a href="#Point.interpolate">.interpolate(p1, p2, t)</a> : <a href="#Point"><code>Point</code></a></li>
+<li><a href="#Point.equals">.equals(p1, p2)</a> : <code>boolean</code></li>
 </ul>
-<h2 id="utilities">Utilities</h2>
-<h3 id="angle">angle</h3>
-<p><code>Number angle(Point a, Point b, Point c)</code></p>
-<h3 id="same">same</h3>
-<p><code>Boolean same(Shape x, Shape y)</code></p>
-<h3 id="intersect">intersect</h3>
-<p><code>Shape intersect(Shape x, Shape y)</code></p>
-<h3 id="convexhull">convexHull</h3>
-<p><code>Polygon convexHull(Point[] ...points)</code></p>
-<h3 id="travellingsalesman">travellingSalesman</h3>
-<p><code>{ Integer[] path, Number length } travellingSalesman(Array distanceMatrix)</code></p>
-<h3 id="graphcolouring">graphColouring</h3>
-<p><code>Integer[] graphColouring(Array adjacencyMatrix)</code></p>
-<h1 id="cryptography">Cryptography</h1>
-<h3 id="caesarcipher">caesarCipher</h3>
-<p><code>String caesarCipher(String msg, Integer shift)</code></p>
-<h3 id="vigenerecipher">vigenereCipher</h3>
-<p><code>String vigenereCipher(String msg, String key)</code></p>
-<h3 id="letterfrequency">letterFrequency</h3>
-<p><code>Number letterFrequency(String letter)</code></p>
-<h3 id="cipherletterfreq">cipherLetterFreq</h3>
-<p><code>Integer[] cipherLetterFreq(String msg)</code></p>
-<h1 id="numeric">Numeric</h1>
-<h3 id="bisect">bisect</h3>
-<p><code>Integer bisect(Function fn, [Integer precision, Number l, Number h]</code></p>
-<p>more functions to come soon ...</p>
-<h1 id="units">Units</h1>
-<h3 id="convert">convert</h3>
-<p><code>Number convert(Number value, String fromUnit, [String toUnit])</code></p>
-<h3 id="define">define</h3>
-<p><code>String define(String unit)</code></p>
-<h1 id="expression-alpha-">Expression (alpha)</h1>
-<h2 id="constructor">Constructor</h2>
-<h3 id="expression">Expression</h3>
-<p><code>new Expression(String str)</code></p>
-<h2 id="methods">Methods</h2>
-<h3 id="-simplify">.simplify</h3>
-<p><code>Expression .simplify()</code></p>
-<h3 id="-evaluate">.evaluate</h3>
-<p><code>Any .evaluate([Object variables])</code></p>
-<h3 id="-tostring">.toString</h3>
-<p><code>String .toString()</code></p>
-<h1 id="bignum-alpha-">Bignum (alpha)</h1>
-<h2 id="constructor">Constructor</h2>
-<h3 id="integer">Integer</h3>
-<p><code>new Integer((String|Integer) n, [Integer base])</code></p>
-<h2 id="properties">Properties</h2>
-<h3 id="-sqrt">.sqrt</h3>
-<h3 id="-power">.power</h3>
-<h3 id="-mod">.mod</h3>
-<h3 id="-factorial">.factorial</h3>
-<h2 id="methods">Methods</h2>
-<h3 id="-tostring">.toString</h3>
-<h3 id="-valueof">.valueOf</h3>
-<h3 id="-isunit">.isUnit</h3>
-<h3 id="-iszero">.isZero</h3>
-<h2 id="static-methods">Static Methods</h2>
-<h3 id="integer-equals">Integer.equals</h3>
-<h3 id="integer-lessorequal">Integer.lessOrEqual</h3>
-<h3 id="integer-greater">Integer.greater</h3>
-<h3 id="integer-greaterorequal">Integer.greaterOrEqual</h3>
-<h3 id="integer-add">Integer.add</h3>
-<h3 id="integer-subtract">Integer.subtract</h3>
-<h3 id="integer-multiply">Integer.multiply</h3>
-<h3 id="integer-divide">Integer.divide</h3>
-<h3 id="integer-lcm">Integer.lcm</h3>
-<h3 id="integer-gcd">Integer.gcd</h3>
-<footer>© 2016 Mathigon, <a href="https://github.com/Mathigon/core.js/blob/master/LICENSE">MIT License</a></footer></div></div><script src="/scripts.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4><a id="Point+x"></a>point.x : <code>number</code></h4>
+<p>Kind: instance property of <a href="#Point"><code>Point</code></a></p>
+<hr>
+<h4><a id="Point+y"></a>point.y : <code>number</code></h4>
+<p>Kind: instance property of <a href="#Point"><code>Point</code></a></p>
+<hr>
+<h4><a id="Point+normal"></a>point.normal : <a href="#Point"><code>Point</code></a></h4>
+<p>Kind: instance property of <a href="#Point"><code>Point</code></a></p>
+<hr>
+<h4><a id="Point+length"></a>point.length : <code>number</code></h4>
+<p>Kind: instance property of <a href="#Point"><code>Point</code></a></p>
+<hr>
+<h4><a id="Point+inverse"></a>point.inverse : <a href="#Point"><code>Point</code></a></h4>
+<p>Kind: instance property of <a href="#Point"><code>Point</code></a></p>
+<hr>
+<h4><a id="Point+flip"></a>point.flip : <a href="#Point"><code>Point</code></a></h4>
+<p>Kind: instance property of <a href="#Point"><code>Point</code></a></p>
+<hr>
+<h4><a id="Point+array"></a>point.array : <code>Array.&lt;number&gt;</code></h4>
+<p>Kind: instance property of <a href="#Point"><code>Point</code></a></p>
+<hr>
+<h4><a id="Point+distanceFromLine"></a>point.distanceFromLine(l) : <code>number</code></h4>
+<p>Calculates the shortest distance between this point and a line l.</p>
+<p>Kind: instance method of <a href="#Point"><code>Point</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>l</td>
+<td><a href="#Line"><code>Line</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Point+clamp"></a>point.clamp(xMin, xMax, yMin, yMax) : <a href="#Point"><code>Point</code></a></h4>
+<p>Clamps this point between given x and y values.</p>
+<p>Kind: instance method of <a href="#Point"><code>Point</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>xMin</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>xMax</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>yMin</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>yMax</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Point+transform"></a>point.transform(m) : <a href="#Point"><code>Point</code></a></h4>
+<p>Transforms this point using a 2x3 matrix m.</p>
+<p>Kind: instance method of <a href="#Point"><code>Point</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>m</td>
+<td><code>Array.&lt;Array.&lt;number&gt;&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Point+rotate"></a>point.rotate(angle, c) : <a href="#Point"><code>Point</code></a></h4>
+<p>Rotates this point by a given angle (in radians) around c.</p>
+<p>Kind: instance method of <a href="#Point"><code>Point</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>angle</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>c</td>
+<td><a href="#Point"><code>Point</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Point+reflect"></a>point.reflect(l) : <a href="#Point"><code>Point</code></a></h4>
+<p>Reflects this point across a line l.</p>
+<p>Kind: instance method of <a href="#Point"><code>Point</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>l</td>
+<td><a href="#Line"><code>Line</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Point.average"></a>Point.average(...points) : <a href="#Point"><code>Point</code></a></h4>
+<p>Calculates the average of multiple points.</p>
+<p>Kind: static method of <a href="#Point"><code>Point</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>...points</td>
+<td><a href="#Point"><code>Point</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Point.dot"></a>Point.dot(p1, p2) : <code>number</code></h4>
+<p>Calculates the dot product of two points p1 and p2.</p>
+<p>Kind: static method of <a href="#Point"><code>Point</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p1</td>
+<td><a href="#Point"><code>Point</code></a></td>
+</tr>
+<tr>
+<td>p2</td>
+<td><a href="#Point"><code>Point</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Point.distance"></a>Point.distance(p1, p2) : <code>number</code></h4>
+<p>Returns the Euclidean distance between two points p1 and p2.</p>
+<p>Kind: static method of <a href="#Point"><code>Point</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p1</td>
+<td><a href="#Point"><code>Point</code></a></td>
+</tr>
+<tr>
+<td>p2</td>
+<td><a href="#Point"><code>Point</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Point.manhattan"></a>Point.manhattan(p1, p2) : <code>number</code></h4>
+<p>Returns the Manhattan distance between two points p1 and p2.</p>
+<p>Kind: static method of <a href="#Point"><code>Point</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p1</td>
+<td><a href="#Point"><code>Point</code></a></td>
+</tr>
+<tr>
+<td>p2</td>
+<td><a href="#Point"><code>Point</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Point.interpolate"></a>Point.interpolate(p1, p2, t) : <a href="#Point"><code>Point</code></a></h4>
+<p>Interpolates two points p1 and p2 by a factor of t.</p>
+<p>Kind: static method of <a href="#Point"><code>Point</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p1</td>
+<td><a href="#Point"><code>Point</code></a></td>
+<td></td>
+</tr>
+<tr>
+<td>p2</td>
+<td><a href="#Point"><code>Point</code></a></td>
+<td></td>
+</tr>
+<tr>
+<td>t</td>
+<td><code>number</code></td>
+<td><code>0.5</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Point.equals"></a>Point.equals(p1, p2) : <code>boolean</code></h4>
+<p>Checks if two points p1 and p2 are equal.</p>
+<p>Kind: static method of <a href="#Point"><code>Point</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p1</td>
+<td><a href="#Point"><code>Point</code></a></td>
+</tr>
+<tr>
+<td>p2</td>
+<td><a href="#Point"><code>Point</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="Angle"></a>Angle</h3>
+<p>A 2-dimensional angle class, defined by three points.</p>
+<p>Kind: global class</p>
+<ul>
+<li><a href="#Angle">Angle</a>
+<ul>
+<li><a href="#Angle+rad">.rad</a> : <code>number</code></li>
+<li><a href="#Angle+deg">.deg</a> : <code>number</code></li>
+<li><a href="#Angle+size">.size</a> : <code>number</code></li>
+<li><a href="#Angle+isRight">.isRight</a> : <code>boolean</code></li>
+<li><a href="#Angle+bisector">.bisector</a> : <a href="#Line"><code>Line</code></a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4><a id="Angle+rad"></a>angle.rad : <code>number</code></h4>
+<p>The size, in radians, of this angle.</p>
+<p>Kind: instance property of <a href="#Angle"><code>Angle</code></a></p>
+<hr>
+<h4><a id="Angle+deg"></a>angle.deg : <code>number</code></h4>
+<p>The size, in degrees, of this angle.</p>
+<p>Kind: instance property of <a href="#Angle"><code>Angle</code></a></p>
+<hr>
+<h4><a id="Angle+size"></a>angle.size : <code>number</code></h4>
+<p>The smaller size of this angle, in radians, between 0 and Pi.</p>
+<p>Kind: instance property of <a href="#Angle"><code>Angle</code></a></p>
+<hr>
+<h4><a id="Angle+isRight"></a>angle.isRight : <code>boolean</code></h4>
+<p>Checks if this angle is right-angled.</p>
+<p>Kind: instance property of <a href="#Angle"><code>Angle</code></a></p>
+<hr>
+<h4><a id="Angle+bisector"></a>angle.bisector : <a href="#Line"><code>Line</code></a></h4>
+<p>The bisector of this angle.</p>
+<p>Kind: instance property of <a href="#Angle"><code>Angle</code></a></p>
+<hr>
+<h3><a id="Line"></a>Line</h3>
+<p>An infinite straight line that goes through two points.</p>
+<p>Kind: global class</p>
+<ul>
+<li><a href="#Line">Line</a>
+<ul>
+<li><em>instance</em>
+<ul>
+<li><a href="#Line+p1">.p1</a> : <a href="#Point"><code>Point</code></a></li>
+<li><a href="#Line+p2">.p2</a> : <a href="#Point"><code>Point</code></a></li>
+<li><a href="#Line+midpoint">.midpoint</a> : <a href="#Point"><code>Point</code></a></li>
+<li><a href="#Line+perpBisector">.perpBisector</a> : <a href="#Line"><code>Line</code></a></li>
+<li><a href="#Line+parallel">.parallel(p)</a> : <a href="#Line"><code>Line</code></a></li>
+<li><a href="#Line+perpendicular">.perpendicular(p)</a> : <a href="#Line"><code>Line</code></a></li>
+<li><a href="#Line+contains">.contains(p)</a> : <code>boolean</code></li>
+<li><a href="#Line+project">.project(p)</a> : <a href="#Point"><code>Point</code></a></li>
+</ul>
+</li>
+<li><em>static</em>
+<ul>
+<li><a href="#Line.equals">.equals(l1, l2)</a> : <code>boolean</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4><a id="Line+p1"></a>line.p1 : <a href="#Point"><code>Point</code></a></h4>
+<p>Kind: instance property of <a href="#Line"><code>Line</code></a></p>
+<hr>
+<h4><a id="Line+p2"></a>line.p2 : <a href="#Point"><code>Point</code></a></h4>
+<p>Kind: instance property of <a href="#Line"><code>Line</code></a></p>
+<hr>
+<h4><a id="Line+midpoint"></a>line.midpoint : <a href="#Point"><code>Point</code></a></h4>
+<p>The midpoint of this line.</p>
+<p>Kind: instance property of <a href="#Line"><code>Line</code></a></p>
+<hr>
+<h4><a id="Line+perpBisector"></a>line.perpBisector : <a href="#Line"><code>Line</code></a></h4>
+<p>The perpendicular bisector of this line.</p>
+<p>Kind: instance property of <a href="#Line"><code>Line</code></a></p>
+<hr>
+<h4><a id="Line+parallel"></a>line.parallel(p) : <a href="#Line"><code>Line</code></a></h4>
+<p>Finds the line parallel to this one, going though point p.</p>
+<p>Kind: instance method of <a href="#Line"><code>Line</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p</td>
+<td><a href="#Point"><code>Point</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Line+perpendicular"></a>line.perpendicular(p) : <a href="#Line"><code>Line</code></a></h4>
+<p>Finds the line perpendicular to this one, going though point p.</p>
+<p>Kind: instance method of <a href="#Line"><code>Line</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p</td>
+<td><a href="#Point"><code>Point</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Line+contains"></a>line.contains(p) : <code>boolean</code></h4>
+<p>Checks if a point p lies on this line.</p>
+<p>Kind: instance method of <a href="#Line"><code>Line</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p</td>
+<td><a href="#Point"><code>Point</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Line+project"></a>line.project(p) : <a href="#Point"><code>Point</code></a></h4>
+<p>Projects a point p onto this line.</p>
+<p>Kind: instance method of <a href="#Line"><code>Line</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p</td>
+<td><a href="#Point"><code>Point</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Line.equals"></a>Line.equals(l1, l2) : <code>boolean</code></h4>
+<p>Checks if two lines l1 and l2 are equal.</p>
+<p>Kind: static method of <a href="#Line"><code>Line</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>l1</td>
+<td><a href="#Line"><code>Line</code></a></td>
+</tr>
+<tr>
+<td>l2</td>
+<td><a href="#Line"><code>Line</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="Segment"></a>Segment</h3>
+<p>A finite line segment defined by its two endpoints.</p>
+<p>Kind: global class</p>
+<ul>
+<li><a href="#Segment">Segment</a>
+<ul>
+<li><a href="#Segment.equals">.equals(l1, l2, [oriented])</a> : <code>boolean</code></li>
+<li><a href="#Segment.intersect">.intersect(l1, l2)</a> : <a href="#Point"><code>Point</code></a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4><a id="Segment.equals"></a>Segment.equals(l1, l2, [oriented]) : <code>boolean</code></h4>
+<p>Checks if two line segments l1 and l2 are equal.</p>
+<p>Kind: static method of <a href="#Segment"><code>Segment</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>l1</td>
+<td><a href="#Line"><code>Line</code></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>l2</td>
+<td><a href="#Line"><code>Line</code></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[oriented]</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>Make true of the orientation matters.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Segment.intersect"></a>Segment.intersect(l1, l2) : <a href="#Point"><code>Point</code></a></h4>
+<p>Finds the intersection of two line segments l1 and l2 (or null).</p>
+<p>Kind: static method of <a href="#Segment"><code>Segment</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>l1</td>
+<td><a href="#Line"><code>Line</code></a></td>
+</tr>
+<tr>
+<td>l2</td>
+<td><a href="#Line"><code>Line</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="Circle"></a>Circle</h3>
+<p>A circle with a given center and radius.</p>
+<p>Kind: global class</p>
+<ul>
+<li><a href="#Circle">Circle</a>
+<ul>
+<li><a href="#Circle+c">.c</a> : <a href="#Point"><code>Point</code></a></li>
+<li><a href="#Circle+r">.r</a> : <code>number</code></li>
+<li><a href="#Circle+circumference">.circumference</a> : <code>number</code></li>
+<li><a href="#Circle+area">.area</a> : <code>number</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4><a id="Circle+c"></a>circle.c : <a href="#Point"><code>Point</code></a></h4>
+<p>Kind: instance property of <a href="#Circle"><code>Circle</code></a></p>
+<hr>
+<h4><a id="Circle+r"></a>circle.r : <code>number</code></h4>
+<p>Kind: instance property of <a href="#Circle"><code>Circle</code></a></p>
+<hr>
+<h4><a id="Circle+circumference"></a>circle.circumference : <code>number</code></h4>
+<p>The length of the circumference of this circle.</p>
+<p>Kind: instance property of <a href="#Circle"><code>Circle</code></a></p>
+<hr>
+<h4><a id="Circle+area"></a>circle.area : <code>number</code></h4>
+<p>The area of this circle.</p>
+<p>Kind: instance property of <a href="#Circle"><code>Circle</code></a></p>
+<hr>
+<h3><a id="Arc"></a>Arc</h3>
+<p>An arc segment of a circle, with given center, start point and angle.</p>
+<p>Kind: global class</p>
+<hr>
+<h3><a id="Polygon"></a>Polygon</h3>
+<p>A polygon defined by its vertex points.</p>
+<p>Kind: global class</p>
+<ul>
+<li><a href="#Polygon">Polygon</a>
+<ul>
+<li><em>instance</em>
+<ul>
+<li><a href="#Polygon+points">.points</a> : <a href="#Point"><code>Array.&lt;Point&gt;</code></a></li>
+<li><a href="#Polygon+circumference">.circumference</a> : <code>number</code></li>
+<li><a href="#Polygon+signedArea">.signedArea</a> : <code>number</code></li>
+<li><a href="#Polygon+area">.area</a> : <code>number</code></li>
+<li><a href="#Polygon+centroid">.centroid</a> : <a href="#Point"><code>Point</code></a></li>
+<li><a href="#Polygon+edges">.edges</a> : <a href="#Segment"><code>Array.&lt;Segment&gt;</code></a></li>
+<li><a href="#Polygon+oriented">.oriented</a> : <a href="#Polygon"><code>Polygon</code></a></li>
+<li><a href="#Polygon+contains">.contains(p)</a> : <code>boolean</code></li>
+<li><a href="#Polygon+intersect">.intersect(polygon)</a> : <a href="#Polygon"><code>Polygon</code></a></li>
+</ul>
+</li>
+<li><em>static</em>
+<ul>
+<li><a href="#Polygon.collision">.collision(p1, p2)</a> : <code>boolean</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4><a id="Polygon+points"></a>polygon.points : <a href="#Point"><code>Array.&lt;Point&gt;</code></a></h4>
+<p>Kind: instance property of <a href="#Polygon"><code>Polygon</code></a></p>
+<hr>
+<h4><a id="Polygon+circumference"></a>polygon.circumference : <code>number</code></h4>
+<p>Kind: instance property of <a href="#Polygon"><code>Polygon</code></a></p>
+<hr>
+<h4><a id="Polygon+signedArea"></a>polygon.signedArea : <code>number</code></h4>
+<p>The (signed) area of this polygon. The result is positive if the vertices
+are ordered clockwise, and negative otherwise.</p>
+<p>Kind: instance property of <a href="#Polygon"><code>Polygon</code></a></p>
+<hr>
+<h4><a id="Polygon+area"></a>polygon.area : <code>number</code></h4>
+<p>Kind: instance property of <a href="#Polygon"><code>Polygon</code></a></p>
+<hr>
+<h4><a id="Polygon+centroid"></a>polygon.centroid : <a href="#Point"><code>Point</code></a></h4>
+<p>Kind: instance property of <a href="#Polygon"><code>Polygon</code></a></p>
+<hr>
+<h4><a id="Polygon+edges"></a>polygon.edges : <a href="#Segment"><code>Array.&lt;Segment&gt;</code></a></h4>
+<p>Kind: instance property of <a href="#Polygon"><code>Polygon</code></a></p>
+<hr>
+<h4><a id="Polygon+oriented"></a>polygon.oriented : <a href="#Polygon"><code>Polygon</code></a></h4>
+<p>The oriented version of this polygon (vertices in clockwise order).</p>
+<p>Kind: instance property of <a href="#Polygon"><code>Polygon</code></a></p>
+<hr>
+<h4><a id="Polygon+contains"></a>polygon.contains(p) : <code>boolean</code></h4>
+<p>Checks if a point p lies inside this polygon.</p>
+<p>Kind: instance method of <a href="#Polygon"><code>Polygon</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p</td>
+<td><a href="#Point"><code>Point</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Polygon+intersect"></a>polygon.intersect(polygon) : <a href="#Polygon"><code>Polygon</code></a></h4>
+<p>The intersection of this and another polygon, calculated using the
+Weiler–Atherton clipping algorithm</p>
+<p>Kind: instance method of <a href="#Polygon"><code>Polygon</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>polygon</td>
+<td><a href="#Polygon"><code>Polygon</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Polygon.collision"></a>Polygon.collision(p1, p2) : <code>boolean</code></h4>
+<p>Checks if two polygons p1 and p2 collide.</p>
+<p>Kind: static method of <a href="#Polygon"><code>Polygon</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p1</td>
+<td><a href="#Polygon"><code>Polygon</code></a></td>
+</tr>
+<tr>
+<td>p2</td>
+<td><a href="#Polygon"><code>Polygon</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="Polyline"></a>Polyline</h3>
+<p>A polyline defined by its vertex points.</p>
+<p>Kind: global class</p>
+<hr>
+<h4><a id="Polyline+edges"></a>polyline.edges : <a href="#Segment"><code>Array.&lt;Segment&gt;</code></a></h4>
+<p>Kind: instance property of <a href="#Polyline"><code>Polyline</code></a></p>
+<hr>
+<h3><a id="Triangle"></a>Triangle</h3>
+<p>A triangle defined by its three vertices.</p>
+<p>Kind: global class</p>
+<ul>
+<li><a href="#Triangle">Triangle</a>
+<ul>
+<li><a href="#Triangle+circumcircle">.circumcircle</a> : <a href="#Circle"><code>Circle</code></a></li>
+<li><a href="#Triangle+incircle">.incircle</a> : <a href="#Circle"><code>Circle</code></a></li>
+<li><a href="#Triangle+orthocenter">.orthocenter</a> : <a href="#Point"><code>Point</code></a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4><a id="Triangle+circumcircle"></a>triangle.circumcircle : <a href="#Circle"><code>Circle</code></a></h4>
+<p>Kind: instance property of <a href="#Triangle"><code>Triangle</code></a></p>
+<hr>
+<h4><a id="Triangle+incircle"></a>triangle.incircle : <a href="#Circle"><code>Circle</code></a></h4>
+<p>Kind: instance property of <a href="#Triangle"><code>Triangle</code></a></p>
+<hr>
+<h4><a id="Triangle+orthocenter"></a>triangle.orthocenter : <a href="#Point"><code>Point</code></a></h4>
+<p>Kind: instance property of <a href="#Triangle"><code>Triangle</code></a></p>
+<hr>
+<h3><a id="Rectangle"></a>Rectangle</h3>
+<p>A rectangle, defined by its top left vertex, width and height.</p>
+<p>Kind: global class</p>
+<ul>
+<li><a href="#Rectangle">Rectangle</a>
+<ul>
+<li><a href="#Rectangle+p">.p</a> : <a href="#Point"><code>Point</code></a></li>
+<li><a href="#Rectangle+w">.w</a> : <code>number</code></li>
+<li><a href="#Rectangle+h">.h</a> : <code>number</code></li>
+<li><a href="#Rectangle+center">.center</a> : <a href="#Point"><code>Point</code></a></li>
+<li><a href="#Rectangle+circumference">.circumference</a> : <code>number</code></li>
+<li><a href="#Rectangle+area">.area</a> : <code>number</code></li>
+<li><a href="#Rectangle+edges">.edges</a> : <a href="#Segment"><code>Array.&lt;Segment&gt;</code></a></li>
+<li><a href="#Rectangle+polygon">.polygon</a> : <a href="#Polygon"><code>Polygon</code></a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4><a id="Rectangle+p"></a>rectangle.p : <a href="#Point"><code>Point</code></a></h4>
+<p>Kind: instance property of <a href="#Rectangle"><code>Rectangle</code></a></p>
+<hr>
+<h4><a id="Rectangle+w"></a>rectangle.w : <code>number</code></h4>
+<p>Kind: instance property of <a href="#Rectangle"><code>Rectangle</code></a></p>
+<hr>
+<h4><a id="Rectangle+h"></a>rectangle.h : <code>number</code></h4>
+<p>Kind: instance property of <a href="#Rectangle"><code>Rectangle</code></a></p>
+<hr>
+<h4><a id="Rectangle+center"></a>rectangle.center : <a href="#Point"><code>Point</code></a></h4>
+<p>Kind: instance property of <a href="#Rectangle"><code>Rectangle</code></a></p>
+<hr>
+<h4><a id="Rectangle+circumference"></a>rectangle.circumference : <code>number</code></h4>
+<p>Kind: instance property of <a href="#Rectangle"><code>Rectangle</code></a></p>
+<hr>
+<h4><a id="Rectangle+area"></a>rectangle.area : <code>number</code></h4>
+<p>Kind: instance property of <a href="#Rectangle"><code>Rectangle</code></a></p>
+<hr>
+<h4><a id="Rectangle+edges"></a>rectangle.edges : <a href="#Segment"><code>Array.&lt;Segment&gt;</code></a></h4>
+<p>Kind: instance property of <a href="#Rectangle"><code>Rectangle</code></a></p>
+<hr>
+<h4><a id="Rectangle+polygon"></a>rectangle.polygon : <a href="#Polygon"><code>Polygon</code></a></h4>
+<p>A polygon class representing this rectangle.</p>
+<p>Kind: instance property of <a href="#Rectangle"><code>Rectangle</code></a></p>
+<hr>
+<h3><a id="Square"></a>Square</h3>
+<p>A square, defined by its top left vertex and size.</p>
+<p>Kind: global class</p>
+<hr>
+<h3><a id="intersections"></a>intersections(...elements) : <code>*</code></h3>
+<p>Returns the intersection of two or more geometry objects.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>...elements</td>
+<td><code>*</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2><a id="matrix"></a> Matrix</h2>
+<h3><a id="module_matrix"></a>matrix</h3>
+<ul>
+<li><a href="#module_matrix">matrix</a>
+<ul>
+<li><a href="#module_matrix.identity">.identity(n)</a> : <code>Array.&lt;Array.&lt;number&gt;&gt;</code></li>
+<li><a href="#module_matrix.fill">.fill(x, y, value)</a> : <code>Array.&lt;Array.&lt;number&gt;&gt;</code></li>
+<li><a href="#module_matrix.sum">.sum(...matrices)</a> : <code>Array.&lt;Array.&lt;number&gt;&gt;</code></li>
+<li><a href="#module_matrix.scalarProduct">.scalarProduct(M, v)</a> : <code>Array.&lt;Array.&lt;number&gt;&gt;</code></li>
+<li><a href="#module_matrix.product">.product(...matrices)</a> : <code>Array.&lt;Array.&lt;number&gt;&gt;</code></li>
+<li><a href="#module_matrix.transpose">.transpose(M)</a> :</li>
+<li><a href="#module_matrix.determinant">.determinant(M)</a> :</li>
+<li><a href="#module_matrix.inverse">.inverse(M)</a> :</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4><a id="module_matrix.identity"></a>matrix.identity(n) : <code>Array.&lt;Array.&lt;number&gt;&gt;</code></h4>
+<p>Returns the identity matrix of size n.</p>
+<p>Kind: static method of <a href="#module_matrix"><code>matrix</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_matrix.fill"></a>matrix.fill(x, y, value) : <code>Array.&lt;Array.&lt;number&gt;&gt;</code></h4>
+<p>Fills a matrix of size x, y with a given value.</p>
+<p>Kind: static method of <a href="#module_matrix"><code>matrix</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>y</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>value</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_matrix.sum"></a>matrix.sum(...matrices) : <code>Array.&lt;Array.&lt;number&gt;&gt;</code></h4>
+<p>Calculates the sum of multiple matrices.</p>
+<p>Kind: static method of <a href="#module_matrix"><code>matrix</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>...matrices</td>
+<td><code>Array.&lt;Array.&lt;number&gt;&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_matrix.scalarProduct"></a>matrix.scalarProduct(M, v) : <code>Array.&lt;Array.&lt;number&gt;&gt;</code></h4>
+<p>Multiplies a matrix M by a scalar v.</p>
+<p>Kind: static method of <a href="#module_matrix"><code>matrix</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M</td>
+<td><code>Array.&lt;Array.&lt;number&gt;&gt;</code></td>
+</tr>
+<tr>
+<td>v</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_matrix.product"></a>matrix.product(...matrices) : <code>Array.&lt;Array.&lt;number&gt;&gt;</code></h4>
+<p>Calculates the matrix product of multiple matrices.</p>
+<p>Kind: static method of <a href="#module_matrix"><code>matrix</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>...matrices</td>
+<td><code>Array.&lt;Array.&lt;number&gt;&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_matrix.transpose"></a>matrix.transpose(M) :</h4>
+<p>Calculates the transpose of a matrix M.</p>
+<p>Kind: static method of <a href="#module_matrix"><code>matrix</code></a><br>
+<strong>Returns</strong>: Array.&lt;number[]&gt;</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M</td>
+<td><code>Array.&lt;Array.&lt;number&gt;&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_matrix.determinant"></a>matrix.determinant(M) :</h4>
+<p>Calculates the determinant of a matrix M.</p>
+<p>Kind: static method of <a href="#module_matrix"><code>matrix</code></a><br>
+<strong>Returns</strong>: number</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M</td>
+<td><code>Array.&lt;Array.&lt;number&gt;&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_matrix.inverse"></a>matrix.inverse(M) :</h4>
+<p>Calculates the inverse of a matrix M.</p>
+<p>Kind: static method of <a href="#module_matrix"><code>matrix</code></a><br>
+<strong>Returns</strong>: Array.&lt;number[]&gt;</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M</td>
+<td><code>Array.&lt;Array.&lt;number&gt;&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2><a id="number-theory"></a> Number Theory</h2>
+<h3><a id="gcd"></a>gcd(...numbers) : <code>number</code></h3>
+<p>Calculates the greatest common divisor of multiple numbers.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>...numbers</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="lcm"></a>lcm(...numbers) : <code>number</code></h3>
+<p>Calculates the lowest common multiple of multiple numbers.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>...numbers</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="isPrime"></a>isPrime(n) : <code>boolean</code></h3>
+<p>Checks if a number n is prime. Contains no dependencies, so that this
+function can easily be stringified and run in a web worker.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="primeFactorisation"></a>primeFactorisation(n) : <code>Array.&lt;number&gt;</code></h3>
+<p>Finds the prime factorisation of a number n.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="primeFactors"></a>primeFactors(n) : <code>Array.&lt;number&gt;</code></h3>
+<p>Finds all prime factors of a number n.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="listPrimes"></a>listPrimes(n) : <code>Array.&lt;number&gt;</code></h3>
+<p>Lists all prime numbers between 0 and n.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="generatePrime"></a>generatePrime(d) : <code>number</code></h3>
+<p>Generates a random prime number with d digits, where 2 &lt;= d &lt;= 16. Contains
+no dependencies, so that this function can easily be stringified and run in
+a web worker.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="goldbach"></a>goldbach(x) : <code>Array.&lt;number&gt;</code></h3>
+<p>Tries to write a number x as the sum of two primes. Contains no dependencies,
+so that this function can easily be stringified and run in a web worker.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2><a id="numeric"></a> Numeric</h2>
+<h3><a id="bisect"></a>bisect(fn, precision, l, h) : <code>number</code></h3>
+<p>Uses interval bisection to find a solution to fn(x) = 0. For example,
+bisect(function(x){ return Math.cos(x/2); }, 10) =&gt; Pi</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fn</td>
+<td><code>function</code></td>
+</tr>
+<tr>
+<td>precision</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>l</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>h</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="integrate"></a>integrate(fn, xMin, xMax, dx) : <code>number</code></h3>
+<p>Riemann-integrates a function fn from xMin to xMax, with an interval size dx.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fn</td>
+<td><code>function</code></td>
+</tr>
+<tr>
+<td>xMin</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>xMax</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>dx</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2><a id="random"></a> Random</h2>
+<h3><a id="module_random"></a>random</h3>
+<ul>
+<li><a href="#module_random">random</a>
+<ul>
+<li><a href="#module_random.shuffle">.shuffle(a)</a> : <code>Array</code></li>
+<li><a href="#module_random.integer">.integer(a, b)</a> : <code>number</code></li>
+<li><a href="#module_random.intArray">.intArray(n)</a> : <code>Array.&lt;number&gt;</code></li>
+<li><a href="#module_random.weighted">.weighted(obj)</a> : <code>*</code></li>
+<li><a href="#module_random.smart">.smart(n, id)</a> : <code>number</code></li>
+<li><a href="#module_random.bernoulli">.bernoulli(p)</a> : <code>number</code></li>
+<li><a href="#module_random.binomial">.binomial(n, p)</a> : <code>number</code></li>
+<li><a href="#module_random.poisson">.poisson(l)</a> : <code>number</code></li>
+<li><a href="#module_random.uniform">.uniform(a, b)</a> : <code>number</code></li>
+<li><a href="#module_random.normal">.normal(m, v)</a> : <code>number</code></li>
+<li><a href="#module_random.exponential">.exponential(l)</a> : <code>number</code></li>
+<li><a href="#module_random.geometric">.geometric(p)</a> : <code>number</code></li>
+<li><a href="#module_random.cauchy">.cauchy()</a> : <code>number</code></li>
+<li><a href="#module_random.normalPDF">.normalPDF(x, m, v)</a> : <code>number</code></li>
+<li><a href="#module_random.chiCDF">.chiCDF(chi, deg)</a> : <code>number</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4><a id="module_random.shuffle"></a>random.shuffle(a) : <code>Array</code></h4>
+<p>Randomly shuffles the elements in an array a.</p>
+<p>Kind: static method of <a href="#module_random"><code>random</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td><code>Array</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_random.integer"></a>random.integer(a, b) : <code>number</code></h4>
+<p>Generates a random integer between 0 and a, or between a and b.</p>
+<p>Kind: static method of <a href="#module_random"><code>random</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>b</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_random.intArray"></a>random.intArray(n) : <code>Array.&lt;number&gt;</code></h4>
+<p>Generates an array of the integers from 0 to n in random order.</p>
+<p>Kind: static method of <a href="#module_random"><code>random</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_random.weighted"></a>random.weighted(obj) : <code>*</code></h4>
+<p>Chooses a random value from weights [2, 5, 3] or { a: 2, b: 5, c: 3 }.</p>
+<p>Kind: static method of <a href="#module_random"><code>random</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>obj</td>
+<td><code>Object</code> | <code>Array</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_random.smart"></a>random.smart(n, id) : <code>number</code></h4>
+<p>Returns a random number between 0 and n, but avoids returning the same number
+multiple times in a row.</p>
+<p>Kind: static method of <a href="#module_random"><code>random</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>id</td>
+<td><code>string</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_random.bernoulli"></a>random.bernoulli(p) : <code>number</code></h4>
+<p>Generates a Bernoulli random variable.</p>
+<p>Kind: static method of <a href="#module_random"><code>random</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_random.binomial"></a>random.binomial(n, p) : <code>number</code></h4>
+<p>Generates a Binomial random variable.</p>
+<p>Kind: static method of <a href="#module_random"><code>random</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>p</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_random.poisson"></a>random.poisson(l) : <code>number</code></h4>
+<p>Generates a Poisson random variable.</p>
+<p>Kind: static method of <a href="#module_random"><code>random</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>l</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_random.uniform"></a>random.uniform(a, b) : <code>number</code></h4>
+<p>Generates a uniform random variable.</p>
+<p>Kind: static method of <a href="#module_random"><code>random</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>b</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_random.normal"></a>random.normal(m, v) : <code>number</code></h4>
+<p>Generates a normal random variable with mean m and variance v.</p>
+<p>Kind: static method of <a href="#module_random"><code>random</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>m</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>v</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_random.exponential"></a>random.exponential(l) : <code>number</code></h4>
+<p>Generates an exponential random variable.</p>
+<p>Kind: static method of <a href="#module_random"><code>random</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>l</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_random.geometric"></a>random.geometric(p) : <code>number</code></h4>
+<p>Generates a geometric random variable.</p>
+<p>Kind: static method of <a href="#module_random"><code>random</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_random.cauchy"></a>random.cauchy() : <code>number</code></h4>
+<p>Generates an Cauchy random variable.</p>
+<p>Kind: static method of <a href="#module_random"><code>random</code></a></p>
+<hr>
+<h4><a id="module_random.normalPDF"></a>random.normalPDF(x, m, v) : <code>number</code></h4>
+<p>Generates pdf(x) for the normal distribution with mean m and variance v.</p>
+<p>Kind: static method of <a href="#module_random"><code>random</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>m</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>v</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_random.chiCDF"></a>random.chiCDF(chi, deg) : <code>number</code></h4>
+<p>The chi CDF function.</p>
+<p>Kind: static method of <a href="#module_random"><code>random</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chi</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>deg</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2><a id="regression"></a> Regression</h2>
+<h3><a id="module_regression"></a>regression</h3>
+<ul>
+<li><a href="#module_regression">regression</a>
+<ul>
+<li><a href="#module_regression.linear">.linear(data)</a> : <code>Array.&lt;number&gt;</code></li>
+<li><a href="#module_regression.linearThroughOrigin">.linearThroughOrigin(data)</a> : <code>Array.&lt;number&gt;</code></li>
+<li><a href="#module_regression.exponential">.exponential(data)</a> : <code>Array.&lt;number&gt;</code></li>
+<li><a href="#module_regression.logarithmic">.logarithmic(data)</a> : <code>Array.&lt;number&gt;</code></li>
+<li><a href="#module_regression.power">.power(data)</a> : <code>Array.&lt;number&gt;</code></li>
+<li><a href="#module_regression.polynomial">.polynomial(data, order)</a> : <code>Array.&lt;number&gt;</code></li>
+<li><a href="#module_regression.coefficient">.coefficient(data, fn)</a> : <code>number</code></li>
+<li><a href="#module_regression.find">.find(data, threshold)</a> : <code>Object</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4><a id="module_regression.linear"></a>regression.linear(data) : <code>Array.&lt;number&gt;</code></h4>
+<p>Finds a linear regression that best approximates a set of data. The result
+will be an array [c, m], where y = m * x + c.</p>
+<p>Kind: static method of <a href="#module_regression"><code>regression</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td><code>Array.&lt;Array.&lt;number&gt;&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_regression.linearThroughOrigin"></a>regression.linearThroughOrigin(data) : <code>Array.&lt;number&gt;</code></h4>
+<p>Finds a linear regression going through the origin, that best approximates a
+set of data. The result will be an array [0, m], where y = m * x.</p>
+<p>Kind: static method of <a href="#module_regression"><code>regression</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td><code>Array.&lt;Array.&lt;number&gt;&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_regression.exponential"></a>regression.exponential(data) : <code>Array.&lt;number&gt;</code></h4>
+<p>Finds an exponential regression that best approximates a set of data. The
+result will be an array [a, b], where y = a * e^(bx).</p>
+<p>Kind: static method of <a href="#module_regression"><code>regression</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td><code>Array.&lt;Array.&lt;number&gt;&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_regression.logarithmic"></a>regression.logarithmic(data) : <code>Array.&lt;number&gt;</code></h4>
+<p>Finds a logarithmic regression that best approximates a set of data. The
+result will be an array [a, b], where y = a + b * log(x).</p>
+<p>Kind: static method of <a href="#module_regression"><code>regression</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td><code>Array.&lt;Array.&lt;number&gt;&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_regression.power"></a>regression.power(data) : <code>Array.&lt;number&gt;</code></h4>
+<p>Finds a power regression that best approximates a set of data. The result
+will be an array [a, b], where y = a * x^b.</p>
+<p>Kind: static method of <a href="#module_regression"><code>regression</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td><code>Array.&lt;Array.&lt;number&gt;&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_regression.polynomial"></a>regression.polynomial(data, order) : <code>Array.&lt;number&gt;</code></h4>
+<p>Finds a polynomial regression of given <code>order</code> that best approximates a set
+of data. The result will be an array giving the coefficients of the
+resulting polynomial.</p>
+<p>Kind: static method of <a href="#module_regression"><code>regression</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td><code>Array.&lt;Array.&lt;number&gt;&gt;</code></td>
+</tr>
+<tr>
+<td>order</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_regression.coefficient"></a>regression.coefficient(data, fn) : <code>number</code></h4>
+<p>Finds the regression coefficient of a given data set and regression function.</p>
+<p>Kind: static method of <a href="#module_regression"><code>regression</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td><code>Array.&lt;Array.&lt;number&gt;&gt;</code></td>
+</tr>
+<tr>
+<td>fn</td>
+<td><code>function</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="module_regression.find"></a>regression.find(data, threshold) : <code>Object</code></h4>
+<p>Finds the most suitable</p>
+<p>Kind: static method of <a href="#module_regression"><code>regression</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td><code>Array.&lt;Array.&lt;number&gt;&gt;</code></td>
+</tr>
+<tr>
+<td>threshold</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2><a id="statistics"></a> Statistics</h2>
+<h3><a id="mean"></a>mean(values) : <code>number</code></h3>
+<p>Calculates the mean of an array of numbers.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>values</td>
+<td><code>Array.&lt;number&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="median"></a>median(values) : <code>number</code></h3>
+<p>Calculates the median of an array of numbers.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>values</td>
+<td><code>Array.&lt;number&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="mode"></a>mode(values) : <code>number</code></h3>
+<p>Calculates the mode of an array of numbers. Returns null if no mode exists,
+i.e. there are multiple values with the same largest count.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>values</td>
+<td><code>Array.&lt;number&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="variance"></a>variance(values) : <code>number</code></h3>
+<p>Calculates the variance of an array of numbers.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>values</td>
+<td><code>Array.&lt;number&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="stdDev"></a>stdDev(values) : <code>number</code></h3>
+<p>Calculates the standard deviation of an array of numbers.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>values</td>
+<td><code>Array.&lt;number&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="covariance"></a>covariance(aX, aY) : <code>number</code></h3>
+<p>Calculates the covariance of the numbers in two arrays aX and aY.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aX</td>
+<td><code>Array.&lt;number&gt;</code></td>
+</tr>
+<tr>
+<td>aY</td>
+<td><code>Array.&lt;number&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="correlation"></a>correlation(aX, aY) : <code>number</code></h3>
+<p>Calculates the correlation between the numbers in two arrays aX and aY.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aX</td>
+<td><code>Array.&lt;number&gt;</code></td>
+</tr>
+<tr>
+<td>aY</td>
+<td><code>Array.&lt;number&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2><a id="vector"></a> Vector</h2>
+<h3><a id="Vector"></a>Vector</h3>
+<p>A n-dimensional Vector class.</p>
+<p>Kind: global class</p>
+<ul>
+<li><a href="#Vector">Vector</a>
+<ul>
+<li><em>instance</em>
+<ul>
+<li><a href="#Vector+length">.length</a> : <code>number</code></li>
+<li><a href="#Vector+magnitude">.magnitude</a> : <code>number</code></li>
+<li><a href="#Vector+normal">.normal</a> : <a href="#Vector"><code>Vector</code></a></li>
+<li><a href="#Vector+scale">.scale(q)</a> : <a href="#Vector"><code>Vector</code></a></li>
+<li><a href="#Vector+map">.map(fn)</a> : <a href="#Vector"><code>Vector</code></a></li>
+</ul>
+</li>
+<li><em>static</em>
+<ul>
+<li><a href="#Vector.fill">.fill(n, value)</a> : <a href="#Vector"><code>Vector</code></a></li>
+<li><a href="#Vector.sum">.sum(v1, v2)</a> : <a href="#Vector"><code>Vector</code></a></li>
+<li><a href="#Vector.difference">.difference(v1, v2)</a> : <a href="#Vector"><code>Vector</code></a></li>
+<li><a href="#Vector.product">.product(v1, v2)</a> : <a href="#Vector"><code>Vector</code></a></li>
+<li><a href="#Vector.dot">.dot(v1, v2)</a> : <code>number</code></li>
+<li><a href="#Vector.cross">.cross(v1, v2)</a> : <a href="#Vector"><code>Vector</code></a></li>
+<li><a href="#Vector.equals">.equals(v1, v2)</a> : <code>boolean</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4><a id="Vector+length"></a>vector.length : <code>number</code></h4>
+<p>Kind: instance property of <a href="#Vector"><code>Vector</code></a></p>
+<hr>
+<h4><a id="Vector+magnitude"></a>vector.magnitude : <code>number</code></h4>
+<p>Kind: instance property of <a href="#Vector"><code>Vector</code></a></p>
+<hr>
+<h4><a id="Vector+normal"></a>vector.normal : <a href="#Vector"><code>Vector</code></a></h4>
+<p>Kind: instance property of <a href="#Vector"><code>Vector</code></a></p>
+<hr>
+<h4><a id="Vector+scale"></a>vector.scale(q) : <a href="#Vector"><code>Vector</code></a></h4>
+<p>Scales this vector by a factor q.</p>
+<p>Kind: instance method of <a href="#Vector"><code>Vector</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>q</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Vector+map"></a>vector.map(fn) : <a href="#Vector"><code>Vector</code></a></h4>
+<p>Kind: instance method of <a href="#Vector"><code>Vector</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fn</td>
+<td><code>function</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Vector.fill"></a>Vector.fill(n, value) : <a href="#Vector"><code>Vector</code></a></h4>
+<p>Creates an <code>n</code>-dimensional vector filled with <code>value</code>.</p>
+<p>Kind: static method of <a href="#Vector"><code>Vector</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>value</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Vector.sum"></a>Vector.sum(v1, v2) : <a href="#Vector"><code>Vector</code></a></h4>
+<p>Calculates the sum of two vectors v1 and v2.</p>
+<p>Kind: static method of <a href="#Vector"><code>Vector</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1</td>
+<td><a href="#Vector"><code>Vector</code></a></td>
+</tr>
+<tr>
+<td>v2</td>
+<td><a href="#Vector"><code>Vector</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Vector.difference"></a>Vector.difference(v1, v2) : <a href="#Vector"><code>Vector</code></a></h4>
+<p>Calculates the difference of two vectors v1 and v2.</p>
+<p>Kind: static method of <a href="#Vector"><code>Vector</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1</td>
+<td><a href="#Vector"><code>Vector</code></a></td>
+</tr>
+<tr>
+<td>v2</td>
+<td><a href="#Vector"><code>Vector</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Vector.product"></a>Vector.product(v1, v2) : <a href="#Vector"><code>Vector</code></a></h4>
+<p>Calculates the element-wise product of two vectors v1 and v2.</p>
+<p>Kind: static method of <a href="#Vector"><code>Vector</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1</td>
+<td><a href="#Vector"><code>Vector</code></a></td>
+</tr>
+<tr>
+<td>v2</td>
+<td><a href="#Vector"><code>Vector</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Vector.dot"></a>Vector.dot(v1, v2) : <code>number</code></h4>
+<p>Calculates the dot product of two vectors v1 and v2.</p>
+<p>Kind: static method of <a href="#Vector"><code>Vector</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1</td>
+<td><a href="#Vector"><code>Vector</code></a></td>
+</tr>
+<tr>
+<td>v2</td>
+<td><a href="#Vector"><code>Vector</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Vector.cross"></a>Vector.cross(v1, v2) : <a href="#Vector"><code>Vector</code></a></h4>
+<p>Finds the cross product of two 3-dimensional vectors v1 and v2.</p>
+<p>Kind: static method of <a href="#Vector"><code>Vector</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1</td>
+<td><a href="#Vector"><code>Vector</code></a></td>
+</tr>
+<tr>
+<td>v2</td>
+<td><a href="#Vector"><code>Vector</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4><a id="Vector.equals"></a>Vector.equals(v1, v2) : <code>boolean</code></h4>
+<p>Checks if two vectors are equal.</p>
+<p>Kind: static method of <a href="#Vector"><code>Vector</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1</td>
+<td><a href="#Vector"><code>Vector</code></a></td>
+</tr>
+<tr>
+<td>v2</td>
+<td><a href="#Vector"><code>Vector</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<footer class="global-footer"><div class="footer-left"><a href="https://mathigon.org">Mathigon.org</a><span class="dot">•</span><a href="https://github.com/mathigon">Mathigon on Github</a><span class="dot">•</span><a href="https://mathigon.org/policies">Terms and Privacy</a></div><div class="footer-right">© Mathigon</div></footer></div></div></div><script src="/scripts.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q || []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
