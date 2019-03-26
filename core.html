@@ -418,6 +418,24 @@ array, continuously looping</p>
 </tbody>
 </table>
 <hr>
+<h3><a id="join"></a>join(...arrays) : <code>Array</code></h3>
+<p>Join multiple Arrays</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>...arrays</td>
+<td><code>Array</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
 <h3><a id="toLinkedList"></a>toLinkedList(array) : <code>Array</code></h3>
 <p>Converts an array into a one-way linked list, with .val and .next properties.</p>
 <p>Kind: global function</p>
@@ -833,21 +851,28 @@ Otherwise it just returns obj directly.</p>
 </tbody>
 </table>
 <hr>
-<h3><a id="deepExtend"></a>deepExtend(obj1, obj2)</h3>
-<p>Deep extends obj1 using th</p>
+<h3><a id="deepExtend"></a>deepExtend(obj1, obj2, [arrayMergeFn])</h3>
+<p>Deep extends obj1 with obj2. You can provide a custom array merge function.</p>
 <p>Kind: global function</p>
 <table>
 <thead>
 <tr>
 <th>Param</th>
+<th>Type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>obj1</td>
+<td><code>Object</code></td>
 </tr>
 <tr>
 <td>obj2</td>
+<td><code>Object</code></td>
+</tr>
+<tr>
+<td>[arrayMergeFn]</td>
+<td><code>function</code></td>
 </tr>
 </tbody>
 </table>

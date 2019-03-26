@@ -107,6 +107,25 @@ adding thousand separators.</p>
 </tbody>
 </table>
 <hr>
+<h3><a id="parseNumber"></a>parseNumber(str) : <code>number</code></h3>
+<p>Converts a number to a string, including . or , decimal points and
+thousands separators.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>str</td>
+<td><code>string</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
 <h3><a id="toOrdinal"></a>toOrdinal(x) : <code>string</code></h3>
 <p>Converts a number to an ordinal.</p>
 <p>Kind: global function</p>
@@ -305,6 +324,32 @@ differ if a or m &lt; 0.</p>
 </tr>
 <tr>
 <td>b</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="quadratic"></a>quadratic(a, b, c) : <code>Array.&lt;number&gt;</code></h3>
+<p>Solves the quadratic equation a x^2 + b x + c = 0</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>b</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td>c</td>
 <td><code>number</code></td>
 </tr>
 </tbody>
@@ -616,134 +661,6 @@ alphabet.</p>
 <tr>
 <td>cipher</td>
 <td><code>str</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2><a id="expression"></a> Expression</h2>
-<h3><a id="Expression"></a>Expression</h3>
-<p>Parsed mathematical expression class.</p>
-<p>Kind: global class</p>
-<ul>
-<li><a href="#Expression">Expression</a>
-<ul>
-<li><a href="#Expression+simplified">.simplified</a> : <a href="#Expression"><code>Expression</code></a></li>
-<li><a href="#Expression+functions">.functions</a> : <code>Array.&lt;string&gt;</code></li>
-<li><a href="#Expression+variables">.variables</a> : <code>Array.&lt;string&gt;</code></li>
-<li><a href="#Expression+mathML">.mathML</a> : <code>string</code></li>
-<li><a href="#Expression+toString">.toString()</a> : <code>string</code></li>
-<li><a href="#Expression+same">.same(other)</a> : <code>boolean</code></li>
-<li><a href="#Expression+equals">.equals(other)</a> : <code>boolean</code></li>
-<li><a href="#Expression+evaluate">.evaluate(vars)</a> : <code>number</code></li>
-<li><a href="#Expression+numEquals">.numEquals(other)</a> : <code>boolean</code></li>
-<li><a href="#Expression+substitute">.substitute(vars)</a> : <a href="#Expression"><code>Expression</code></a></li>
-</ul>
-</li>
-</ul>
-<hr>
-<h4><a id="Expression+simplified"></a>expression.simplified : <a href="#Expression"><code>Expression</code></a></h4>
-<p>Kind: instance property of <a href="#Expression"><code>Expression</code></a></p>
-<hr>
-<h4><a id="Expression+functions"></a>expression.functions : <code>Array.&lt;string&gt;</code></h4>
-<p>Kind: instance property of <a href="#Expression"><code>Expression</code></a></p>
-<hr>
-<h4><a id="Expression+variables"></a>expression.variables : <code>Array.&lt;string&gt;</code></h4>
-<p>Kind: instance property of <a href="#Expression"><code>Expression</code></a></p>
-<hr>
-<h4><a id="Expression+mathML"></a>expression.mathML : <code>string</code></h4>
-<p>Kind: instance property of <a href="#Expression"><code>Expression</code></a></p>
-<hr>
-<h4><a id="Expression+toString"></a>expression.toString() : <code>string</code></h4>
-<p>Kind: instance method of <a href="#Expression"><code>Expression</code></a></p>
-<hr>
-<h4><a id="Expression+same"></a>expression.same(other) : <code>boolean</code></h4>
-<p>Checks if two expressions are exactly the same.</p>
-<p>Kind: instance method of <a href="#Expression"><code>Expression</code></a></p>
-<table>
-<thead>
-<tr>
-<th>Param</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>other</td>
-<td><a href="#Expression"><code>Expression</code></a></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h4><a id="Expression+equals"></a>expression.equals(other) : <code>boolean</code></h4>
-<p>Checks if two expressions are mathematically equivalent.</p>
-<p>Kind: instance method of <a href="#Expression"><code>Expression</code></a></p>
-<table>
-<thead>
-<tr>
-<th>Param</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>other</td>
-<td><a href="#Expression"><code>Expression</code></a></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h4><a id="Expression+evaluate"></a>expression.evaluate(vars) : <code>number</code></h4>
-<p>Evaluates this expression with a given set of variable values.</p>
-<p>Kind: instance method of <a href="#Expression"><code>Expression</code></a><br>
-<strong>Throws</strong>:</p>
-<ul>
-<li><code>ExprError</code></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Param</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>vars</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h4><a id="Expression+numEquals"></a>expression.numEquals(other) : <code>boolean</code></h4>
-<p>Numerically checks if two expressions are mathematically equal.</p>
-<p>Kind: instance method of <a href="#Expression"><code>Expression</code></a></p>
-<table>
-<thead>
-<tr>
-<th>Param</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>other</td>
-<td><a href="#Expression"><code>Expression</code></a></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h4><a id="Expression+substitute"></a>expression.substitute(vars) : <a href="#Expression"><code>Expression</code></a></h4>
-<p>Substitutes certain variables in an expression.</p>
-<p>Kind: instance method of <a href="#Expression"><code>Expression</code></a></p>
-<table>
-<thead>
-<tr>
-<th>Param</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>vars</td>
-<td><code>Object</code></td>
 </tr>
 </tbody>
 </table>

@@ -1,44 +1,37 @@
-<!DOCTYPE html><html class="ready"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>hilbert.js</title><meta name="description" content="JavaScript expression parsing, MathML rendering and CAS."><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><meta http-equiv="cleartype" content="on"><meta property="og:title" content="hilbert.js"><meta property="og:description" content="JavaScript expression parsing, MathML rendering and CAS."><meta property="og:image" content="https://mathigon.org/images/og-tile/mathigon.jpg"><meta property="og:site_name" content="Mathigon"><meta name="twitter:site" content="@MathigonOrg"><link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,300,400i&amp;amp;subset=greek" rel="stylesheet" type="text/css"><link href="/styles.css?v=1" rel="stylesheet"></head><body><header><a id="logo" href="/"><svg class="icon" viewBox="0 0 36 36" width="36" height="36"><use xlink:href="/images/icons.svg#logo"></use></svg><svg class="icon" viewBox="0 0 120 36" width="120" height="36"><use xlink:href="/images/icons.svg#title-io"></use></svg></a><nav><div class="nav-item"><div class="nav-link dropdown-title"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#javascript"></use></svg><span class="nav-text">JS Libraries</span></div><div class="dropdown-body"><a class="nav-dropdown-item red" href="/core"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#core"></use></svg>core.js</a><a class="nav-dropdown-item blue" href="/fermat"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#fermat"></use></svg>fermat.js</a><a class="nav-dropdown-item blue" href="/hilbert"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#fermat"></use></svg>hilbert.js</a><a class="nav-dropdown-item green" href="/boost"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#boost"></use></svg>boost.js</a></div></div><div class="nav-item"><div class="nav-link dropdown-title"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#library"></use></svg><span class="nav-text">Textbook Content</span></div><div class="dropdown-body"><a class="nav-dropdown-item yellow" href="/markdown"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#markdown"></use></svg>Markdown</a><a class="nav-dropdown-item blue" href="/functions"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#functions"></use></svg>Functions</a><a class="nav-dropdown-item red" href="/others"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#others"></use></svg>Others</a></div></div></nav></header><div class="x-blue"><div class="hero slanted"><div class="container narrow"><h1><svg class="icon" viewBox="0 0 72 72" width="72" height="72"><use xlink:href="/images/icons.svg#fermat"></use></svg>hilbert.js</h1><p class="subtitle">JavaScript expression parsing, MathML rendering and CAS.</p><div class="btn-row"><a class="btn btn-white m-blue" href="https://github.com/mathigon/hilbert.js"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#github"></use></svg>View on Github</a></div></div></div><div class="container narrow api"><div class="sidebar"><div class="sidebar-body"></div></div><div class="api-body"><h2><a id="expression"></a> Expression</h2>
-<h3><a id="Expression"></a>Expression</h3>
+<!DOCTYPE html><html class="ready"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>hilbert.js</title><meta name="description" content="JavaScript expression parsing, MathML rendering and CAS."><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><meta http-equiv="cleartype" content="on"><meta property="og:title" content="hilbert.js"><meta property="og:description" content="JavaScript expression parsing, MathML rendering and CAS."><meta property="og:image" content="https://mathigon.org/images/og-tile/mathigon.jpg"><meta property="og:site_name" content="Mathigon"><meta name="twitter:site" content="@MathigonOrg"><link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,300,400i&amp;amp;subset=greek" rel="stylesheet" type="text/css"><link href="/styles.css?v=1" rel="stylesheet"></head><body><header><a id="logo" href="/"><svg class="icon" viewBox="0 0 36 36" width="36" height="36"><use xlink:href="/images/icons.svg#logo"></use></svg><svg class="icon" viewBox="0 0 120 36" width="120" height="36"><use xlink:href="/images/icons.svg#title-io"></use></svg></a><nav><div class="nav-item"><div class="nav-link dropdown-title"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#javascript"></use></svg><span class="nav-text">JS Libraries</span></div><div class="dropdown-body"><a class="nav-dropdown-item red" href="/core"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#core"></use></svg>core.js</a><a class="nav-dropdown-item blue" href="/fermat"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#fermat"></use></svg>fermat.js</a><a class="nav-dropdown-item blue" href="/hilbert"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#fermat"></use></svg>hilbert.js</a><a class="nav-dropdown-item green" href="/boost"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#boost"></use></svg>boost.js</a></div></div><div class="nav-item"><div class="nav-link dropdown-title"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#library"></use></svg><span class="nav-text">Textbook Content</span></div><div class="dropdown-body"><a class="nav-dropdown-item yellow" href="/markdown"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#markdown"></use></svg>Markdown</a><a class="nav-dropdown-item blue" href="/functions"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#functions"></use></svg>Functions</a><a class="nav-dropdown-item red" href="/others"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#others"></use></svg>Others</a></div></div></nav></header><div class="x-blue"><div class="hero slanted"><div class="container narrow"><h1><svg class="icon" viewBox="0 0 72 72" width="72" height="72"><use xlink:href="/images/icons.svg#fermat"></use></svg>hilbert.js</h1><p class="subtitle">JavaScript expression parsing, MathML rendering and CAS.</p><div class="btn-row"><a class="btn btn-white m-blue" href="https://github.com/mathigon/hilbert.js"><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="/images/icons.svg#github"></use></svg>View on Github</a></div></div></div><div class="container narrow api"><div class="sidebar"><div class="sidebar-body"></div></div><div class="api-body"><h2><a id="elements"></a> Elements</h2>
+<h3><a id="ExprElement"></a>ExprElement</h3>
+<p>Maths Expression</p>
 <p>Kind: global class</p>
 <ul>
-<li><a href="#Expression">Expression</a>
+<li><a href="#ExprElement">ExprElement</a>
 <ul>
-<li><em>instance</em>
-<ul>
-<li><a href="#Expression+simplified">.simplified</a> : <a href="#Expression"><code>Expression</code></a></li>
-<li><a href="#Expression+variables">.variables</a> : <code>Array.&lt;String&gt;</code></li>
-<li><a href="#Expression+functions">.functions</a> : <code>Array.&lt;String&gt;</code></li>
-<li><a href="#Expression+evaluate">.evaluate([_vars])</a> : <code>number</code> | <code>null</code></li>
-<li><a href="#Expression+substitute">.substitute([_vars])</a> : <a href="#Expression"><code>Expression</code></a></li>
-<li><a href="#Expression+toString">.toString()</a> : <code>string</code></li>
-<li><a href="#Expression+toMathML">.toMathML()</a> : <code>string</code></li>
-</ul>
-</li>
-<li><em>static</em>
-<ul>
-<li><a href="#Expression.parse">.parse(str)</a> : <a href="#Expression"><code>Expression</code></a></li>
-</ul>
-</li>
+<li><a href="#ExprElement+simplified">.simplified</a> : <code>Expression</code></li>
+<li><a href="#ExprElement+variables">.variables</a> : <code>Array.&lt;String&gt;</code></li>
+<li><a href="#ExprElement+functions">.functions</a> : <code>Array.&lt;String&gt;</code></li>
+<li><a href="#ExprElement+evaluate">.evaluate([_vars])</a> : <code>number</code> | <code>null</code></li>
+<li><a href="#ExprElement+substitute">.substitute([_vars])</a> : <code>Expression</code></li>
+<li><a href="#ExprElement+collapse">.collapse()</a> : <code>Expression</code></li>
+<li><a href="#ExprElement+toString">.toString()</a> : <code>string</code></li>
+<li><a href="#ExprElement+toMathML">.toMathML([_custom])</a> : <code>string</code></li>
 </ul>
 </li>
 </ul>
 <hr>
-<h4><a id="Expression+simplified"></a>expression.simplified : <a href="#Expression"><code>Expression</code></a></h4>
+<h4><a id="ExprElement+simplified"></a>exprElement.simplified : <code>Expression</code></h4>
 <p>Returns the simplest mathematically equivalent expression.</p>
-<p>Kind: instance property of <a href="#Expression"><code>Expression</code></a></p>
+<p>Kind: instance property of <a href="#ExprElement"><code>ExprElement</code></a></p>
 <hr>
-<h4><a id="Expression+variables"></a>expression.variables : <code>Array.&lt;String&gt;</code></h4>
+<h4><a id="ExprElement+variables"></a>exprElement.variables : <code>Array.&lt;String&gt;</code></h4>
 <p>Returns a list of all variables used in the expression.</p>
-<p>Kind: instance property of <a href="#Expression"><code>Expression</code></a></p>
+<p>Kind: instance property of <a href="#ExprElement"><code>ExprElement</code></a></p>
 <hr>
-<h4><a id="Expression+functions"></a>expression.functions : <code>Array.&lt;String&gt;</code></h4>
+<h4><a id="ExprElement+functions"></a>exprElement.functions : <code>Array.&lt;String&gt;</code></h4>
 <p>Returns a list of all functions called by the expression.</p>
-<p>Kind: instance property of <a href="#Expression"><code>Expression</code></a></p>
+<p>Kind: instance property of <a href="#ExprElement"><code>ExprElement</code></a></p>
 <hr>
-<h4><a id="Expression+evaluate"></a>expression.evaluate([_vars]) : <code>number</code> | <code>null</code></h4>
+<h4><a id="ExprElement+evaluate"></a>exprElement.evaluate([_vars]) : <code>number</code> | <code>null</code></h4>
 <p>Evaluates an expression using a given map of variables and functions.</p>
-<p>Kind: instance method of <a href="#Expression"><code>Expression</code></a></p>
+<p>Kind: instance method of <a href="#ExprElement"><code>ExprElement</code></a></p>
 <table>
 <thead>
 <tr>
@@ -54,9 +47,9 @@
 </tbody>
 </table>
 <hr>
-<h4><a id="Expression+substitute"></a>expression.substitute([_vars]) : <a href="#Expression"><code>Expression</code></a></h4>
+<h4><a id="ExprElement+substitute"></a>exprElement.substitute([_vars]) : <code>Expression</code></h4>
 <p>Substitutes a new expression for a variable.</p>
-<p>Kind: instance method of <a href="#Expression"><code>Expression</code></a></p>
+<p>Kind: instance method of <a href="#ExprElement"><code>ExprElement</code></a></p>
 <table>
 <thead>
 <tr>
@@ -72,35 +65,85 @@
 </tbody>
 </table>
 <hr>
-<h4><a id="Expression+toString"></a>expression.toString() : <code>string</code></h4>
+<h4><a id="ExprElement+collapse"></a>exprElement.collapse() : <code>Expression</code></h4>
+<p>Collapses all terms into functions.</p>
+<p>Kind: instance method of <a href="#ExprElement"><code>ExprElement</code></a></p>
+<hr>
+<h4><a id="ExprElement+toString"></a>exprElement.toString() : <code>string</code></h4>
 <p>Converts the expression to a plain text string.</p>
-<p>Kind: instance method of <a href="#Expression"><code>Expression</code></a></p>
+<p>Kind: instance method of <a href="#ExprElement"><code>ExprElement</code></a></p>
 <hr>
-<h4><a id="Expression+toMathML"></a>expression.toMathML() : <code>string</code></h4>
+<h4><a id="ExprElement+toMathML"></a>exprElement.toMathML([_custom]) : <code>string</code></h4>
 <p>Converts the expression to a MathML string.</p>
-<p>Kind: instance method of <a href="#Expression"><code>Expression</code></a></p>
-<hr>
-<h4><a id="Expression.parse"></a>Expression.parse(str) : <a href="#Expression"><code>Expression</code></a></h4>
-<p>Parses a string to an expression.</p>
-<p>Kind: static method of <a href="#Expression"><code>Expression</code></a></p>
+<p>Kind: instance method of <a href="#ExprElement"><code>ExprElement</code></a></p>
 <table>
 <thead>
 <tr>
 <th>Param</th>
 <th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[_custom]</td>
+<td><code>Object.&lt;String, function()&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2><a id="errors"></a> Errors</h2>
+<h3><a id="ExprError"></a>ExprError</h3>
+<p>Expression Error Class</p>
+<p>Kind: global class</p>
+<hr>
+<h2><a id="expression"></a> Expression</h2>
+<h3><a id="parse"></a>parse(str, collapse) : <code>Expression</code></h3>
+<p>Parses a string to an expression.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Default</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>str</td>
 <td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>collapse</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h3><a id="ExprError"></a>ExprError</h3>
-<p>Expression Error Class</p>
-<p>Kind: global class</p>
+<h3><a id="numEquals"></a>numEquals(expr1, expr2) : <code>boolean</code></h3>
+<p>Checks numerically if two expressions are equal. Obviously this is not a
+very robust solution, but much easier than the full CAS simplification.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>expr1</td>
+<td><code>Expression</code></td>
+</tr>
+<tr>
+<td>expr2</td>
+<td><code>Expression</code></td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2><a id="functions"></a> Functions</h2>
 <h2><a id="parser"></a> Parser</h2>
