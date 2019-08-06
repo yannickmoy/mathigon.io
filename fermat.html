@@ -1334,6 +1334,7 @@ alphabet.</p>
 <li><a href="#Polygon+area">.area</a> : <code>number</code></li>
 <li><a href="#Polygon+centroid">.centroid</a> : <a href="#Point"><code>Point</code></a></li>
 <li><a href="#Polygon+edges">.edges</a> : <a href="#Segment"><code>Array.&lt;Segment&gt;</code></a></li>
+<li><a href="#Polygon+radius">.radius</a> : <code>number</code></li>
 <li><a href="#Polygon+oriented">.oriented</a> : <a href="#Polygon"><code>Polygon</code></a></li>
 <li><a href="#Polygon+contains">.contains(p)</a> : <code>boolean</code></li>
 <li><a href="#Polygon+intersect">.intersect(polygon)</a> : <a href="#Polygon"><code>Polygon</code></a></li>
@@ -1368,6 +1369,9 @@ are ordered clockwise, and negative otherwise.</p>
 <p>Kind: instance property of <a href="#Polygon"><code>Polygon</code></a></p>
 <hr>
 <h4><a id="Polygon+edges"></a>polygon.edges : <a href="#Segment"><code>Array.&lt;Segment&gt;</code></a></h4>
+<p>Kind: instance property of <a href="#Polygon"><code>Polygon</code></a></p>
+<hr>
+<h4><a id="Polygon+radius"></a>polygon.radius : <code>number</code></h4>
 <p>Kind: instance property of <a href="#Polygon"><code>Polygon</code></a></p>
 <hr>
 <h4><a id="Polygon+oriented"></a>polygon.oriented : <a href="#Polygon"><code>Polygon</code></a></h4>
@@ -1526,7 +1530,9 @@ Weiler–Atherton clipping algorithm</p>
 <li><a href="#Rectangle+circumference">.circumference</a> : <code>number</code></li>
 <li><a href="#Rectangle+area">.area</a> : <code>number</code></li>
 <li><a href="#Rectangle+edges">.edges</a> : <a href="#Segment"><code>Array.&lt;Segment&gt;</code></a></li>
+<li><a href="#Rectangle+points">.points</a> : <a href="#Point"><code>Array.&lt;Point&gt;</code></a></li>
 <li><a href="#Rectangle+polygon">.polygon</a> : <a href="#Polygon"><code>Polygon</code></a></li>
+<li><a href="#Rectangle+contains">.contains(p)</a> : <code>boolean</code></li>
 </ul>
 </li>
 </ul>
@@ -1552,9 +1558,29 @@ Weiler–Atherton clipping algorithm</p>
 <h4><a id="Rectangle+edges"></a>rectangle.edges : <a href="#Segment"><code>Array.&lt;Segment&gt;</code></a></h4>
 <p>Kind: instance property of <a href="#Rectangle"><code>Rectangle</code></a></p>
 <hr>
+<h4><a id="Rectangle+points"></a>rectangle.points : <a href="#Point"><code>Array.&lt;Point&gt;</code></a></h4>
+<p>Kind: instance property of <a href="#Rectangle"><code>Rectangle</code></a></p>
+<hr>
 <h4><a id="Rectangle+polygon"></a>rectangle.polygon : <a href="#Polygon"><code>Polygon</code></a></h4>
 <p>A polygon class representing this rectangle.</p>
 <p>Kind: instance property of <a href="#Rectangle"><code>Rectangle</code></a></p>
+<hr>
+<h4><a id="Rectangle+contains"></a>rectangle.contains(p) : <code>boolean</code></h4>
+<p>Kind: instance method of <a href="#Rectangle"><code>Rectangle</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p</td>
+<td><a href="#Point"><code>Point</code></a></td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h3><a id="Square"></a>Square</h3>
 <p>A square, defined by its top left vertex and size.</p>
@@ -1887,6 +1913,24 @@ a web worker.</p>
 <h3><a id="goldbach"></a>goldbach(x) : <code>Array.&lt;number&gt;</code></h3>
 <p>Tries to write a number x as the sum of two primes. Contains no dependencies,
 so that this function can easily be stringified and run in a web worker.</p>
+<p>Kind: global function</p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td><code>number</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3><a id="eulerPhi"></a>eulerPhi(x) : <code>number</code></h3>
+<p>Computes Euler's totient function (phi) for a given natural number x.</p>
 <p>Kind: global function</p>
 <table>
 <thead>
