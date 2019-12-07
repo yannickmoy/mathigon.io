@@ -6,39 +6,89 @@ events (<em>“measuring the height of Mount Everest”</em>), a mathematical pu
 with some general exposition, we should arrive at a new problem that students
 can’t solve, and then develop new mathematics that’s required. There could
 even be some suspense: students don’t initially know where the story might
-lead, and are later surprised with a powerful mathematics result. At every
-point, students should understand the reason for what they are learning.</p>
-<h3>2. Exploration and Open Play</h3>
-<p>Whenever possible, a new topic should be introduced with a open-ended
-environment where students can explore, discover some initial concepts,</p>
-<h3>3. User Interactions</h3>
+lead, and are later surprised with a powerful mathematical result. This approach
+should motivate students, make the content more memorable, and justify why
+what students are learning is useful or important.</p>
+<h3>2. User Interactions</h3>
 <p>Every Mathigon course is divided into small steps. Usually, these should not
 be longer than 2-3 paragraphs of text, and at every step, there needs to be
-something to do for the user.</p>
+something to do for the user. These can be simple multiple-choice questions
+or fill-in-the-blanks, or more complex games and interactive environment. The
+goal is to make students learn in a more <em>active</em> way, and verify that they
+are understanding the content (rather than just scrolling down the page).</p>
+<h3>3. Exploration and Open Play</h3>
+<p>When possible, try introducing a new topic with an open-ended environment
+where students can play, explore, and even discover some initial concepts on
+their own. This usually works well for very good student, but might not be as
+effective for weaker and less-experienced students. To help these students, it
+makes sense to include some scaffolding like ideas what to try, or a list of
+statements out of which students have to pick the correct/possible ones.</p>
+<p>As a whole, this step should be non-blocking. After a set time, or a specific
+number of actions, the next step is revealed and students are walked through
+the essential mathematical concepts in more detail.</p>
 <h3>4. Questions</h3>
 <p>Avoid asking students direct questions (<em>“What is the sum of 3 and 4?”</em>) and
 instead write a statement that students have to complete (<em>“The sum of 3 and
-4 is ___.”</em>).</p>
+4 is ___.”</em>). This should make the content feel more accessible, like working
+with a personal tutor rather than listening to a lecture. It should appear to
+students almost as if they are writing their own textbook.</p>
+<p>Blanks are some of the easiest interactive elements to create, and despite their
+simplicity they can be very effective. They can be multiple choice questions,
+number inputs (exact numbers as well as number ranges), or equation inputs. In
+all those cases, try to chose blanks that test students understanding of the key
+mathematical concepts, rather than just their arithmetic skills.</p>
+<p>It can also be very effective to have multiple-choice questions to which
+students don't yet know the answer. They have to look at all the possible
+options, and then decide which one works or makes the most sense.</p>
 <h3>5. Tone and Pronouns</h3>
 <p>Overall, the tone should be kept as neutral and factual as possible. Rather
 than referring directly to the author (“I”) or student (“you”), assume that
-you are working together (“we” or “let’s”). This allows students to feel more</p>
+you are working together (“we” or “let’s”). This allows students to feel more
+autonomous and independent, rather than being lectured at.</p>
 <h3>6. Illustrations and Graphics</h3>
-<p>As you are scrolling though a course, the browser viewport should always
-contain some colour like illustrations or diagrams (excluding very small
-screens like phones). Diagram style (not hand-drawn, etc.)</p>
+<p>When scrolling though a course, the browser viewport should always contain some
+colour like illustrations or diagrams (except on very small screens like
+smartphones). These can either be mathematical diagrams directly related to the
+text, or they can be more generic illustrations that relate to the current
+topic and make it more visually appealing.</p>
+<p>Illustrations should always be photo-realistic (no “clip-arts”). Diagrams should
+be SVGs and follow the Mathigon style for colours, fonts, line thicknesses, etc.</p>
 <h3>6. Inline Elements</h3>
-<p>TODO - Links between text and graphics, highlights in text</p>
+<p>Mathigon supports a number of different inline elements:</p>
+<ul>
+<li><strong>Blanks</strong> (blue boxes): see section 4 for details. Blanks are always
+blocking the next step, meaning that students have to answer them before
+being able to proceed.</li>
+<li><strong>Variable sliders</strong> (red boxes): these allow students to change the value of
+a specific variable in the text, and watch what happens to other numbers or
+diagrams. They are an easy way to make examples less specific, by letting
+students pick the input. They also allow students to find &quot;patterns&quot; in the
+result. Like blanks, variable sliders are blocking. Students have to move
+every slider in a step, before being able to proceed.</li>
+<li><strong>Glossary and biography entries</strong> (yellow underlines): when hovering, these
+elements reveal boxes with more details about the word or person. Glossary
+entries also allow linking to other Mathigon courses with more details.
+They are optional and non-blocking.</li>
+<li><strong>Hover targets</strong> (green underlines): when hovering, these reveal an arrow
+that can point to specific elements on the page (words, diagrams, etc.), or
+they can highlight a specific part of a geometric diagram.</li>
+<li><strong>Pills</strong> (rounded boxes in different coloured): these are similar to hover
+targets, but can appear in lots of different colours, usually matching the
+colour of the corresponding elements in a diagram.</li>
+</ul>
 <h3>7. Use of Colours</h3>
-<p>TODO - text/diagrams match</p>
-<h3>8. Questions and Clanks</h3>
-<p>TODO - simple, number, range, etc.</p>
-<h3>9. List and Table Data</h3>
-<p>TODO -
-Structured data should never be represented in a long sentence: use
-tables or bullet lists instead.</p>
-<h3>10. Writing Style</h3>
-<p>TODO - Lots of small paragraphs, short sentences, etc.</p>
+<p>When showing complex diagrams or equations, it often makes sense to highlight
+specific variables or parts of the diagram in different colours. You can then
+use <em>pills</em> (see above) to refer to these elements in the text, and highlight
+them when hovering.</p>
+<h3>8. List and Table Data</h3>
+<p>Structured data should never be represented in a long sentence: always use
+tables or bullet lists instead (ideally with colours, icons or diagrams).</p>
+<h3>9. Writing Style</h3>
+<p>Remember that Mathigon is targeted at children, some of which might still
+struggle with reading. Sentences should be short and concise, avoid
+unnecessarily complex words, and paragraphs should not be longer than 4-5
+lines of text.</p>
 <footer class="global-footer"><div class="footer-left"><a href="https://mathigon.org">Mathigon.org</a><span class="dot">•</span><a href="https://github.com/mathigon">Mathigon on Github</a><span class="dot">•</span><a href="https://mathigon.org/policies">Terms and Privacy</a></div><div class="footer-right">© Mathigon</div></footer></div></div><script src="/scripts.js?v=2"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q || []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
