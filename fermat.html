@@ -266,7 +266,7 @@
             
         </li>
 </ul></div></div></section><hr/><section><h3><span class="kind">Function</span>numberFormat<a id="numberFormat"></a></h3><div class="description"><div><ul class="tsd-signatures ">
-        <li class="tsd-signature tsd-kind-icon">number<wbr>Format<span class="tsd-signature-symbol">(</span>n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, places<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+        <li class="tsd-signature tsd-kind-icon">number<wbr>Format<span class="tsd-signature-symbol">(</span>n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, places<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, seperators<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -284,6 +284,11 @@
                         </li>
                         <li>
                             <h5>places: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></h5>
+            
+            
+                        </li>
+                        <li>
+                            <h5>seperators: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;true</span></h5>
             
             
                         </li>
@@ -667,7 +672,19 @@
             
             
         </li>
-</ul></div></div></section><section><h4><span class="kind">Property</span>im<a id="im"></a></h4><div class="description"></div></section><section><h4><span class="kind">Property</span>re<a id="re"></a></h4><div class="description"></div></section><section><h4><span class="kind">Accessor</span>conjugate<a id="conjugate"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</ul></div></div></section><section><h4><span class="kind">Property</span>im<a id="im"></a></h4><div class="description"></div></section><section><h4><span class="kind">Property</span>re<a id="re"></a></h4><div class="description"></div></section><section><h4><span class="kind">Accessor</span>argument<a id="argument"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+            <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> argument<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
+</ul>
+
+<ul class="tsd-descriptions">
+            <li class="tsd-description">
+                    <aside class="tsd-sources">
+                    </aside>
+                
+                
+                
+            </li>
+</ul></div></div></section><section><h4><span class="kind">Accessor</span>conjugate<a id="conjugate"></a></h4><div class="description"><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> conjugate<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
@@ -679,8 +696,8 @@
                 
                 
             </li>
-</ul></div></div></section><section><h4><span class="kind">Accessor</span>magnitude<a id="magnitude"></a></h4><div class="description"><div><ul class="tsd-signatures ">
-            <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> magnitude<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
+</ul></div></div></section><section><h4><span class="kind">Accessor</span>modulus<a id="modulus"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+            <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> modulus<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -691,20 +708,8 @@
                 
                 
             </li>
-</ul></div></div></section><section><h4><span class="kind">Accessor</span>phase<a id="phase"></a></h4><div class="description"><div><ul class="tsd-signatures ">
-            <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> phase<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
-</ul>
-
-<ul class="tsd-descriptions">
-            <li class="tsd-description">
-                    <aside class="tsd-sources">
-                    </aside>
-                
-                
-                
-            </li>
-</ul></div></div></section><section><h4><span class="kind">Method</span>toString<a id="toString"></a></h4><div class="description"><div><ul class="tsd-signatures ">
-        <li class="tsd-signature tsd-kind-icon">to<wbr>String<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></li>
+</ul></div></div></section><section><h4><span class="kind">Method</span>root<a id="root"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">root<span class="tsd-signature-symbol">(</span>n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, i<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Complex</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -713,11 +718,44 @@
                 </aside>
             
             
+                <h4 class="tsd-parameters-title">Parameters</h4>
+                <ul class="tsd-parameters">
+                        <li>
+                            <h5>n: <span class="tsd-signature-type">number</span></h5>
             
-                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span>
-                                    <span class="tsd-signature-symbol"> | </span>
-                                <span class="tsd-signature-type">number</span>
-            </h4>
+            
+                        </li>
+                        <li>
+                            <h5>i: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></h5>
+            
+            
+                        </li>
+                </ul>
+            
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Complex</span></h4>
+            
+            
+        </li>
+</ul></div></div></section><section><h4><span class="kind">Method</span>toString<a id="toString"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">to<wbr>String<span class="tsd-signature-symbol">(</span>precision<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+</ul>
+
+<ul class="tsd-descriptions">
+        <li class="tsd-description">
+                <aside class="tsd-sources">
+                </aside>
+            
+            
+                <h4 class="tsd-parameters-title">Parameters</h4>
+                <ul class="tsd-parameters">
+                        <li>
+                            <h5>precision: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;2</span></h5>
+            
+            
+                        </li>
+                </ul>
+            
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
             
             
         </li>
@@ -740,6 +778,29 @@
                         </li>
                         <li>
                             <h5>c2: <span class="tsd-signature-type">Complex</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+            
+            
+                        </li>
+                </ul>
+            
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Complex</span></h4>
+            
+            
+        </li>
+</ul></div></div></section><section><h4><span class="kind">static</span><span class="kind">Method</span>exp<a id="exp"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">exp<span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Complex</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Complex</span></li>
+</ul>
+
+<ul class="tsd-descriptions">
+        <li class="tsd-description">
+                <aside class="tsd-sources">
+                </aside>
+            
+            
+                <h4 class="tsd-parameters-title">Parameters</h4>
+                <ul class="tsd-parameters">
+                        <li>
+                            <h5>c: <span class="tsd-signature-type">Complex</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
             
             
                         </li>
@@ -1040,6 +1101,21 @@
                 
                 
             </li>
+</ul></div></div></section><section><h4><span class="kind">Method</span>at<a id="at"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">at<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span></li>
+</ul>
+
+<ul class="tsd-descriptions">
+        <li class="tsd-description">
+                <aside class="tsd-sources">
+                </aside>
+            
+            
+            
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Point</span></h4>
+            
+            
+        </li>
 </ul></div></div></section><section><h4><span class="kind">Method</span>equals<a id="equals"></a></h4><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">equals<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Angle</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 </ul>
@@ -1060,6 +1136,21 @@
                 </ul>
             
                 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+            
+            
+        </li>
+</ul></div></div></section><section><h4><span class="kind">Method</span>project<a id="project"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">project<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span></li>
+</ul>
+
+<ul class="tsd-descriptions">
+        <li class="tsd-description">
+                <aside class="tsd-sources">
+                </aside>
+            
+            
+            
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Point</span></h4>
             
             
         </li>
@@ -1350,6 +1441,42 @@
             </li>
 </ul></div></div></section><section><h4><span class="kind">Accessor</span>dy<a id="dy"></a></h4><div class="description"><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> dy<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
+</ul>
+
+<ul class="tsd-descriptions">
+            <li class="tsd-description">
+                    <aside class="tsd-sources">
+                    </aside>
+                
+                
+                
+            </li>
+</ul></div></div></section><section><h4><span class="kind">Accessor</span>rect<a id="rect"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+            <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> rect<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
+</ul>
+
+<ul class="tsd-descriptions">
+            <li class="tsd-description">
+                    <aside class="tsd-sources">
+                    </aside>
+                
+                
+                
+            </li>
+</ul></div></div></section><section><h4><span class="kind">Accessor</span>xRange<a id="xRange"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+            <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> xRange<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
+</ul>
+
+<ul class="tsd-descriptions">
+            <li class="tsd-description">
+                    <aside class="tsd-sources">
+                    </aside>
+                
+                
+                
+            </li>
+</ul></div></div></section><section><h4><span class="kind">Accessor</span>yRange<a id="yRange"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+            <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> yRange<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -2310,7 +2437,7 @@
             
         </li>
 </ul></div></div></section><section><h4><span class="kind">Method</span>clamp<a id="clamp"></a></h4><div class="description"><div><ul class="tsd-signatures ">
-        <li class="tsd-signature tsd-kind-icon">clamp<span class="tsd-signature-symbol">(</span>xMin<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, xMax<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, yMin<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, yMax<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span></li>
+        <li class="tsd-signature tsd-kind-icon">clamp<span class="tsd-signature-symbol">(</span>bounds<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Bounds</span>, padding<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -2322,22 +2449,12 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>xMin: <span class="tsd-signature-type">number</span></h5>
+                            <h5>bounds: <span class="tsd-signature-type">Bounds</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>xMax: <span class="tsd-signature-type">number</span></h5>
-            
-            
-                        </li>
-                        <li>
-                            <h5>yMin: <span class="tsd-signature-type">number</span></h5>
-            
-            
-                        </li>
-                        <li>
-                            <h5>yMax: <span class="tsd-signature-type">number</span></h5>
+                            <h5>padding: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></h5>
             
             
                         </li>
@@ -3113,7 +3230,7 @@
             
         </li>
 </ul></div></div></section><section><h4><span class="kind">Method</span>reflect<a id="reflect"></a></h4><div class="description"><div><ul class="tsd-signatures ">
-        <li class="tsd-signature tsd-kind-icon">reflect<span class="tsd-signature-symbol">(</span>line<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Line</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+        <li class="tsd-signature tsd-kind-icon">reflect<span class="tsd-signature-symbol">(</span>line<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Line</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Polygon</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -3131,12 +3248,12 @@
                         </li>
                 </ul>
             
-                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Polygon</span></h4>
             
             
         </li>
 </ul></div></div></section><section><h4><span class="kind">Method</span>rotate<a id="rotate"></a></h4><div class="description"><div><ul class="tsd-signatures ">
-        <li class="tsd-signature tsd-kind-icon">rotate<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, center<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Point</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+        <li class="tsd-signature tsd-kind-icon">rotate<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, center<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Point</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Polygon</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -3159,12 +3276,12 @@
                         </li>
                 </ul>
             
-                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Polygon</span></h4>
             
             
         </li>
 </ul></div></div></section><section><h4><span class="kind">Method</span>scale<a id="scale"></a></h4><div class="description"><div><ul class="tsd-signatures ">
-        <li class="tsd-signature tsd-kind-icon">scale<span class="tsd-signature-symbol">(</span>sx<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, sy<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+        <li class="tsd-signature tsd-kind-icon">scale<span class="tsd-signature-symbol">(</span>sx<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, sy<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Polygon</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -3187,12 +3304,12 @@
                         </li>
                 </ul>
             
-                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Polygon</span></h4>
             
             
         </li>
 </ul></div></div></section><section><h4><span class="kind">Method</span>shift<a id="shift"></a></h4><div class="description"><div><ul class="tsd-signatures ">
-        <li class="tsd-signature tsd-kind-icon">shift<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+        <li class="tsd-signature tsd-kind-icon">shift<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Polygon</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -3215,12 +3332,12 @@
                         </li>
                 </ul>
             
-                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Polygon</span></h4>
             
             
         </li>
 </ul></div></div></section><section><h4><span class="kind">Method</span>transform<a id="transform"></a></h4><div class="description"><div><ul class="tsd-signatures ">
-        <li class="tsd-signature tsd-kind-icon">transform<span class="tsd-signature-symbol">(</span>m<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TransformMatrix</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+        <li class="tsd-signature tsd-kind-icon">transform<span class="tsd-signature-symbol">(</span>m<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TransformMatrix</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Polygon</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -3238,12 +3355,12 @@
                         </li>
                 </ul>
             
-                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Polygon</span></h4>
             
             
         </li>
 </ul></div></div></section><section><h4><span class="kind">Method</span>translate<a id="translate"></a></h4><div class="description"><div><ul class="tsd-signatures ">
-        <li class="tsd-signature tsd-kind-icon">translate<span class="tsd-signature-symbol">(</span>p<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+        <li class="tsd-signature tsd-kind-icon">translate<span class="tsd-signature-symbol">(</span>p<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Polygon</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -3261,7 +3378,7 @@
                         </li>
                 </ul>
             
-                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Polygon</span></h4>
             
             
         </li>
@@ -3476,6 +3593,18 @@
                 
                 
             </li>
+</ul></div></div></section><section><h4><span class="kind">Accessor</span>centroid<a id="centroid"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+            <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> centroid<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
+</ul>
+
+<ul class="tsd-descriptions">
+            <li class="tsd-description">
+                    <aside class="tsd-sources">
+                    </aside>
+                
+                
+                
+            </li>
 </ul></div></div></section><section><h4><span class="kind">Accessor</span>circumference<a id="circumference"></a></h4><div class="description"><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> circumference<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
@@ -3594,7 +3723,7 @@
             
         </li>
 </ul></div></div></section><section><h4><span class="kind">Method</span>project<a id="project"></a></h4><div class="description"><div><ul class="tsd-signatures ">
-        <li class="tsd-signature tsd-kind-icon">project<span class="tsd-signature-symbol">(</span>p<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SimplePoint</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Point</span></li>
+        <li class="tsd-signature tsd-kind-icon">project<span class="tsd-signature-symbol">(</span>p<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SimplePoint</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -3612,15 +3741,12 @@
                         </li>
                 </ul>
             
-                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span>
-                                    <span class="tsd-signature-symbol"> | </span>
-                                <span class="tsd-signature-type">Point</span>
-            </h4>
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Point</span></h4>
             
             
         </li>
 </ul></div></div></section><section><h4><span class="kind">Method</span>reflect<a id="reflect"></a></h4><div class="description"><div><ul class="tsd-signatures ">
-        <li class="tsd-signature tsd-kind-icon">reflect<span class="tsd-signature-symbol">(</span>l<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Line</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+        <li class="tsd-signature tsd-kind-icon">reflect<span class="tsd-signature-symbol">(</span>l<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Line</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Polygon</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -3638,12 +3764,12 @@
                         </li>
                 </ul>
             
-                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Polygon</span></h4>
             
             
         </li>
 </ul></div></div></section><section><h4><span class="kind">Method</span>rotate<a id="rotate"></a></h4><div class="description"><div><ul class="tsd-signatures ">
-        <li class="tsd-signature tsd-kind-icon">rotate<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, c<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Point</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+        <li class="tsd-signature tsd-kind-icon">rotate<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, c<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Point</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Polygon</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -3666,7 +3792,7 @@
                         </li>
                 </ul>
             
-                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Polygon</span></h4>
             
             
         </li>
@@ -3727,7 +3853,7 @@
             
         </li>
 </ul></div></div></section><section><h4><span class="kind">Method</span>transform<a id="transform"></a></h4><div class="description"><div><ul class="tsd-signatures ">
-        <li class="tsd-signature tsd-kind-icon">transform<span class="tsd-signature-symbol">(</span>m<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TransformMatrix</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+        <li class="tsd-signature tsd-kind-icon">transform<span class="tsd-signature-symbol">(</span>m<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TransformMatrix</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Polygon</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -3745,7 +3871,7 @@
                         </li>
                 </ul>
             
-                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Polygon</span></h4>
             
             
         </li>
@@ -4011,6 +4137,52 @@
             
             
         </li>
+</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>isAngle<a id="isAngle"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">is<wbr>Angle<span class="tsd-signature-symbol">(</span>shape<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Shape</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">shape</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Angle</span></li>
+</ul>
+
+<ul class="tsd-descriptions">
+        <li class="tsd-description">
+                <aside class="tsd-sources">
+                </aside>
+            
+            
+                <h4 class="tsd-parameters-title">Parameters</h4>
+                <ul class="tsd-parameters">
+                        <li>
+                            <h5>shape: <span class="tsd-signature-type">Point</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Shape</span></h5>
+            
+            
+                        </li>
+                </ul>
+            
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">shape</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Angle</span></h4>
+            
+            
+        </li>
+</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>isArc<a id="isArc"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">is<wbr>Arc<span class="tsd-signature-symbol">(</span>shape<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Shape</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">shape</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Arc</span></li>
+</ul>
+
+<ul class="tsd-descriptions">
+        <li class="tsd-description">
+                <aside class="tsd-sources">
+                </aside>
+            
+            
+                <h4 class="tsd-parameters-title">Parameters</h4>
+                <ul class="tsd-parameters">
+                        <li>
+                            <h5>shape: <span class="tsd-signature-type">Point</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Shape</span></h5>
+            
+            
+                        </li>
+                </ul>
+            
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">shape</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Arc</span></h4>
+            
+            
+        </li>
 </ul></div></div></section><hr/><section><h3><span class="kind">Function</span>isCircle<a id="isCircle"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">is<wbr>Circle<span class="tsd-signature-symbol">(</span>shape<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Shape</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">shape</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Circle</span></li>
 </ul>
@@ -4057,6 +4229,29 @@
             
             
         </li>
+</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>isPoint<a id="isPoint"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">is<wbr>Point<span class="tsd-signature-symbol">(</span>shape<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Shape</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">shape</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Point</span></li>
+</ul>
+
+<ul class="tsd-descriptions">
+        <li class="tsd-description">
+                <aside class="tsd-sources">
+                </aside>
+            
+            
+                <h4 class="tsd-parameters-title">Parameters</h4>
+                <ul class="tsd-parameters">
+                        <li>
+                            <h5>shape: <span class="tsd-signature-type">Point</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Shape</span></h5>
+            
+            
+                        </li>
+                </ul>
+            
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">shape</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Point</span></h4>
+            
+            
+        </li>
 </ul></div></div></section><hr/><section><h3><span class="kind">Function</span>isPolygonLike<a id="isPolygonLike"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">is<wbr>Polygon<wbr>Like<span class="tsd-signature-symbol">(</span>shape<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Shape</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">shape</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Polygon</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Rectangle</span></li>
 </ul>
@@ -4080,8 +4275,8 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>simpleIntersection<a id="simpleIntersection"></a></h3><div class="description"><div><ul class="tsd-signatures ">
-        <li class="tsd-signature tsd-kind-icon">simple<wbr>Intersection<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Line</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Circle</span>, b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Line</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Circle</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span><span class="tsd-signature-symbol">[]</span></li>
+</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>isSector<a id="isSector"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">is<wbr>Sector<span class="tsd-signature-symbol">(</span>shape<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Shape</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">shape</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Sector</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -4093,18 +4288,13 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>a: <span class="tsd-signature-type">Line</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Circle</span></h5>
-            
-            
-                        </li>
-                        <li>
-                            <h5>b: <span class="tsd-signature-type">Line</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Circle</span></h5>
+                            <h5>shape: <span class="tsd-signature-type">Point</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Shape</span></h5>
             
             
                         </li>
                 </ul>
             
-                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Point</span><span class="tsd-signature-symbol">[]</span></h4>
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">shape</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Sector</span></h4>
             
             
         </li>
