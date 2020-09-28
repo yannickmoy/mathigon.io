@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="ready"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>core.ts</title><meta name="description" content="JavaScript utility function and classes, including array and string helper functions, type checking and event classes."><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><meta http-equiv="cleartype" content="on"><meta property="og:title" content="core.ts"><meta property="og:description" content="JavaScript utility function and classes, including array and string helper functions, type checking and event classes."><meta property="og:image" content="https://mathigon.org/images/og-tile/mathigon.jpg"><meta property="og:site_name" content="Mathigon"><meta name="twitter:site" content="@MathigonOrg"><link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,300,400i&amp;amp;subset=greek" rel="stylesheet" type="text/css"><link href="/styles.css?v=3" rel="stylesheet"></head><body><header><a id="logo" href="/"><svg class="icon" viewBox="0 0 36 36" width="36" height="36"><use xlink:href="/images/icons.svg#logo"></use></svg><svg class="icon" viewBox="0 0 120 36" width="120" height="36"><use xlink:href="/images/icons.svg#title-io"></use></svg></a><nav><x-popup class="nav-item" animation="fade"><button class="nav-link popup-target"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg#glossary"></use></svg><span class="nav-text">JS Libraries</span></button><div class="popup-body"><a class="nav-link red" href="/core"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg#controls"></use></svg>core.js</a><a class="nav-link blue" href="/fermat"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg#compass"></use></svg>fermat.js</a><a class="nav-link yellow" href="/hilbert"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg#lightbulb"></use></svg>hilbert.js</a><a class="nav-link green" href="/boost"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg#brush"></use></svg>boost.js</a></div></x-popup><x-popup class="nav-item" animation="fade"><button class="nav-link popup-target"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg#library"></use></svg><span class="nav-text">Textbook Content</span></button><div class="popup-body"><a class="nav-link blue" href="/markdown"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg#notes"></use></svg>Markdown</a><a class="nav-link red" href="/guidelines"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg#book"></use></svg>Content Guide</a><a class="nav-link yellow" href="/functions"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg#settings"></use></svg>Step Functions</a></div></x-popup></nav></header><div class="x-red"><div class="hero slanted"><div class="container narrow"><h1><svg class="icon" viewBox="0 0 54 54" width="54" height="54"><use xlink:href="/images/icons.svg#controls"></use></svg>core.ts</h1><p class="subtitle">JavaScript utility function and classes, including array and string helper functions, type checking and event classes.</p><div class="btn-row"><a class="btn btn-white m-red" href="https://github.com/mathigon/core.js"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg#github"></use></svg>View on Github</a></div></div></div><div class="container api"><div class="sidebar"><div class="sidebar-body"></div></div><div class="api-body"><section><h2>Arrays<a id="arrays"></a></h2><div class="description"></div><hr/><section><h3><span class="kind">Interface</span>LinkedListItem<a id="LinkedListItem"></a></h3><div class="description"></div><div class="section-body"><section><h4><span class="kind">Property</span>next<a id="next"></a></h4><div class="description"></div></section><section><h4><span class="kind">Property</span>val<a id="val"></a></h4><div class="description"></div></section></div></section><hr/><section><h3><span class="kind">Function</span>chunk<a id="chunk"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+<!DOCTYPE html><html class="ready"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>core.ts</title><meta name="description" content="JavaScript utility function and classes, including array and string helper functions, type checking and event classes."><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><meta http-equiv="cleartype" content="on"><meta property="og:title" content="core.ts"><meta property="og:description" content="JavaScript utility function and classes, including array and string helper functions, type checking and event classes."><meta property="og:image" content="https://mathigon.org/images/og-tile/mathigon.jpg"><meta property="og:site_name" content="Mathigon"><meta name="twitter:site" content="@MathigonOrg"><link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,300,400i&amp;amp;subset=greek" rel="stylesheet" type="text/css"><link href="/styles.css?v=4" rel="stylesheet"></head><body><header><a id="logo" href="/"><svg class="icon" viewBox="0 0 36 36" width="36" height="36"><use xlink:href="/images/icons.svg?v=4#logo"></use></svg><svg class="icon" viewBox="0 0 120 36" width="120" height="36"><use xlink:href="/images/icons.svg?v=4#title-io"></use></svg></a><nav><x-popup class="nav-item" animation="fade"><button class="nav-link popup-target"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#glossary"></use></svg><span class="nav-text">TS Libraries</span></button><div class="popup-body"><a class="nav-link red" href="/core"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#construction"></use></svg>core.ts</a><a class="nav-link blue" href="/fermat"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#lightbulb"></use></svg>fermat.ts</a><a class="nav-link purple" href="/euclid"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#compass"></use></svg>euclid.ts</a><a class="nav-link yellow" href="/hilbert"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#equation"></use></svg>hilbert.ts</a><a class="nav-link green" href="/boost"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#brush"></use></svg>boost.ts</a></div></x-popup><x-popup class="nav-item" animation="fade"><button class="nav-link popup-target"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#library"></use></svg><span class="nav-text">Textbook Content</span></button><div class="popup-body"><a class="nav-link yellow" href="https://www.notion.so/mathigon/Content-Writing-718073cf25bf468b9d717735884803da"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#book"></use></svg>Content Guide</a><a class="nav-link blue" href="/markdown"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#notes"></use></svg>Markdown</a><a class="nav-link red" href="/interactivity"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#settings"></use></svg>Interactivity</a><a class="nav-link green" href="/translations"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#language"></use></svg>Translations</a></div></x-popup></nav></header><div class="x-red"><div class="hero slanted"><div class="container narrow"><h1><svg class="icon" viewBox="0 0 54 54" width="54" height="54"><use xlink:href="/images/icons.svg?v=4#construction"></use></svg>core.ts</h1><p class="subtitle">JavaScript utility function and classes, including array and string helper functions, type checking and event classes.</p><div class="btn-row"><a class="btn btn-white m-red" href="https://github.com/mathigon/core.js"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#github"></use></svg>View on Github</a></div></div></div><div class="container api"><div class="sidebar"><div class="sidebar-body"></div></div><div class="api-body"><section><h2>Arrays<a id="arrays"></a></h2><div class="description"></div><hr/><section><h3><span class="kind">Interface</span>LinkedListItem<a id="LinkedListItem"></a></h3><div class="description"></div><div class="section-body"><section><h4><span class="kind">Property</span>next<a id="next"></a></h4><div class="description"></div></section><section><h4><span class="kind">Property</span>val<a id="val"></a></h4><div class="description"></div></section></div></section><hr/><section><h3><span class="kind">Function</span>chunk<a id="chunk"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">chunk<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></li>
 </ul>
 
@@ -11,12 +11,12 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>n: <span class="tsd-signature-type">number</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> n: <span class="tsd-signature-type">number</span></h5>
             
             
                         </li>
@@ -26,7 +26,8 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>cumulative<a id="cumulative"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>cumulative<a id="cumulative"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">cumulative<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></li>
 </ul>
 
@@ -39,7 +40,7 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>array: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> array: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
             
             
                         </li>
@@ -49,7 +50,8 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>difference<a id="difference"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>difference<a id="difference"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">difference<span class="tsd-signature-symbol">(</span>a1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, a2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
 </ul>
 
@@ -62,12 +64,12 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>a1: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> a1: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>a2: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> a2: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
             
             
                         </li>
@@ -77,7 +79,8 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>flatten<a id="flatten"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>flatten<a id="flatten"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">flatten<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
 </ul>
 
@@ -90,7 +93,7 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>array: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> array: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
             
             
                         </li>
@@ -100,7 +103,8 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>intersect<a id="intersect"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>intersect<a id="intersect"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">intersect<span class="tsd-signature-symbol">(</span>a1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span>, a2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></li>
 </ul>
 
@@ -113,12 +117,12 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>a1: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> a1: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>a2: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> a2: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
             
             
                         </li>
@@ -128,7 +132,8 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>join<a id="join"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>join<a id="join"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">join<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>arrays<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></li>
 </ul>
 
@@ -141,7 +146,7 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5><span class="tsd-flag ts-flagtrue">true</span> <span class="tsd-signature-symbol">...</span>arrays: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> <span class="tsd-flag ts-flagtrue">true</span> <span class="tsd-signature-symbol">...</span>arrays: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></h5>
             
             
                         </li>
@@ -151,7 +156,8 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>last<a id="last"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>last<a id="last"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">last<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, i<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
 </ul>
 
@@ -164,12 +170,12 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>i: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> i: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
             
             
                         </li>
@@ -179,7 +185,8 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>list<a id="list"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>list<a id="list"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">list<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, b<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, step<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></li>
 </ul>
 
@@ -192,17 +199,17 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>a: <span class="tsd-signature-type">number</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> a: <span class="tsd-signature-type">number</span></h5>
             
             
                         </li>
                         <li>
-                            <h5><span class="tsd-flag ts-flagtrue">true</span> b: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> <span class="tsd-flag ts-flagtrue">true</span> b: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>step: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;1</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> step: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1</span></h5>
             
             
                         </li>
@@ -212,8 +219,9 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>loop<a id="loop"></a></h3><div class="description"><div><ul class="tsd-signatures ">
-        <li class="tsd-signature tsd-kind-icon">loop<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">[object Object]</span></li>
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>loop<a id="loop"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">loop<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -225,17 +233,17 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
             
             
                         </li>
                 </ul>
             
-                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">[object Object]</span></h4>
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span></h4>
             
             
                         <ul class="tsd-parameters">
-                                <li class="tsd-parameter-siganture">
+                                <li class="tsd-parameter-signature">
                                     <ul class="tsd-signatures ">
                                             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
                                     </ul>
@@ -253,7 +261,8 @@
                                 </li>
                         </ul>
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>repeat<a id="repeat"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>repeat<a id="repeat"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">repeat<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
 </ul>
 
@@ -266,12 +275,12 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>value: <span class="tsd-signature-type">T</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> value: <span class="tsd-signature-type">T</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>n: <span class="tsd-signature-type">number</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> n: <span class="tsd-signature-type">number</span></h5>
             
             
                         </li>
@@ -281,7 +290,8 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>repeat2D<a id="repeat2D"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>repeat2D<a id="repeat2D"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">repeat2D<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></li>
 </ul>
 
@@ -294,17 +304,17 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>value: <span class="tsd-signature-type">T</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> value: <span class="tsd-signature-type">T</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>x: <span class="tsd-signature-type">number</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> x: <span class="tsd-signature-type">number</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>y: <span class="tsd-signature-type">number</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> y: <span class="tsd-signature-type">number</span></h5>
             
             
                         </li>
@@ -314,7 +324,8 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>rotate<a id="rotate"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>rotate<a id="rotate"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">rotate<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, offset<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
 </ul>
 
@@ -327,12 +338,12 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>offset: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;1</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> offset: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1</span></h5>
             
             
                         </li>
@@ -342,8 +353,9 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>sortBy<a id="sortBy"></a></h3><div class="description"><div><ul class="tsd-signatures ">
-        <li class="tsd-signature tsd-kind-icon">sort<wbr>By<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">[object Object]</span>, reverse<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>sortBy<a id="sortBy"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">sort<wbr>By<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span>, reverse<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -355,16 +367,16 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>fn: <span class="tsd-signature-type">[object Object]</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> fn: <span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
             
             
                                     <ul class="tsd-parameters">
-                                            <li class="tsd-parameter-siganture">
+                                            <li class="tsd-parameter-signature">
                                                 <ul class="tsd-signatures ">
                                                         <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
                                                 </ul>
@@ -376,7 +388,7 @@
                                         <h4 class="tsd-parameters-title">Parameters</h4>
                                         <ul class="tsd-parameters">
                                                 <li>
-                                                    <h5>x: <span class="tsd-signature-type">T</span></h5>
+                                                    <h5><span class="tsd-flag ts-flagtrue">true</span> x: <span class="tsd-signature-type">T</span></h5>
                                     
                                     
                                                 </li>
@@ -391,7 +403,7 @@
                                     </ul>
                         </li>
                         <li>
-                            <h5>reverse: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> reverse: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
             
             
                         </li>
@@ -401,8 +413,9 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>tabulate<a id="tabulate"></a></h3><div class="description"><div><ul class="tsd-signatures ">
-        <li class="tsd-signature tsd-kind-icon">tabulate<span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">[object Object]</span>, n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>tabulate<a id="tabulate"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">tabulate<span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span>, n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -414,11 +427,11 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>fn: <span class="tsd-signature-type">[object Object]</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> fn: <span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span></h5>
             
             
                                     <ul class="tsd-parameters">
-                                            <li class="tsd-parameter-siganture">
+                                            <li class="tsd-parameter-signature">
                                                 <ul class="tsd-signatures ">
                                                         <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
                                                 </ul>
@@ -430,7 +443,7 @@
                                         <h4 class="tsd-parameters-title">Parameters</h4>
                                         <ul class="tsd-parameters">
                                                 <li>
-                                                    <h5>i: <span class="tsd-signature-type">number</span></h5>
+                                                    <h5><span class="tsd-flag ts-flagtrue">true</span> i: <span class="tsd-signature-type">number</span></h5>
                                     
                                     
                                                 </li>
@@ -445,7 +458,7 @@
                                     </ul>
                         </li>
                         <li>
-                            <h5>n: <span class="tsd-signature-type">number</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> n: <span class="tsd-signature-type">number</span></h5>
             
             
                         </li>
@@ -455,8 +468,9 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>tabulate2D<a id="tabulate2D"></a></h3><div class="description"><div><ul class="tsd-signatures ">
-        <li class="tsd-signature tsd-kind-icon">tabulate2D<span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">[object Object]</span>, x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></li>
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>tabulate2D<a id="tabulate2D"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">tabulate2D<span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, j<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span>, x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -468,11 +482,11 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>fn: <span class="tsd-signature-type">[object Object]</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> fn: <span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, j<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span></h5>
             
             
                                     <ul class="tsd-parameters">
-                                            <li class="tsd-parameter-siganture">
+                                            <li class="tsd-parameter-signature">
                                                 <ul class="tsd-signatures ">
                                                         <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, j<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
                                                 </ul>
@@ -484,12 +498,12 @@
                                         <h4 class="tsd-parameters-title">Parameters</h4>
                                         <ul class="tsd-parameters">
                                                 <li>
-                                                    <h5>i: <span class="tsd-signature-type">number</span></h5>
+                                                    <h5><span class="tsd-flag ts-flagtrue">true</span> i: <span class="tsd-signature-type">number</span></h5>
                                     
                                     
                                                 </li>
                                                 <li>
-                                                    <h5>j: <span class="tsd-signature-type">number</span></h5>
+                                                    <h5><span class="tsd-flag ts-flagtrue">true</span> j: <span class="tsd-signature-type">number</span></h5>
                                     
                                     
                                                 </li>
@@ -504,12 +518,12 @@
                                     </ul>
                         </li>
                         <li>
-                            <h5>x: <span class="tsd-signature-type">number</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> x: <span class="tsd-signature-type">number</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>y: <span class="tsd-signature-type">number</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> y: <span class="tsd-signature-type">number</span></h5>
             
             
                         </li>
@@ -519,7 +533,8 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>toLinkedList<a id="toLinkedList"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>toLinkedList<a id="toLinkedList"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">to<wbr>Linked<wbr>List<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LinkedListItem</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></li>
 </ul>
 
@@ -532,7 +547,7 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
             
             
                         </li>
@@ -542,7 +557,8 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>total<a id="total"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>total<a id="total"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">total<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 </ul>
 
@@ -555,7 +571,7 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>array: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> array: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
             
             
                         </li>
@@ -565,7 +581,8 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>unique<a id="unique"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>unique<a id="unique"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">unique<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
 </ul>
 
@@ -578,7 +595,7 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
             
             
                         </li>
@@ -588,7 +605,164 @@
             
             
         </li>
-</ul></div></div></section></section><section><h2>Colors<a id="colors"></a></h2><div class="description"></div><hr/><section><h3><span class="kind">Class</span>Color<a id="Color"></a></h3><div class="description"></div><div class="section-body"><section><h4>constructor<a id="constructor"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section></section><section><h2>Cache<a id="cache"></a></h2><div class="description"></div><hr/><section><h3><span class="kind">Class</span>Cache<a id="Cache"></a></h3><div class="description"></div><div class="section-body"><section><h4>constructor<a id="constructor"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">new <wbr>Cache<span class="tsd-signature-symbol">(</span>maxSize<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Cache</span></li>
+</ul>
+
+<ul class="tsd-descriptions">
+        <li class="tsd-description">
+                <aside class="tsd-sources">
+                </aside>
+            
+            
+                <h4 class="tsd-parameters-title">Parameters</h4>
+                <ul class="tsd-parameters">
+                        <li>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> maxSize: <span class="tsd-signature-type">number</span></h5>
+            
+            
+                        </li>
+                </ul>
+            
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Cache</span></h4>
+            
+            
+        </li>
+</ul>
+</div></div></section><section><h4><span class="kind">Property</span>maxSize<a id="maxSize"></a></h4><div class="description"></div></section><section><h4><span class="kind">Method</span>get<a id="get"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span></li>
+</ul>
+
+<ul class="tsd-descriptions">
+        <li class="tsd-description">
+                <aside class="tsd-sources">
+                </aside>
+            
+            
+                <h4 class="tsd-parameters-title">Parameters</h4>
+                <ul class="tsd-parameters">
+                        <li>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> a: <span class="tsd-signature-type">string</span></h5>
+            
+            
+                        </li>
+                </ul>
+            
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span></h4>
+            
+            
+        </li>
+</ul>
+</div></div></section><section><h4><span class="kind">Method</span>getOrSet<a id="getOrSet"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">get<wbr>OrSet<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+</ul>
+
+<ul class="tsd-descriptions">
+        <li class="tsd-description">
+                <aside class="tsd-sources">
+                </aside>
+            
+            
+                <h4 class="tsd-parameters-title">Parameters</h4>
+                <ul class="tsd-parameters">
+                        <li>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> a: <span class="tsd-signature-type">string</span></h5>
+            
+            
+                        </li>
+                        <li>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> callback: <span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span></h5>
+            
+            
+                                    <ul class="tsd-parameters">
+                                            <li class="tsd-parameter-signature">
+                                                <ul class="tsd-signatures ">
+                                                        <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+                                                </ul>
+                                    
+                                                <ul class="tsd-descriptions">
+                                                        <li class="tsd-description">
+                                    
+                                    
+                                        <h4 class="tsd-parameters-title">Parameters</h4>
+                                        <ul class="tsd-parameters">
+                                                <li>
+                                                    <h5><span class="tsd-flag ts-flagtrue">true</span> a: <span class="tsd-signature-type">string</span></h5>
+                                    
+                                    
+                                                </li>
+                                        </ul>
+                                    
+                                        <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+                                    
+                                    
+                                    </li>
+                                                </ul>
+                                            </li>
+                                    </ul>
+                        </li>
+                </ul>
+            
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+            
+            
+        </li>
+</ul>
+</div></div></section><section><h4><span class="kind">Method</span>has<a id="has"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">has<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+</ul>
+
+<ul class="tsd-descriptions">
+        <li class="tsd-description">
+                <aside class="tsd-sources">
+                </aside>
+            
+            
+                <h4 class="tsd-parameters-title">Parameters</h4>
+                <ul class="tsd-parameters">
+                        <li>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> a: <span class="tsd-signature-type">string</span></h5>
+            
+            
+                        </li>
+                </ul>
+            
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+            
+            
+        </li>
+</ul>
+</div></div></section><section><h4><span class="kind">Method</span>set<a id="set"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">set<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+</ul>
+
+<ul class="tsd-descriptions">
+        <li class="tsd-description">
+                <aside class="tsd-sources">
+                </aside>
+            
+            
+                <h4 class="tsd-parameters-title">Parameters</h4>
+                <ul class="tsd-parameters">
+                        <li>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> a: <span class="tsd-signature-type">string</span></h5>
+            
+            
+                        </li>
+                        <li>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> b: <span class="tsd-signature-type">T</span></h5>
+            
+            
+                        </li>
+                </ul>
+            
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+            
+            
+        </li>
+</ul>
+</div></div></section></div></section></section><section><h2>Colors<a id="colors"></a></h2><div class="description"></div><hr/><section><h3><span class="kind">Class</span>Color<a id="Color"></a></h3><div class="description"></div><div class="section-body"><section><h4>constructor<a id="constructor"></a></h4><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">new <wbr>Color<span class="tsd-signature-symbol">(</span>r<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, g<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, a<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Color</span></li>
 </ul>
 
@@ -601,22 +775,22 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>r: <span class="tsd-signature-type">number</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> r: <span class="tsd-signature-type">number</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>g: <span class="tsd-signature-type">number</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> g: <span class="tsd-signature-type">number</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>b: <span class="tsd-signature-type">number</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> b: <span class="tsd-signature-type">number</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>a: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;1</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> a: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1</span></h5>
             
             
                         </li>
@@ -626,7 +800,8 @@
             
             
         </li>
-</ul></div></div></section><section><h4><span class="kind">Property</span>a<a id="a"></a></h4><div class="description"></div></section><section><h4><span class="kind">Property</span>b<a id="b"></a></h4><div class="description"></div></section><section><h4><span class="kind">Property</span>g<a id="g"></a></h4><div class="description"></div></section><section><h4><span class="kind">Property</span>r<a id="r"></a></h4><div class="description"></div></section><section><h4><span class="kind">Accessor</span>hex<a id="hex"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><section><h4><span class="kind">Property</span>a<a id="a"></a></h4><div class="description"></div></section><section><h4><span class="kind">Property</span>b<a id="b"></a></h4><div class="description"></div></section><section><h4><span class="kind">Property</span>g<a id="g"></a></h4><div class="description"></div></section><section><h4><span class="kind">Property</span>r<a id="r"></a></h4><div class="description"></div></section><section><h4><span class="kind">Accessor</span>hex<a id="hex"></a></h4><div class="description"><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> hex<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
@@ -638,7 +813,8 @@
                 
                 
             </li>
-</ul></div></div></section><section><h4><span class="kind">Accessor</span>hsl<a id="hsl"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><section><h4><span class="kind">Accessor</span>hsl<a id="hsl"></a></h4><div class="description"><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> hsl<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
@@ -650,7 +826,8 @@
                 
                 
             </li>
-</ul></div></div></section><section><h4><span class="kind">Accessor</span>rgb<a id="rgb"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><section><h4><span class="kind">Accessor</span>rgb<a id="rgb"></a></h4><div class="description"><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> rgb<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
@@ -662,7 +839,8 @@
                 
                 
             </li>
-</ul></div></div></section><section><h4><span class="kind">Method</span>copy<a id="copy"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><section><h4><span class="kind">Method</span>copy<a id="copy"></a></h4><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">copy<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Color</span></li>
 </ul>
 
@@ -677,7 +855,8 @@
             
             
         </li>
-</ul></div></div></section><section><h4><span class="kind">Method</span>toString<a id="toString"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><section><h4><span class="kind">Method</span>toString<a id="toString"></a></h4><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">to<wbr>String<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 </ul>
 
@@ -692,7 +871,8 @@
             
             
         </li>
-</ul></div></div></section><section><h4><span class="kind">static</span><span class="kind">Method</span>from<a id="from"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><section><h4><span class="kind">static</span><span class="kind">Method</span>from<a id="from"></a></h4><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">from<span class="tsd-signature-symbol">(</span>color<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Color</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Color</span></li>
 </ul>
 
@@ -705,7 +885,7 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>color: <span class="tsd-signature-type">Color</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> color: <span class="tsd-signature-type">Color</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
             
             
                         </li>
@@ -715,7 +895,8 @@
             
             
         </li>
-</ul></div></div></section><section><h4><span class="kind">static</span><span class="kind">Method</span>fromHex<a id="fromHex"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><section><h4><span class="kind">static</span><span class="kind">Method</span>fromHex<a id="fromHex"></a></h4><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">from<wbr>Hex<span class="tsd-signature-symbol">(</span>hex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Color</span></li>
 </ul>
 
@@ -728,7 +909,7 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>hex: <span class="tsd-signature-type">string</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> hex: <span class="tsd-signature-type">string</span></h5>
             
             
                         </li>
@@ -738,7 +919,8 @@
             
             
         </li>
-</ul></div></div></section><section><h4><span class="kind">static</span><span class="kind">Method</span>fromRgb<a id="fromRgb"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><section><h4><span class="kind">static</span><span class="kind">Method</span>fromRgb<a id="fromRgb"></a></h4><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">from<wbr>Rgb<span class="tsd-signature-symbol">(</span>color<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Color</span></li>
 </ul>
 
@@ -751,7 +933,7 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>color: <span class="tsd-signature-type">string</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> color: <span class="tsd-signature-type">string</span></h5>
             
             
                         </li>
@@ -761,7 +943,8 @@
             
             
         </li>
-</ul></div></div></section><section><h4><span class="kind">static</span><span class="kind">Method</span>gradient<a id="gradient"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><section><h4><span class="kind">static</span><span class="kind">Method</span>gradient<a id="gradient"></a></h4><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">gradient<span class="tsd-signature-symbol">(</span>from<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Color</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, to<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Color</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, steps<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Color</span><span class="tsd-signature-symbol">[]</span></li>
 </ul>
 
@@ -774,17 +957,17 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>from: <span class="tsd-signature-type">Color</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> from: <span class="tsd-signature-type">Color</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>to: <span class="tsd-signature-type">Color</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> to: <span class="tsd-signature-type">Color</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>steps: <span class="tsd-signature-type">number</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> steps: <span class="tsd-signature-type">number</span></h5>
             
             
                         </li>
@@ -794,7 +977,8 @@
             
             
         </li>
-</ul></div></div></section><section><h4><span class="kind">static</span><span class="kind">Method</span>mix<a id="mix"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><section><h4><span class="kind">static</span><span class="kind">Method</span>mix<a id="mix"></a></h4><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">mix<span class="tsd-signature-symbol">(</span>c1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Color</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, c2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Color</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, p<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Color</span></li>
 </ul>
 
@@ -807,17 +991,17 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>c1: <span class="tsd-signature-type">Color</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> c1: <span class="tsd-signature-type">Color</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>c2: <span class="tsd-signature-type">Color</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> c2: <span class="tsd-signature-type">Color</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>p: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0.5</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> p: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0.5</span></h5>
             
             
                         </li>
@@ -827,7 +1011,8 @@
             
             
         </li>
-</ul></div></div></section><section><h4><span class="kind">static</span><span class="kind">Method</span>rainbow<a id="rainbow"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><section><h4><span class="kind">static</span><span class="kind">Method</span>rainbow<a id="rainbow"></a></h4><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">rainbow<span class="tsd-signature-symbol">(</span>steps<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Color</span><span class="tsd-signature-symbol">[]</span></li>
 </ul>
 
@@ -840,7 +1025,7 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>steps: <span class="tsd-signature-type">number</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> steps: <span class="tsd-signature-type">number</span></h5>
             
             
                         </li>
@@ -850,7 +1035,8 @@
             
             
         </li>
-</ul></div></div></section></div></section></section><section><h2>Events<a id="events"></a></h2><div class="description"></div><hr/><section><h3><span class="kind">Class</span>EventTarget<a id="EventTarget"></a></h3><div class="description"></div><div class="section-body"><section><h4><span class="kind">Method</span>off<a id="off"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section></div></section></section><section><h2>Events<a id="events"></a></h2><div class="description"></div><hr/><section><h3><span class="kind">Class</span>EventTarget<a id="EventTarget"></a></h3><div class="description"></div><div class="section-body"><section><h4><span class="kind">Method</span>off<a id="off"></a></h4><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">off<span class="tsd-signature-symbol">(</span>events<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EventCallback</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 </ul>
 
@@ -863,12 +1049,12 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>events: <span class="tsd-signature-type">string</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> events: <span class="tsd-signature-type">string</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>fn: <span class="tsd-signature-type">EventCallback</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> fn: <span class="tsd-signature-type">EventCallback</span></h5>
             
             
                         </li>
@@ -878,7 +1064,8 @@
             
             
         </li>
-</ul></div></div></section><section><h4><span class="kind">Method</span>on<a id="on"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><section><h4><span class="kind">Method</span>on<a id="on"></a></h4><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">on<span class="tsd-signature-symbol">(</span>events<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EventCallback</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 </ul>
 
@@ -891,12 +1078,12 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>events: <span class="tsd-signature-type">string</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> events: <span class="tsd-signature-type">string</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>fn: <span class="tsd-signature-type">EventCallback</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> fn: <span class="tsd-signature-type">EventCallback</span></h5>
             
             
                         </li>
@@ -906,7 +1093,8 @@
             
             
         </li>
-</ul></div></div></section><section><h4><span class="kind">Method</span>one<a id="one"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><section><h4><span class="kind">Method</span>one<a id="one"></a></h4><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">one<span class="tsd-signature-symbol">(</span>events<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EventCallback</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 </ul>
 
@@ -919,12 +1107,12 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>events: <span class="tsd-signature-type">string</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> events: <span class="tsd-signature-type">string</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>fn: <span class="tsd-signature-type">EventCallback</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> fn: <span class="tsd-signature-type">EventCallback</span></h5>
             
             
                         </li>
@@ -934,7 +1122,8 @@
             
             
         </li>
-</ul></div></div></section><section><h4><span class="kind">Method</span>trigger<a id="trigger"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><section><h4><span class="kind">Method</span>trigger<a id="trigger"></a></h4><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">trigger<span class="tsd-signature-symbol">(</span>events<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, arg<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 </ul>
 
@@ -947,12 +1136,12 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>events: <span class="tsd-signature-type">string</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> events: <span class="tsd-signature-type">string</span></h5>
             
             
                         </li>
                         <li>
-                            <h5><span class="tsd-flag ts-flagtrue">true</span> arg: <span class="tsd-signature-type">any</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> <span class="tsd-flag ts-flagtrue">true</span> arg: <span class="tsd-signature-type">any</span></h5>
             
             
                         </li>
@@ -962,7 +1151,8 @@
             
             
         </li>
-</ul></div></div></section></div></section></section><section><h2>Strings<a id="strings"></a></h2><div class="description"></div><hr/><section><h3><span class="kind">Function</span>autoCorrect<a id="autoCorrect"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section></div></section></section><section><h2>Strings<a id="strings"></a></h2><div class="description"></div><hr/><section><h3><span class="kind">Function</span>autoCorrect<a id="autoCorrect"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">auto<wbr>Correct<span class="tsd-signature-symbol">(</span>word<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, dict<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></li>
 </ul>
 
@@ -975,25 +1165,23 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>word: <span class="tsd-signature-type">string</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> word: <span class="tsd-signature-type">string</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>dict: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> dict: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
             
             
                         </li>
                 </ul>
             
-                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span>
-                                    <span class="tsd-signature-symbol"> | </span>
-                                <span class="tsd-signature-type">string</span>
-            </h4>
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h4>
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>isPalindrome<a id="isPalindrome"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>isPalindrome<a id="isPalindrome"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">is<wbr>Palindrome<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 </ul>
 
@@ -1006,7 +1194,7 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>str: <span class="tsd-signature-type">string</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> str: <span class="tsd-signature-type">string</span></h5>
             
             
                         </li>
@@ -1016,8 +1204,9 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>stringDistance<a id="stringDistance"></a></h3><div class="description"><div><ul class="tsd-signatures ">
-        <li class="tsd-signature tsd-kind-icon">string<wbr>Distance<span class="tsd-signature-symbol">(</span>s1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, s2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>stringDistance<a id="stringDistance"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">string<wbr>Distance<span class="tsd-signature-symbol">(</span>s1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, s2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, ignoreTrailing<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -1029,12 +1218,17 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>s1: <span class="tsd-signature-type">string</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> s1: <span class="tsd-signature-type">string</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>s2: <span class="tsd-signature-type">string</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> s2: <span class="tsd-signature-type">string</span></h5>
+            
+            
+                        </li>
+                        <li>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> ignoreTrailing: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
             
             
                         </li>
@@ -1044,7 +1238,8 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>toCamelCase<a id="toCamelCase"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>toCamelCase<a id="toCamelCase"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">to<wbr>Camel<wbr>Case<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 </ul>
 
@@ -1057,7 +1252,7 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>str: <span class="tsd-signature-type">string</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> str: <span class="tsd-signature-type">string</span></h5>
             
             
                         </li>
@@ -1067,7 +1262,8 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>toTitleCase<a id="toTitleCase"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>toTitleCase<a id="toTitleCase"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">to<wbr>Title<wbr>Case<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 </ul>
 
@@ -1080,7 +1276,7 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>str: <span class="tsd-signature-type">string</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> str: <span class="tsd-signature-type">string</span></h5>
             
             
                         </li>
@@ -1090,7 +1286,8 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>words<a id="words"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>words<a id="words"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">words<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, divider<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></li>
 </ul>
 
@@ -1103,12 +1300,12 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>str: <span class="tsd-signature-type">string</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> str: <span class="tsd-signature-type">string</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>divider: <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/\s+/</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> divider: <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /\s+/</span></h5>
             
             
                         </li>
@@ -1118,7 +1315,8 @@
             
             
         </li>
-</ul></div></div></section></section><section><h2>Utilities<a id="utilities"></a></h2><div class="description"></div><hr/><section><h3><span class="kind">Type alias</span>Obj<a id="Obj"></a></h3><div class="description"></div></section><hr/><section><h3><span class="kind">Function</span>applyDefaults<a id="applyDefaults"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section></section><section><h2>Utilities<a id="utilities"></a></h2><div class="description"></div><hr/><section><h3><span class="kind">Type alias</span>Obj<a id="Obj"></a></h3><div class="description"></div></section><hr/><section><h3><span class="kind">Function</span>applyDefaults<a id="applyDefaults"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">apply<wbr>Defaults<span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, defaults<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 </ul>
 
@@ -1131,12 +1329,12 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>obj: <span class="tsd-signature-type">any</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> obj: <span class="tsd-signature-type">any</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>defaults: <span class="tsd-signature-type">any</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> defaults: <span class="tsd-signature-type">any</span></h5>
             
             
                         </li>
@@ -1146,8 +1344,9 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>cache<a id="cache"></a></h3><div class="description"><div><ul class="tsd-signatures ">
-        <li class="tsd-signature tsd-kind-icon">cache<span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">[object Object]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>cache<a id="cache"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">cache<span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -1159,11 +1358,11 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>fn: <span class="tsd-signature-type">[object Object]</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> fn: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span></h5>
             
             
                                     <ul class="tsd-parameters">
-                                            <li class="tsd-parameter-siganture">
+                                            <li class="tsd-parameter-signature">
                                                 <ul class="tsd-signatures ">
                                                         <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
                                                 </ul>
@@ -1175,7 +1374,7 @@
                                         <h4 class="tsd-parameters-title">Parameters</h4>
                                         <ul class="tsd-parameters">
                                                 <li>
-                                                    <h5><span class="tsd-flag ts-flagtrue">true</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+                                                    <h5><span class="tsd-flag ts-flagtrue">true</span> <span class="tsd-flag ts-flagtrue">true</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
                                     
                                     
                                                 </li>
@@ -1195,7 +1394,8 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>deepExtend<a id="deepExtend"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>deepExtend<a id="deepExtend"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">deep<wbr>Extend<span class="tsd-signature-symbol">(</span>obj1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, obj2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, arrayMergeFn<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 </ul>
 
@@ -1208,17 +1408,17 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>obj1: <span class="tsd-signature-type">any</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> obj1: <span class="tsd-signature-type">any</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>obj2: <span class="tsd-signature-type">any</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> obj2: <span class="tsd-signature-type">any</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>arrayMergeFn: <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> =&nbsp;defaultMerge</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> arrayMergeFn: <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = defaultMerge</span></h5>
             
             
                         </li>
@@ -1228,8 +1428,9 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>defer<a id="defer"></a></h3><div class="description"><div><ul class="tsd-signatures ">
-        <li class="tsd-signature tsd-kind-icon">defer<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">[object Object]</span></li>
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>defer<a id="defer"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">defer<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>promise<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>reject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">; </span>resolve<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> }</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -1239,14 +1440,85 @@
             
             
             
-                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">[object Object]</span></h4>
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>promise<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>reject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">; </span>resolve<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> }</span></h4>
             
             
                         <ul class="tsd-parameters">
+                                <li class="tsd-parameter">
+                                        <h5><span class="tsd-flag ts-flagtrue">true</span> promise<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+                        
+                        
+                        
+                                </li>
+                                <li class="tsd-parameter">
+                                        <h5><span class="tsd-flag ts-flagtrue">true</span> reject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+                        
+                        
+                        
+                                                <ul class="tsd-parameters">
+                                                        <li class="tsd-parameter-signature">
+                                                            <ul class="tsd-signatures ">
+                                                                    <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+                                                            </ul>
+                                                
+                                                            <ul class="tsd-descriptions">
+                                                                    <li class="tsd-description">
+                                                
+                                                
+                                                    <h4 class="tsd-parameters-title">Parameters</h4>
+                                                    <ul class="tsd-parameters">
+                                                            <li>
+                                                                <h5><span class="tsd-flag ts-flagtrue">true</span> <span class="tsd-flag ts-flagtrue">true</span> arg: <span class="tsd-signature-type">any</span></h5>
+                                                
+                                                
+                                                            </li>
+                                                    </ul>
+                                                
+                                                    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+                                                
+                                                
+                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                </ul>
+                                </li>
+                                <li class="tsd-parameter">
+                                        <h5><span class="tsd-flag ts-flagtrue">true</span> resolve<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+                        
+                        
+                        
+                                                <ul class="tsd-parameters">
+                                                        <li class="tsd-parameter-signature">
+                                                            <ul class="tsd-signatures ">
+                                                                    <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+                                                            </ul>
+                                                
+                                                            <ul class="tsd-descriptions">
+                                                                    <li class="tsd-description">
+                                                
+                                                
+                                                    <h4 class="tsd-parameters-title">Parameters</h4>
+                                                    <ul class="tsd-parameters">
+                                                            <li>
+                                                                <h5><span class="tsd-flag ts-flagtrue">true</span> <span class="tsd-flag ts-flagtrue">true</span> arg: <span class="tsd-signature-type">T</span></h5>
+                                                
+                                                
+                                                            </li>
+                                                    </ul>
+                                                
+                                                    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+                                                
+                                                
+                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                </ul>
+                                </li>
                         </ul>
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>delay<a id="delay"></a></h3><div class="description"><div><ul class="tsd-signatures ">
-        <li class="tsd-signature tsd-kind-icon">delay<span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">[object Object]</span>, t<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>delay<a id="delay"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">delay<span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span>, t<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -1258,11 +1530,11 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>fn: <span class="tsd-signature-type">[object Object]</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> fn: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
             
             
                                     <ul class="tsd-parameters">
-                                            <li class="tsd-parameter-siganture">
+                                            <li class="tsd-parameter-signature">
                                                 <ul class="tsd-signatures ">
                                                         <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
                                                 </ul>
@@ -1281,7 +1553,7 @@
                                     </ul>
                         </li>
                         <li>
-                            <h5>t: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> t: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
             
             
                         </li>
@@ -1291,7 +1563,8 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>isOneOf<a id="isOneOf"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>isOneOf<a id="isOneOf"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">is<wbr>One<wbr>Of<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, <span class="tsd-signature-symbol">...</span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 </ul>
 
@@ -1304,12 +1577,12 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>x: <span class="tsd-signature-type">T</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> x: <span class="tsd-signature-type">T</span></h5>
             
             
                         </li>
                         <li>
-                            <h5><span class="tsd-flag ts-flagtrue">true</span> <span class="tsd-signature-symbol">...</span>values: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> <span class="tsd-flag ts-flagtrue">true</span> <span class="tsd-signature-symbol">...</span>values: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
             
             
                         </li>
@@ -1319,8 +1592,9 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>run<a id="run"></a></h3><div class="description"><div><ul class="tsd-signatures ">
-        <li class="tsd-signature tsd-kind-icon">run<span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">[object Object]</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>run<a id="run"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">run<span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -1332,12 +1606,12 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>val: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">[object Object]</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> val: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span></h5>
             
             
                         </li>
                         <li>
-                            <h5><span class="tsd-flag ts-flagtrue">true</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">[]</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> <span class="tsd-flag ts-flagtrue">true</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">[]</span></h5>
             
             
                         </li>
@@ -1347,7 +1621,8 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>safeToJSON<a id="safeToJSON"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>safeToJSON<a id="safeToJSON"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">safe<wbr>ToJSON<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, fallback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 </ul>
 
@@ -1360,12 +1635,12 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5><span class="tsd-flag ts-flagtrue">true</span> str: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> <span class="tsd-flag ts-flagtrue">true</span> str: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>fallback: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> fallback: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = {}</span></h5>
             
             
                         </li>
@@ -1375,8 +1650,9 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>throttle<a id="throttle"></a></h3><div class="description"><div><ul class="tsd-signatures ">
-        <li class="tsd-signature tsd-kind-icon">throttle<span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">[object Object]</span>, t<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, forceDelay<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>throttle<a id="throttle"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">throttle<span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span>, t<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, forceDelay<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
 </ul>
 
 <ul class="tsd-descriptions">
@@ -1388,11 +1664,11 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>fn: <span class="tsd-signature-type">[object Object]</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> fn: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
             
             
                                     <ul class="tsd-parameters">
-                                            <li class="tsd-parameter-siganture">
+                                            <li class="tsd-parameter-signature">
                                                 <ul class="tsd-signatures ">
                                                         <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
                                                 </ul>
@@ -1404,7 +1680,7 @@
                                         <h4 class="tsd-parameters-title">Parameters</h4>
                                         <ul class="tsd-parameters">
                                                 <li>
-                                                    <h5><span class="tsd-flag ts-flagtrue">true</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+                                                    <h5><span class="tsd-flag ts-flagtrue">true</span> <span class="tsd-flag ts-flagtrue">true</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
                                     
                                     
                                                 </li>
@@ -1419,12 +1695,12 @@
                                     </ul>
                         </li>
                         <li>
-                            <h5>t: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> t: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
             
             
                         </li>
                         <li>
-                            <h5>forceDelay: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> forceDelay: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
             
             
                         </li>
@@ -1434,7 +1710,8 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>uid<a id="uid"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>uid<a id="uid"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">uid<span class="tsd-signature-symbol">(</span>n<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 </ul>
 
@@ -1447,7 +1724,7 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>n: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;10</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> n: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 10</span></h5>
             
             
                         </li>
@@ -1457,7 +1734,8 @@
             
             
         </li>
-</ul></div></div></section><hr/><section><h3><span class="kind">Function</span>wait<a id="wait"></a></h3><div class="description"><div><ul class="tsd-signatures ">
+</ul>
+</div></div></section><hr/><section><h3><span class="kind">Function</span>wait<a id="wait"></a></h3><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">wait<span class="tsd-signature-symbol">(</span>t<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 </ul>
 
@@ -1470,7 +1748,7 @@
                 <h4 class="tsd-parameters-title">Parameters</h4>
                 <ul class="tsd-parameters">
                         <li>
-                            <h5>t: <span class="tsd-signature-type">number</span></h5>
+                            <h5><span class="tsd-flag ts-flagtrue">true</span> t: <span class="tsd-signature-type">number</span></h5>
             
             
                         </li>
@@ -1480,7 +1758,8 @@
             
             
         </li>
-</ul></div></div></section></section><footer class="global-footer"><div class="footer-left"><a href="https://mathigon.org">Mathigon.org</a><span class="dot">•</span><a href="https://github.com/mathigon">Mathigon on Github</a><span class="dot">•</span><a href="https://mathigon.org/policies">Terms and Privacy</a></div><div class="footer-right">© Mathigon</div></footer></div></div></div><script src="/scripts.js?v=3"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+</ul>
+</div></div></section></section><footer class="global-footer"><div class="footer-left"><a href="https://mathigon.org">Mathigon.org</a><span class="dot">•</span><a href="https://github.com/mathigon">Mathigon on Github</a><span class="dot">•</span><a href="https://mathigon.org/policies">Terms and Privacy</a></div><div class="footer-right">© Mathigon</div></footer></div></div></div><script src="/scripts.js?v=4"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q || []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
