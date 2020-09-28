@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="ready"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>euclid.ts</title><meta name="description" content="2D Euclidean geometry classes, utilities, and drawing tools."><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><meta http-equiv="cleartype" content="on"><meta property="og:title" content="euclid.ts"><meta property="og:description" content="2D Euclidean geometry classes, utilities, and drawing tools."><meta property="og:image" content="https://mathigon.org/images/og-tile/mathigon.jpg"><meta property="og:site_name" content="Mathigon"><meta name="twitter:site" content="@MathigonOrg"><link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,300,400i&amp;amp;subset=greek" rel="stylesheet" type="text/css"><link href="/styles.css?v=4" rel="stylesheet"></head><body><header><a id="logo" href="/"><svg class="icon" viewBox="0 0 36 36" width="36" height="36"><use xlink:href="/images/icons.svg?v=4#logo"></use></svg><svg class="icon" viewBox="0 0 120 36" width="120" height="36"><use xlink:href="/images/icons.svg?v=4#title-io"></use></svg></a><nav><x-popup class="nav-item" animation="fade"><button class="nav-link popup-target"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#glossary"></use></svg><span class="nav-text">TS Libraries</span></button><div class="popup-body"><a class="nav-link red" href="/core"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#construction"></use></svg>core.ts</a><a class="nav-link blue" href="/fermat"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#lightbulb"></use></svg>fermat.ts</a><a class="nav-link purple" href="/euclid"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#compass"></use></svg>euclid.ts</a><a class="nav-link yellow" href="/hilbert"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#equation"></use></svg>hilbert.ts</a><a class="nav-link green" href="/boost"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#brush"></use></svg>boost.ts</a></div></x-popup><x-popup class="nav-item" animation="fade"><button class="nav-link popup-target"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#library"></use></svg><span class="nav-text">Textbook Content</span></button><div class="popup-body"><a class="nav-link yellow" href="https://www.notion.so/mathigon/Content-Writing-718073cf25bf468b9d717735884803da"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#book"></use></svg>Content Guide</a><a class="nav-link blue" href="/markdown"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#notes"></use></svg>Markdown</a><a class="nav-link red" href="/interactivity"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#settings"></use></svg>Interactivity</a><a class="nav-link green" href="/translations"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#language"></use></svg>Translations</a></div></x-popup></nav></header><div class="x-purple"><div class="hero slanted"><div class="container narrow"><h1><svg class="icon" viewBox="0 0 54 54" width="54" height="54"><use xlink:href="/images/icons.svg?v=4#compass"></use></svg>euclid.ts</h1><p class="subtitle">2D Euclidean geometry classes, utilities, and drawing tools.</p><div class="btn-row"><a class="btn btn-white m-purple" href="https://github.com/mathigon/euclid.js"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#github"></use></svg>View on Github</a></div></div></div><div class="container api"><div class="sidebar"><div class="sidebar-body"></div></div><div class="api-body"><section><h2>Angle<a id="angle"></a></h2><div class="description"></div><hr/><section><h3><span class="kind">Class</span>Angle<a id="Angle"></a></h3><div class="description"></div><div class="section-body"><section><h4>constructor<a id="constructor"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+<!DOCTYPE html><html class="ready"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>euclid.ts</title><meta name="description" content="2D Euclidean geometry classes, utilities, and drawing tools."><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><meta http-equiv="cleartype" content="on"><meta property="og:title" content="euclid.ts"><meta property="og:description" content="2D Euclidean geometry classes, utilities, and drawing tools."><meta property="og:image" content="https://mathigon.org/images/og-tile/mathigon.jpg"><meta property="og:site_name" content="Mathigon"><meta name="twitter:site" content="@MathigonOrg"><link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,300,400i&amp;amp;subset=greek" rel="stylesheet" type="text/css"><link href="/styles.css?v=5" rel="stylesheet"></head><body><header><a id="logo" href="/"><svg class="icon" viewBox="0 0 36 36" width="36" height="36"><use xlink:href="/images/icons.svg?v=4#logo"></use></svg><svg class="icon" viewBox="0 0 120 36" width="120" height="36"><use xlink:href="/images/icons.svg?v=4#title-io"></use></svg></a><nav><x-popup class="nav-item" animation="fade"><button class="nav-link popup-target"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#glossary"></use></svg><span class="nav-text">TS Libraries</span></button><div class="popup-body"><a class="nav-link red" href="/core"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#construction"></use></svg>core.ts</a><a class="nav-link blue" href="/fermat"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#lightbulb"></use></svg>fermat.ts</a><a class="nav-link purple" href="/euclid"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#compass"></use></svg>euclid.ts</a><a class="nav-link yellow" href="/hilbert"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#equation"></use></svg>hilbert.ts</a><a class="nav-link green" href="/boost"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#brush"></use></svg>boost.ts</a></div></x-popup><x-popup class="nav-item" animation="fade"><button class="nav-link popup-target"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#library"></use></svg><span class="nav-text">Textbook Content</span></button><div class="popup-body"><a class="nav-link yellow" href="https://www.notion.so/mathigon/Content-Writing-718073cf25bf468b9d717735884803da"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#book"></use></svg>Content Guide</a><a class="nav-link blue" href="/markdown"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#notes"></use></svg>Markdown</a><a class="nav-link red" href="/interactivity"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#settings"></use></svg>Interactivity</a><a class="nav-link green" href="/translations"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#language"></use></svg>Translations</a></div></x-popup></nav></header><div class="x-purple"><div class="hero slanted"><div class="container narrow"><h1><svg class="icon" viewBox="0 0 54 54" width="54" height="54"><use xlink:href="/images/icons.svg?v=4#compass"></use></svg>euclid.ts</h1><p class="subtitle">2D Euclidean geometry classes, utilities, and drawing tools.</p><div class="btn-row"><a class="btn btn-white m-purple" href="https://github.com/mathigon/euclid.js"><svg class="icon" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="/images/icons.svg?v=4#github"></use></svg>View on Github</a></div></div></div><div class="container api"><div class="sidebar"><div class="sidebar-body"></div></div><div class="api-body"><section><h2>Angle<a id="angle"></a></h2><div class="description"></div><hr/><section><h3><span class="kind">Class</span>Angle<a id="Angle"></a></h3><div class="description"><p>A 2-dimensional angle class, defined by three points.</p></div><div class="section-body"><section><h4>constructor<a id="constructor"></a></h4><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">new <wbr>Angle<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span>, b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span>, c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Angle</span></li>
 </ul>
 
@@ -32,7 +32,7 @@
             
         </li>
 </ul>
-</div></div></section><section><h4><span class="kind">Property</span>a<a id="a"></a></h4><div class="description"></div></section><section><h4><span class="kind">Property</span>b<a id="b"></a></h4><div class="description"></div></section><section><h4><span class="kind">Property</span>c<a id="c"></a></h4><div class="description"></div></section><section><h4><span class="kind">Property</span>type<a id="type"></a></h4><div class="description"></div></section><section><h4><span class="kind">Accessor</span>arc<a id="arc"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section><section><h4><span class="kind">Property</span>a<a id="a"></a></h4><div class="description"></div></section><section><h4><span class="kind">Property</span>b<a id="b"></a></h4><div class="description"></div></section><section><h4><span class="kind">Property</span>c<a id="c"></a></h4><div class="description"></div></section><section><h4><span class="kind">Property</span>type<a id="type"></a></h4><div class="description"></div></section><section><h4><span class="kind">Accessor</span>arc<a id="arc"></a></h4><div class="description"><p>Returns the Arc element corresponding to this angle.</p><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> arc<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
@@ -45,7 +45,7 @@
                 
             </li>
 </ul>
-</div></div></section><section><h4><span class="kind">Accessor</span>bisector<a id="bisector"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section><section><h4><span class="kind">Accessor</span>bisector<a id="bisector"></a></h4><div class="description"><p>The bisector of this angle.</p><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> bisector<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
@@ -58,7 +58,7 @@
                 
             </li>
 </ul>
-</div></div></section><section><h4><span class="kind">Accessor</span>deg<a id="deg"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section><section><h4><span class="kind">Accessor</span>deg<a id="deg"></a></h4><div class="description"><p>The size, in degrees, of this angle.</p><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> deg<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
@@ -71,7 +71,7 @@
                 
             </li>
 </ul>
-</div></div></section><section><h4><span class="kind">Accessor</span>isRight<a id="isRight"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section><section><h4><span class="kind">Accessor</span>isRight<a id="isRight"></a></h4><div class="description"><p>Checks if this angle is right-angled.</p><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> isRight<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
@@ -84,7 +84,7 @@
                 
             </li>
 </ul>
-</div></div></section><section><h4><span class="kind">Accessor</span>rad<a id="rad"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section><section><h4><span class="kind">Accessor</span>rad<a id="rad"></a></h4><div class="description"><p>The size, in radians, of this angle.</p><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> rad<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
@@ -97,7 +97,7 @@
                 
             </li>
 </ul>
-</div></div></section><section><h4><span class="kind">Accessor</span>sup<a id="sup"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section><section><h4><span class="kind">Accessor</span>sup<a id="sup"></a></h4><div class="description"><p>Returns the smaller one of this and its supplementary angle.</p><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> sup<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
@@ -109,6 +109,38 @@
                 
                 
             </li>
+</ul>
+</div></div></section><section><h4><span class="kind">Method</span>at<a id="at"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">at<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span></li>
+</ul>
+
+<ul class="tsd-descriptions">
+        <li class="tsd-description">
+                <aside class="tsd-sources">
+                </aside>
+            
+            
+            
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Point</span></h4>
+            
+            
+        </li>
+</ul>
+</div></div></section><section><h4><span class="kind">Method</span>contains<a id="contains"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">contains<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+</ul>
+
+<ul class="tsd-descriptions">
+        <li class="tsd-description">
+                <aside class="tsd-sources">
+                </aside>
+            
+            
+            
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+            
+            
+        </li>
 </ul>
 </div></div></section><section><h4><span class="kind">Method</span>equals<a id="equals"></a></h4><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">equals<span class="tsd-signature-symbol">(</span>_a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Angle</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
@@ -130,6 +162,22 @@
                 </ul>
             
                 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+            
+            
+        </li>
+</ul>
+</div></div></section><section><h4><span class="kind">Method</span>project<a id="project"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+        <li class="tsd-signature tsd-kind-icon">project<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span></li>
+</ul>
+
+<ul class="tsd-descriptions">
+        <li class="tsd-description">
+                <aside class="tsd-sources">
+                </aside>
+            
+            
+            
+                <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Point</span></h4>
             
             
         </li>
@@ -297,7 +345,7 @@
             
         </li>
 </ul>
-</div></div></section></div></section></section><section><h2>Arc<a id="arc"></a></h2><div class="description"></div><hr/><section><h3><span class="kind">Class</span>Arc<a id="Arc"></a></h3><div class="description"></div><div class="section-body"><section><h4>constructor<a id="constructor"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section></div></section></section><section><h2>Arc<a id="arc"></a></h2><div class="description"></div><hr/><section><h3><span class="kind">Class</span>Arc<a id="Arc"></a></h3><div class="description"><p>An arc segment of a circle, with given center, start point and angle.</p></div><div class="section-body"><section><h4>constructor<a id="constructor"></a></h4><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">new <wbr>Arc<span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span>, start<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span>, angle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Arc</span></li>
 </ul>
 
@@ -790,7 +838,7 @@
                 
             </li>
 </ul>
-</div></div></section></div></section></section><section><h2>Circle<a id="circle"></a></h2><div class="description"></div><hr/><section><h3><span class="kind">Class</span>Circle<a id="Circle"></a></h3><div class="description"></div><div class="section-body"><section><h4>constructor<a id="constructor"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section></div></section></section><section><h2>Circle<a id="circle"></a></h2><div class="description"></div><hr/><section><h3><span class="kind">Class</span>Circle<a id="Circle"></a></h3><div class="description"><p>A circle with a given center and radius.</p></div><div class="section-body"><section><h4>constructor<a id="constructor"></a></h4><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">new <wbr>Circle<span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Point</span>, r<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Circle</span></li>
 </ul>
 
@@ -832,7 +880,7 @@
                 
             </li>
 </ul>
-</div></div></section><section><h4><span class="kind">Accessor</span>area<a id="area"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section><section><h4><span class="kind">Accessor</span>area<a id="area"></a></h4><div class="description"><p>The area of this circle.</p><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> area<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
@@ -845,7 +893,7 @@
                 
             </li>
 </ul>
-</div></div></section><section><h4><span class="kind">Accessor</span>circumference<a id="circumference"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section><section><h4><span class="kind">Accessor</span>circumference<a id="circumference"></a></h4><div class="description"><p>The length of the circumference of this circle.</p><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> circumference<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
@@ -1628,7 +1676,7 @@
             
         </li>
 </ul>
-</div></div></section></section><section><h2>Line<a id="line"></a></h2><div class="description"></div><hr/><section><h3><span class="kind">Class</span>Line<a id="Line"></a></h3><div class="description"></div><div class="section-body"><section><h4>constructor<a id="constructor"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section></section><section><h2>Line<a id="line"></a></h2><div class="description"></div><hr/><section><h3><span class="kind">Class</span>Line<a id="Line"></a></h3><div class="description"><p>An infinite straight line that goes through two points.</p></div><div class="section-body"><section><h4>constructor<a id="constructor"></a></h4><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">new <wbr>Line<span class="tsd-signature-symbol">(</span>p1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span>, p2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Line</span></li>
 </ul>
 
@@ -1657,7 +1705,7 @@
             
         </li>
 </ul>
-</div></div></section><section><h4><span class="kind">Property</span>p1<a id="p1"></a></h4><div class="description"></div></section><section><h4><span class="kind">Property</span>p2<a id="p2"></a></h4><div class="description"></div></section><section><h4><span class="kind">Property</span>type<a id="type"></a></h4><div class="description"></div></section><section><h4><span class="kind">Accessor</span>angle<a id="angle"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section><section><h4><span class="kind">Property</span>p1<a id="p1"></a></h4><div class="description"></div></section><section><h4><span class="kind">Property</span>p2<a id="p2"></a></h4><div class="description"></div></section><section><h4><span class="kind">Property</span>type<a id="type"></a></h4><div class="description"></div></section><section><h4><span class="kind">Accessor</span>angle<a id="angle"></a></h4><div class="description"><p>The angle formed between this line and the x-axis.</p><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> angle<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
@@ -1670,7 +1718,7 @@
                 
             </li>
 </ul>
-</div></div></section><section><h4><span class="kind">Accessor</span>intercept<a id="intercept"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section><section><h4><span class="kind">Accessor</span>intercept<a id="intercept"></a></h4><div class="description"><p>The y-axis intercept of this line.</p><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> intercept<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
@@ -1709,7 +1757,7 @@
                 
             </li>
 </ul>
-</div></div></section><section><h4><span class="kind">Accessor</span>midpoint<a id="midpoint"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section><section><h4><span class="kind">Accessor</span>midpoint<a id="midpoint"></a></h4><div class="description"><p>The midpoint of this line.</p><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> midpoint<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
@@ -1722,7 +1770,7 @@
                 
             </li>
 </ul>
-</div></div></section><section><h4><span class="kind">Accessor</span>perpendicularBisector<a id="perpendicularBisector"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section><section><h4><span class="kind">Accessor</span>perpendicularBisector<a id="perpendicularBisector"></a></h4><div class="description"><p>The perpendicular bisector of this line.</p><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> perpendicularBisector<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
@@ -1735,7 +1783,7 @@
                 
             </li>
 </ul>
-</div></div></section><section><h4><span class="kind">Accessor</span>perpendicularVector<a id="perpendicularVector"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section><section><h4><span class="kind">Accessor</span>perpendicularVector<a id="perpendicularVector"></a></h4><div class="description"><p>The point representing the perpendicular vector of this line.</p><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> perpendicularVector<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
@@ -1748,7 +1796,7 @@
                 
             </li>
 </ul>
-</div></div></section><section><h4><span class="kind">Accessor</span>slope<a id="slope"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section><section><h4><span class="kind">Accessor</span>slope<a id="slope"></a></h4><div class="description"><p>The slope of this line.</p><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> slope<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
@@ -1761,7 +1809,7 @@
                 
             </li>
 </ul>
-</div></div></section><section><h4><span class="kind">Accessor</span>unitVector<a id="unitVector"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section><section><h4><span class="kind">Accessor</span>unitVector<a id="unitVector"></a></h4><div class="description"><p>The point representing a unit vector along this line.</p><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> unitVector<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
@@ -2135,7 +2183,7 @@
             
         </li>
 </ul>
-</div></div></section></div></section><hr/><section><h3><span class="kind">Class</span>Ray<a id="Ray"></a></h3><div class="description"></div><div class="section-body"><section><h4><span class="kind">Property</span>type<a id="type"></a></h4><div class="description"></div></section><section><h4><span class="kind">Method</span>equals<a id="equals"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section></div></section><hr/><section><h3><span class="kind">Class</span>Ray<a id="Ray"></a></h3><div class="description"><p>An infinite ray defined by an endpoint and another point on the ray.</p></div><div class="section-body"><section><h4><span class="kind">Property</span>type<a id="type"></a></h4><div class="description"></div></section><section><h4><span class="kind">Method</span>equals<a id="equals"></a></h4><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">equals<span class="tsd-signature-symbol">(</span>other<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Ray</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 </ul>
 
@@ -2190,7 +2238,7 @@
             
         </li>
 </ul>
-</div></div></section></div></section><hr/><section><h3><span class="kind">Class</span>Segment<a id="Segment"></a></h3><div class="description"></div><div class="section-body"><section><h4><span class="kind">Property</span>type<a id="type"></a></h4><div class="description"></div></section><section><h4><span class="kind">Method</span>contains<a id="contains"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section></div></section><hr/><section><h3><span class="kind">Class</span>Segment<a id="Segment"></a></h3><div class="description"><p>A finite line segment defined by its two endpoints.</p></div><div class="section-body"><section><h4><span class="kind">Property</span>type<a id="type"></a></h4><div class="description"></div></section><section><h4><span class="kind">Method</span>contains<a id="contains"></a></h4><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">contains<span class="tsd-signature-symbol">(</span>p<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 </ul>
 
@@ -2325,7 +2373,7 @@
             
         </li>
 </ul>
-</div></div></section></div></section></section><section><h2>Point<a id="point"></a></h2><div class="description"></div><hr/><section><h3><span class="kind">Class</span>Point<a id="Point"></a></h3><div class="description"></div><div class="section-body"><section><h4>constructor<a id="constructor"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section></div></section></section><section><h2>Point<a id="point"></a></h2><div class="description"></div><hr/><section><h3><span class="kind">Class</span>Point<a id="Point"></a></h3><div class="description"><p>A single point class defined by two coordinates x and y.</p></div><div class="section-body"><section><h4>constructor<a id="constructor"></a></h4><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">new <wbr>Point<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span></li>
 </ul>
 
@@ -3103,7 +3151,7 @@
             
         </li>
 </ul>
-</div></div></section></div></section><hr/><section><h3><span class="kind">Variable</span>ORIGIN<a id="ORIGIN"></a></h3><div class="description"></div></section></section><section><h2>Polygon<a id="polygon"></a></h2><div class="description"></div><hr/><section><h3><span class="kind">Class</span>Polygon<a id="Polygon"></a></h3><div class="description"></div><div class="section-body"><section><h4>constructor<a id="constructor"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section></div></section><hr/><section><h3><span class="kind">Variable</span>ORIGIN<a id="ORIGIN"></a></h3><div class="description"></div></section></section><section><h2>Polygon<a id="polygon"></a></h2><div class="description"></div><hr/><section><h3><span class="kind">Class</span>Polygon<a id="Polygon"></a></h3><div class="description"><p>A polygon defined by its vertex points.</p></div><div class="section-body"><section><h4>constructor<a id="constructor"></a></h4><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">new <wbr>Polygon<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>points<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Polygon</span></li>
 </ul>
 
@@ -3179,7 +3227,7 @@
                 
             </li>
 </ul>
-</div></div></section><section><h4><span class="kind">Accessor</span>oriented<a id="oriented"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section><section><h4><span class="kind">Accessor</span>oriented<a id="oriented"></a></h4><div class="description"><p>The oriented version of this polygon (vertices in clockwise order).</p><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> oriented<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
@@ -3205,7 +3253,8 @@
                 
             </li>
 </ul>
-</div></div></section><section><h4><span class="kind">Accessor</span>signedArea<a id="signedArea"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section><section><h4><span class="kind">Accessor</span>signedArea<a id="signedArea"></a></h4><div class="description"><p>The (signed) area of this polygon. The result is positive if the vertices
+are ordered clockwise, and negative otherwise.</p><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> signedArea<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
@@ -3595,7 +3644,7 @@
             
         </li>
 </ul>
-</div></div></section></div></section><hr/><section><h3><span class="kind">Class</span>Polyline<a id="Polyline"></a></h3><div class="description"></div><div class="section-body"><section><h4><span class="kind">Property</span>type<a id="type"></a></h4><div class="description"></div></section><section><h4><span class="kind">Accessor</span>edges<a id="edges"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section></div></section><hr/><section><h3><span class="kind">Class</span>Polyline<a id="Polyline"></a></h3><div class="description"><p>A polyline defined by its vertex points.</p></div><div class="section-body"><section><h4><span class="kind">Property</span>type<a id="type"></a></h4><div class="description"></div></section><section><h4><span class="kind">Accessor</span>edges<a id="edges"></a></h4><div class="description"><p></p><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> edges<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
@@ -3621,7 +3670,7 @@
                 
             </li>
 </ul>
-</div></div></section></div></section><hr/><section><h3><span class="kind">Class</span>Triangle<a id="Triangle"></a></h3><div class="description"></div><div class="section-body"><section><h4><span class="kind">Property</span>type<a id="type"></a></h4><div class="description"></div></section><section><h4><span class="kind">Accessor</span>circumcircle<a id="circumcircle"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section></div></section><hr/><section><h3><span class="kind">Class</span>Triangle<a id="Triangle"></a></h3><div class="description"><p>A triangle defined by its three vertices.</p></div><div class="section-body"><section><h4><span class="kind">Property</span>type<a id="type"></a></h4><div class="description"></div></section><section><h4><span class="kind">Accessor</span>circumcircle<a id="circumcircle"></a></h4><div class="description"><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> circumcircle<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
@@ -3660,7 +3709,7 @@
                 
             </li>
 </ul>
-</div></div></section></div></section></section><section><h2>Rectangle<a id="rectangle"></a></h2><div class="description"></div><hr/><section><h3><span class="kind">Class</span>Rectangle<a id="Rectangle"></a></h3><div class="description"></div><div class="section-body"><section><h4>constructor<a id="constructor"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section></div></section></section><section><h2>Rectangle<a id="rectangle"></a></h2><div class="description"></div><hr/><section><h3><span class="kind">Class</span>Rectangle<a id="Rectangle"></a></h3><div class="description"><p>A rectangle, defined by its top left vertex, width and height.</p></div><div class="section-body"><section><h4>constructor<a id="constructor"></a></h4><div class="description"><div><ul class="tsd-signatures ">
         <li class="tsd-signature tsd-kind-icon">new <wbr>Rectangle<span class="tsd-signature-symbol">(</span>p<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span>, w<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, h<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Rectangle</span></li>
 </ul>
 
@@ -3746,7 +3795,7 @@
                 
             </li>
 </ul>
-</div></div></section><section><h4><span class="kind">Accessor</span>edges<a id="edges"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section><section><h4><span class="kind">Accessor</span>edges<a id="edges"></a></h4><div class="description"><p></p><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> edges<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
@@ -3759,7 +3808,7 @@
                 
             </li>
 </ul>
-</div></div></section><section><h4><span class="kind">Accessor</span>points<a id="points"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section><section><h4><span class="kind">Accessor</span>points<a id="points"></a></h4><div class="description"><p></p><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> points<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
@@ -3772,7 +3821,7 @@
                 
             </li>
 </ul>
-</div></div></section><section><h4><span class="kind">Accessor</span>polygon<a id="polygon"></a></h4><div class="description"><div><ul class="tsd-signatures ">
+</div></div></section><section><h4><span class="kind">Accessor</span>polygon<a id="polygon"></a></h4><div class="description"><p>A polygon class representing this rectangle.</p><div><ul class="tsd-signatures ">
             <li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> polygon<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 </ul>
 
